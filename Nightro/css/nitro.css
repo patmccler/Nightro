@@ -1,6 +1,97 @@
-/*
+/* Applies to: Nitro */
 
-Applies to: Nitro
+/* Nitro Top Bar */
 
-CSS Below
-*/
+div#header.main-header {
+  background-image: none !important;
+  background-color: red !important;
+}
+
+/* Breadcrumbs */
+
+div#main-crumbs.navbar {
+  background-image: none !important;
+  background-color: green !important;
+}
+
+/* Pill for Filter Display */
+
+li.pill.pill-default {
+  background-image: none !important;
+  background-color: red !important;
+}
+
+/* Box around count and filter display */
+
+.filter-display-description {
+  background-color: green
+}
+
+/* Change Filter Button */
+
+a.btn.btn-default {
+  background-image: none !important;
+  background-color: red !important;
+}
+
+/* Filter Button */
+
+button.btn.btn-default {
+  background-image: none !important;
+  background-color: red !important;
+}
+
+/* Page Title */
+
+.row h2 {
+  color: white
+}
+
+/* BROKEN: Page Numbers */
+
+ul.pagination li {
+  background-image: none !important;
+  background-color: green !important;
+}
+
+
+#ticket-560158 {
+  /* Fuck this one ticket */
+  color: red
+}
+
+div#header.main-header {
+  background-image: none !important;
+  background-color: red !important;
+}
+
+/* html, html * {
+  color: #eeeeee !important;
+  background-color: #222222 !important;
+} */
+
+img, video {
+  z-index: 1
+}
+
+* {
+  border-color: #555555 !important
+}
+
+/* cite, cite * {color: #029833 !important} */
+
+/* :link, :link * {color: #8db2e5 !important} */
+
+/* input, textarea {background-color: #333333 !important} */
+
+/* a {background-color: rgba(255, 255, 255, 0.01) !important} */
+
+:visited, :visited * {
+  color: rgb(211, 138, 138) !important
+}
+
+/* html, body, input, select, button {background-image: none !important} */
+
+video {
+  background-color: transparent !important;
+}

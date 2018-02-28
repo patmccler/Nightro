@@ -84,6 +84,7 @@ var dark_mode_main = {
    */
   custom_sites: {
     "ebay": ".ebay.com",
+    "nitro": "nitro.com",
     "yahoo": "www.yahoo.",
     "twitch": ".twitch.tv",
     "github": "github.com",
@@ -134,6 +135,7 @@ var dark_mode_main = {
     'facebook': 'facebook',
     'messenger': 'facebook',
     'amazon': 'amazon',
+    "nitro": "nitro",
     'news.google.com': 'NewsGoogle',
     'www.twitch.tv': 'twitchTV',
     'twitter.com': 'twitter',
