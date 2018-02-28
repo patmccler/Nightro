@@ -56,6 +56,14 @@ div.dropdown-menu {
   background-color: #141A1E !important;
 }
 
+li.bg-danger {
+  background-color: #5D2925
+}
+
+li.bg-success {
+  background-color: #265234
+}
+
 /* Search Dropdown */
 
 .tt-input {
