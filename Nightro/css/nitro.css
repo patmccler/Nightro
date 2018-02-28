@@ -7,7 +7,9 @@
 
  */
 
-/* Page backgrounds handled in main.js */
+/* Page backgrounds handled in main.js
+  bg color: 292929 41,41,41
+ */
 
 /*Nitro Header bar */
 div#header.main-header {
@@ -43,13 +45,14 @@ ul.full-menu * {
 
 li.pill.pill-default {
   background-image: none !important;
-  background-color: red !important;
+  background-color: #749EB7 !important;
+  color: #292929 !important;
 }
 
 /* Box around count and filter display */
 
 .filter-display-description {
-  background-color: green
+  background-color: #292929 !important;
 }
 
 /* -----SEARCH/FILTERS----- */
@@ -58,7 +61,49 @@ li.pill.pill-default {
 
 li.pill.pill-default {
   background-image: none !important;
-  background-color: red !important;
+  background-color: #749EB7 !important;
+  color: #292929 !important;
+}
+
+.font-weight-normal {
+  color: #292929 !important;
+}
+
+/* Filter & Sorting Buttons */
+.filter-display > div:nth-child(4) > a:nth-child(1) {
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
+}
+
+/* Change Filter Button */
+
+a.btn.btn-default {
+  background-image: none !important;
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
+}
+
+/* Filter Button */
+
+button.btn.btn-default {
+  background-image: none !important;
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
+}
+
+/* Filter Window */
+
+div.filter-form {
+  background-image: none !important;
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
+}
+
+/*Sort Dropdown*/
+ul.dropdown-menu {
+  background-image: none !important;
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
 }
 
 /* Box around count and filter display */
@@ -67,32 +112,6 @@ li.pill.pill-default {
   background-color: green
 }
 
-/* Change Filter Button */
-
-a.btn.btn-default {
-  background-image: none !important;
-  background-color: red !important;
-}
-
-/* Filter Button */
-
-button.btn.btn-default {
-  background-image: none !important;
-  background-color: red !important;
-}
-
-/* Filter Window */
-
-div.filter-form {
-  background-image: none !important;
-  background-color: red !important;
-}
-
-/*Sort Dropdown*/
-ul.dropdown-menu {
-  background-image: none !important;
-  background-color: red !important;
-}
 /* Submit Buttons */
 input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
   color: pink !important;
