@@ -23,6 +23,10 @@ div#main-crumbs.navbar {
   color: white !important;
 }
 
+div#main-crumbs.li {
+  color: #749EB7 !important;
+}
+
 /*Hovering over breadcrumbs */
 a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
   color: #B7B7B7 !important;
