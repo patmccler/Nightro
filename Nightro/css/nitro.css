@@ -32,7 +32,7 @@ div#main-crumbs.li {
 
 /*Hovering over breadcrumbs */
 
-a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
+ a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
   color: #B7B7B7 !important;
   background-color: #00447C !important;
 }
@@ -141,7 +141,15 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
 
 ul.pagination * {
   background-image: none !important;
-  background-color: green !important;
+  background-color: #383838 !important;
+}
+
+.pagination > li > a {
+  color: white !important;
+  border-color: #455A6B !important;
+}
+.pagination > li > a:hover {
+  background-color: #00447C !important;
 }
 
 div#tickets_table {
