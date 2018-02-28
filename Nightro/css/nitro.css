@@ -156,6 +156,11 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
   background-color: orange !important;
 }
 
+/* Support Tags */
+.badge-info, .pill-info{
+  background-color: #749EB7 !important;
+}
+
 /* Page Title */
 
 .row h2 {
