@@ -4,6 +4,12 @@ div.panel-body {
   text: #3B3B3B;
 }
 
+div.ticket-comment {
+  background-image: none !important;
+  background-color: #383838 !important;
+  text: #3B3B3B;
+}
+
 div.list-view {
     background-image: none !important;
     background-color: #303030 !important;
