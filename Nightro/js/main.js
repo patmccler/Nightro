@@ -1,3 +1,4 @@
+console.log("main loaded");
 var is_head_added = false,
   is_black_colred = false,
   is_custom_css = false,

@@ -1,4 +1,4 @@
-
+console.log("test main loaded");
 function onError(e) {
   console.log(e);
 }
