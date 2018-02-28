@@ -10,20 +10,20 @@
 
 /* Nitro Top Bar */
 body {
-  background: 00111F;
+  background: #00111F;
 
 }
 
 div#header.main-header {
   background-image: none !important;
-  background-color: 002340 !important;
+  background-color: #002340 !important;
 }
 
 /* Breadcrumbs */
 
 div#main-crumbs.navbar {
   background-image: none !important;
-  background-color: green !important;
+  background-color: #002c47 !important;
 }
 
 /* Pill for Filter Display */
@@ -135,11 +135,6 @@ div.panel-container {
 #ticket-560158 {
   /* Fuck this one ticket */
   color: red
-}
-
-div#header.main-header {
-  background-image: none !important;
-  background-color: red !important;
 }
 
 /* GLOBAL CODE */
