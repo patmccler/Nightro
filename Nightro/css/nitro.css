@@ -154,16 +154,18 @@ div#tickets_table {
 thead * {
   background-image: none !important;
   background-color: #455A6B !important;
+  color: #292929;
 }
 
 tr {
   background-image: none !important;
-  background-color: green !important;
+  background-color: #303030 !important;
 }
 
 tr:nth-child(even) {
   background-image: none !important;
-  background-color: pink !important;
+  background-color: #383838 !important;
+  text: #3B3B3B;
 }
 
 /* Status Text Color */
