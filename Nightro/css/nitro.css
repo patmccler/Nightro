@@ -12,6 +12,7 @@
  */
 
 /*Nitro Header bar */
+
 div#header.main-header {
   background-image: none !important;
   background-color: #00447C !important;
@@ -30,13 +31,22 @@ div#main-crumbs.li {
 }
 
 /*Hovering over breadcrumbs */
+
 a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
   color: #B7B7B7 !important;
   background-color: #00447C !important;
 }
 
 /* -- SIDE MENU -- */
+
 ul.full-menu * {
+  background-image: none !important;
+  background-color: #141A1E !important;
+}
+
+/* Dropdown menus */
+
+div.dropdown-menu {
   background-image: none !important;
   background-color: #141A1E !important;
 }
@@ -70,7 +80,8 @@ li.pill.pill-default {
 }
 
 /* Filter & Sorting Buttons */
-.filter-display > div:nth-child(4) > a:nth-child(1) {
+
+.filter-display>div:nth-child(4)>a:nth-child(1) {
   background-color: #455A6B !important;
   color: #749EB7 !important;
 }
@@ -100,6 +111,7 @@ div.filter-form {
 }
 
 /*Sort Dropdown*/
+
 ul.dropdown-menu {
   background-image: none !important;
   background-color: #455A6B !important;
@@ -113,6 +125,7 @@ ul.dropdown-menu {
 }
 
 /* Submit Buttons */
+
 input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
   color: pink !important;
   background-color: orange !important;
@@ -137,14 +150,17 @@ div#tickets_table {
 }
 
 /* Body of Lists like Tickets */
+
 thead * {
   background-image: none !important;
   background-color: #455A6B !important;
 }
+
 tr {
   background-image: none !important;
   background-color: green !important;
 }
+
 tr:nth-child(even) {
   background-image: none !important;
   background-color: pink !important;
@@ -182,6 +198,7 @@ div.panel-container {
 }
 
 /* DON'T ADJUST YET! */
+
 /* GLOBAL CODE */
 
 /* html, html * {
@@ -193,9 +210,9 @@ html, html * {
   color: rgb(183, 183, 183) !important;
 }
 
-* {
+/* * {
   border-color: #a4afaf !important;
-}
+} */
 
 a, a[class] {
   color: #6091c1 !important;
