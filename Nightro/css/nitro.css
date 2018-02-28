@@ -8,7 +8,9 @@
  */
 
 /* Page backgrounds handled in main.js */
-
+body {
+  background: rgb(41, 41, 41) !important;
+}
 /*Nitro Header bar */
 div#header.main-header {
   background-image: none !important;

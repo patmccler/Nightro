@@ -6,13 +6,13 @@
    "content_scripts": [ {
       "all_frames": true,
       "exclude_globs": [ "*/chrome/newtab*" ],
-      "js": [ "js/main.js" ],
+      "js": [ "js/testMain.js" ],
       "match_about_blank": true,
       "matches": [ "<all_urls>" ],
       "run_at": "document_start"
    }, {
       "all_frames": true,
-      "css": [ "css/universal.css" ],
+      "css": [ "css/nitro.css" ],
       "exclude_globs": [ "*/chrome/newtab*" ],
       "match_about_blank": true,
       "matches": [ "<all_urls>" ],
