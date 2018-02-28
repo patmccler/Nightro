@@ -83,7 +83,8 @@ var dark_mode_main = {
    * @type Object list
    */
   custom_sites: {
-    "nitro": "nitro.com"
+    "nitro": "nitro.com",
+    "tickets": "nitro.com/support_tickets"
   },
   /**
    * Add Link Element to head
@@ -109,7 +110,8 @@ var dark_mode_main = {
    * @version 1.0
    */
   cs: {
-    "nitro": "nitro"
+    "nitro": "nitro",
+    "tickets": "tickets"
   },
   /**
    * Runs custom css check

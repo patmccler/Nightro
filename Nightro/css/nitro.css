@@ -7,14 +7,22 @@
 
  */
 
+<<<<<<< HEAD
 /* Page backgrounds handled in main.js */
 body {
   background: rgb(41, 41, 41) !important;
 }
+=======
+/* Page backgrounds handled in main.js
+  bg color: 292929 41,41,41
+ */
+
+>>>>>>> master
 /*Nitro Header bar */
+
 div#header.main-header {
   background-image: none !important;
-  background-color: #204F6B !important;
+  background-color: #00447C !important;
 }
 
 /* Breadcrumbs */
@@ -30,24 +38,48 @@ div#main-crumbs.li {
 }
 
 /*Hovering over breadcrumbs */
-a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
+
+ a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
   color: #B7B7B7 !important;
-  background-color: #204F6B !important;
+  background-color: #00447C !important;
 }
 
+/* -- SIDE MENU -- */
 
+ul.full-menu * {
+  background-image: none !important;
+  background-color: #141A1E !important;
+}
+
+/* Dropdown menus */
+
+div.dropdown-menu {
+  background-image: none !important;
+  background-color: #141A1E !important;
+}
+
+/* TEXT AREAS */
+
+textarea {
+  background-color: #6B6B6B !important;
+}
+
+input {
+  background-color: #6B6B6B !important;
+}
 
 /* Pill for Filter Display */
 
 li.pill.pill-default {
   background-image: none !important;
-  background-color: red !important;
+  background-color: #749EB7 !important;
+  color: #292929 !important;
 }
 
 /* Box around count and filter display */
 
 .filter-display-description {
-  background-color: green
+  background-color: #292929 !important;
 }
 
 /* -----SEARCH/FILTERS----- */
@@ -56,7 +88,51 @@ li.pill.pill-default {
 
 li.pill.pill-default {
   background-image: none !important;
-  background-color: red !important;
+  background-color: #749EB7 !important;
+  color: #292929 !important;
+}
+
+.font-weight-normal {
+  color: #292929 !important;
+}
+
+/* Filter & Sorting Buttons */
+
+.filter-display>div:nth-child(4)>a:nth-child(1) {
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
+}
+
+/* Change Filter Button */
+
+a.btn.btn-default {
+  background-image: none !important;
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
+}
+
+/* Sort Button */
+
+button.btn.btn-default {
+  background-image: none !important;
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
+}
+
+/* Filter Window */
+
+div.filter-form {
+  background-image: none !important;
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
+}
+
+/*Sort Dropdown*/
+
+ul.dropdown-menu {
+  background-image: none !important;
+  background-color: #455A6B !important;
+  color: #749EB7 !important;
 }
 
 /* Box around count and filter display */
@@ -65,33 +141,8 @@ li.pill.pill-default {
   background-color: green
 }
 
-/* Change Filter Button */
-
-a.btn.btn-default {
-  background-image: none !important;
-  background-color: red !important;
-}
-
-/* Filter Button */
-
-button.btn.btn-default {
-  background-image: none !important;
-  background-color: red !important;
-}
-
-/* Filter Window */
-
-div.filter-form {
-  background-image: none !important;
-  background-color: red !important;
-}
-
-/*Sort Dropdown*/
-ul.dropdown-menu {
-  background-image: none !important;
-  background-color: red !important;
-}
 /* Submit Buttons */
+
 input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
   color: pink !important;
   background-color: orange !important;
@@ -107,7 +158,15 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
 
 ul.pagination * {
   background-image: none !important;
-  background-color: green !important;
+  background-color: #383838 !important;
+}
+
+.pagination > li > a {
+  color: white !important;
+  border-color: #455A6B !important;
+}
+.pagination > li > a:hover {
+  background-color: #00447C !important;
 }
 
 div#tickets_table {
@@ -116,17 +175,22 @@ div#tickets_table {
 }
 
 /* Body of Lists like Tickets */
+
 thead * {
   background-image: none !important;
-  background-color: green !important;
+  background-color: #455A6B !important;
+  color: #292929;
 }
+
 tr {
   background-image: none !important;
-  background-color: green !important;
+  background-color: #303030 !important;
 }
+
 tr:nth-child(even) {
   background-image: none !important;
-  background-color: pink !important;
+  background-color: #383838 !important;
+  text: #3B3B3B;
 }
 
 /* Status Text Color */
@@ -160,6 +224,8 @@ div.panel-container {
   color: red
 }
 
+/* DON'T ADJUST YET! */
+
 /* GLOBAL CODE */
 
 /* html, html * {
@@ -171,9 +237,9 @@ html, html * {
   color: rgb(183, 183, 183) !important;
 }
 
-* {
+/* * {
   border-color: #a4afaf !important;
-}
+} */
 
 a, a[class] {
   color: #6091c1 !important;

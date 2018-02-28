@@ -12,7 +12,11 @@
       "run_at": "document_start"
    }, {
       "all_frames": true,
+<<<<<<< HEAD
       "css": [ "css/nitro.css", "css/nitro.css" ],
+=======
+      "css": [ "css/nitro.css","css/tickets.css" ],
+>>>>>>> master
       "exclude_globs": [ "*/chrome/newtab*" ],
       "match_about_blank": true,
       "matches": [ "<all_urls>" ],
