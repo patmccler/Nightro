@@ -33,7 +33,11 @@ a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div
   background-color: #204F6B !important;
 }
 
-
+/* -- SIDE MENU -- */
+ul.full-menu * {
+  background-image: none !important;
+  background-color: #141A1E !important;
+}
 
 /* Pill for Filter Display */
 
