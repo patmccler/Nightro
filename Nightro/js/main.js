@@ -14,7 +14,7 @@ var document_observer = new MutationObserver(function(mutations) {
       dnm_set_brg(data.document_brightness);
     });
     dark_mode_main.remove_link_element();
-    document.body.style.setProperty('background', 'rgb(23, 23, 23)', 'important');
+    document.body.style.setProperty('background', 'rgb(41, 41, 41)', 'important');
     document_observer.disconnect();
   }
 });
@@ -41,7 +41,7 @@ var dark_mode_main = {
    * Initialize Color Object Varialbe
    */
   curr_obj: {
-    'rgb(255, 255, 255)': 'rgb(23, 23, 23)',
+    'rgb(255, 255, 255)': 'rgb(41, 41, 41)',
     'rgb(245, 245, 245)': 'rgb(22, 22, 22)'
   },
   current_dfc: document.defaultView,
