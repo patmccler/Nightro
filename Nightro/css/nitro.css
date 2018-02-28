@@ -51,6 +51,16 @@ div.dropdown-menu {
   background-color: #141A1E !important;
 }
 
+/* TEXT AREAS */
+
+textarea {
+  background-color: #6B6B6B !important;
+}
+
+input {
+  background-color: #6B6B6B !important;
+}
+
 /* Pill for Filter Display */
 
 li.pill.pill-default {

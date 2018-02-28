@@ -1,4 +1,10 @@
 div.panel-body {
   background-image: none !important;
-  background-color: #141A1E !important;
+  background-color: #383838 !important;
+  text: #3B3B3B;
+}
+
+div.list-view {
+    background-image: none !important;
+    background-color: #303030 !important;
 }
