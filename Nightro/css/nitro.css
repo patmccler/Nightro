@@ -1,10 +1,22 @@
 /* Applies to: Nitro */
 
+/* color pallete hex codes:
+   Header bg: 002340
+   body bg: 00111F
+
+
+ */
+
+
 /* Nitro Top Bar */
+body {
+  background: 00111F;
+
+}
 
 div#header.main-header {
   background-image: none !important;
-  background-color: red !important;
+  background-color: 002340 !important;
 }
 
 /* Breadcrumbs */
