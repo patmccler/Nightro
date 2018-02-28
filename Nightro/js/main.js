@@ -83,29 +83,7 @@ var dark_mode_main = {
    * @type Object list
    */
   custom_sites: {
-    "ebay": ".ebay.com",
-    "nitro": "nitro.com",
-    "yahoo": "www.yahoo.",
-    "twitch": ".twitch.tv",
-    "github": "github.com",
-    "docs": "docs.google.",
-    "bing": "www.bing.com",
-    "amazon": "www.amazon.",
-    "gmail": "mail.google.",
-    "tumblr": "www.tumblr.",
-    "twitter": "twitter.com",
-    "inbox": "inbox.google.",
-    "drive": "drive.google.",
-    "sites": "sites.google.",
-    "youtube": "www.youtube.",
-    "dropbox": "www.dropbox.",
-    "reddit": "www.reddit.com",
-    "maps": ".google.com/maps/",
-    "facebook": "www.facebook.",
-    "wikipedia": "wikipedia.org",
-    "instagram": "www.instagram.",
-    "duckduckgo": "duckduckgo.com",
-    "stackoverflow": "stackoverflow.com"
+    "nitro": "nitro.com"
   },
   /**
    * Add Link Element to head
@@ -131,22 +109,7 @@ var dark_mode_main = {
    * @version 1.0
    */
   cs: {
-    'wikipedia': 'wikipedia',
-    'facebook': 'facebook',
-    'messenger': 'facebook',
-    'amazon': 'amazon',
-    "nitro": "nitro",
-    'news.google.com': 'NewsGoogle',
-    'www.twitch.tv': 'twitchTV',
-    'twitter.com': 'twitter',
-    'github.com': 'github',
-    'accounts.google.com': 'InboxGoogle',
-    'inbox.google.com': 'InboxGoogle',
-    'www.quora.com': 'quora',
-    'www.youtube.com': 'youtube',
-    'mail.google.com': 'gmail',
-    'web.whatsapp.com': 'WebWhatsapp',
-    'darknightmode.com': 'darknightmode'
+    "nitro": "nitro"
   },
   /**
    * Runs custom css check
