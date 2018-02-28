@@ -3,6 +3,16 @@ function onError(e) {
   console.log(e);
 }
 
+document.addEventListener("DOMContentLoaded", setup);
+
+function setup() {
+  tryWipe();
+  setupPageAction();
+
+}
+
+
+
 function wipeAll() {
    console.log("testMain.js");
   let body = document.getElementsByTagName("body")[0];
@@ -23,7 +33,6 @@ function wipeAll() {
   }
   console.log(count);
 }
-document.addEventListener("DOMContentLoaded", tryWipe);
 
 function tryWipe() {
   try {
@@ -34,4 +43,12 @@ function tryWipe() {
     onError(e);
   }
 }
-//setTimeout(wipeAll, 1000);//runs on page load
+
+function setupPageAction() {
+
+  chrome.runtime.sendMessage({greeting: "try darkmode page action"},
+    function (response) {
+      console.log(response.response);
+    }
+  )
+}
