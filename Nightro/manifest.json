@@ -12,7 +12,7 @@
       "run_at": "document_start"
    }, {
       "all_frames": true,
-      "css": [ "css/nitro.css" ],
+      "css": [ "css/nitro.css", "css/nitro.css" ],
       "exclude_globs": [ "*/chrome/newtab*" ],
       "match_about_blank": true,
       "matches": [ "<all_urls>" ],
