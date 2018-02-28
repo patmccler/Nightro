@@ -28,8 +28,6 @@ function wipeAll() {
       allElem[i].style.color = "inherit";
       count++;
     }
-
-
   }
   console.log(count);
 }

@@ -1,5 +1,6 @@
 console.log("BG START");
 
+
 //called when pageAction is clicked
 chrome.pageAction.onClicked.addListener(() => {
   console.log("Saving this URL as domain to use");
@@ -16,7 +17,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   switch(request.greeting) {
       case "try darkmode page action":
         console.log("trying page action");
-        response += "PAGE ACTION";
+        if(needPageAction()) {
+          response += "need page action";
+          chrome.pageAction.show(sender.tab.id);
+
+        }
+        else {
+          response += "no page action needed";
+        }
         break;
 
       default:
@@ -30,3 +38,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   sendResponse(answer);
 
 });
+
+function needPageAction() {
+  //TODO
+  return true;
+}
