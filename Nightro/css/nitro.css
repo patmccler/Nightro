@@ -7,17 +7,15 @@
 
  */
 
-<<<<<<< HEAD
+
 /* Page backgrounds handled in main.js */
 body {
   background: rgb(41, 41, 41) !important;
 }
-=======
 /* Page backgrounds handled in main.js
   bg color: 292929 41,41,41
  */
 
->>>>>>> master
 /*Nitro Header bar */
 
 div#header.main-header {
