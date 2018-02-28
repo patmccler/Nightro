@@ -18,6 +18,11 @@ div#header.main-header {
   background-color: #00447C !important;
 }
 
+
+span.fa-search, span.fa-phone, .fa-microphone, .fa-bars {
+  color: white !important;
+}
+
 /* Breadcrumbs */
 
 div#main-crumbs.navbar {
@@ -50,6 +55,16 @@ div.dropdown-menu {
   background-image: none !important;
   background-color: #141A1E !important;
 }
+
+/* Search Dropdown */
+.tt-input {
+  color: #b7b7b7 !important;
+}
+
+.tt-input, input {
+  background-color: #455A6B !important;
+}
+
 
 /* TEXT AREAS */
 
@@ -161,6 +176,7 @@ ul.pagination * {
 .pagination > li > a:hover {
   background-color: #00447C !important;
 }
+
 
 div#tickets_table {
   background-image: none !important;
