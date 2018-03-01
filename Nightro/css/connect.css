@@ -6,19 +6,11 @@
   background: rgb(41, 41, 41);
 }
 
-div article.message {
-  background-image: none !important;
-  background-color: #404040 !important;
-}
 /*525252*/
 /* article.message{
   background-image: none !important;
   background-color: #303030 !important;
 } */
-
-div.message-body {
-    color: #ACE !important;
-}
 
 article.message.me div.contents div.message-meta div.message-avatar {
   display: inline-block;
@@ -92,4 +84,16 @@ div article.message.me div.contents div.message-meta span.message-sender {
     line-height: 35px;
     margin: 0 auto;
     position: relative;
+}
+
+
+/*--------------- Messages --------------- */
+div article.message {
+  background-image: none !important;
+  background-color: #404040 !important;
+  margin: none;
+}
+
+div.message-body {
+    color: #ACE !important;
 }
