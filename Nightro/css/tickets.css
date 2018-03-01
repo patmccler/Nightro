@@ -25,7 +25,10 @@ p, h1, h4, span.help-block {
 /*--------------- Tag Pills ---------------*/
 
 span.pill.pill-warning {
-  background-color: #f9423a;
+  background-color: transparent;
+  border-color: #f9423a;
+  color: #f9423a;
+
 }\
 /*--------------- Ticket Comments ---------------*/
 div.ticket-comment {

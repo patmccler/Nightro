@@ -63,6 +63,22 @@ div.dropdown-menu {
   background-color: #141A1E !important;
 }
 
+/* Spot Nitro Drop */
+
+.spotnitro .tt-dropdown-menu {
+  background-color: #6f6f6f;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  padding: 8px 8px;
+  width: 422px;
+}
+
+.spotnitro .tt-dropdown-menu div * :hover {
+  background-color: #383838 !important;
+
+}
+
 li.bg-danger {
   background-color: #5D2925
 }
@@ -126,6 +142,14 @@ li.pill.pill-default {
   color: #292929 !important;
 }
 
+.nitro-search-form .predicate-input .input-group-addon {
+
+    width: auto;
+    padding: 0;
+    background-color: #6B6B6B;
+
+}
+
 /*--------------- Filter & Sorting Buttons ---------------*/
 
 .filter-display>div:nth-child(4)>a:nth-child(1) {
@@ -155,6 +179,7 @@ div.filter-form {
   background-image: none !important;
   background-color: #455A6B !important;
   color: #749EB7 !important;
+  border-color:
 }
 
 /*--------------- DROPDOWNS ---------------*/
@@ -186,7 +211,31 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
   background-color: #B7B7B7 !important;
 }
 
-/*--------------- Page Title ---------------*/
+/* Support Tags */
+.badge-info, .pill-info{
+  background-color: #749EB7 !important;
+  color: #292929 !important;
+}
+/* Table Headers */
+
+.table th {
+  color: white !important;
+}
+
+/* Table Borders */
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857;
+  vertical-align: top;
+  border-top: 1px solid #455A6B;
+}
+
+.table > thead > tr > th {
+  border-bottom: 2px solid #00447C;
+}
+
+/* Page Title */
 
 .row h2 {
   color: white;
