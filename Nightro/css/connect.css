@@ -1,0 +1,6 @@
+/* rgb(41, 41, 41) */
+
+
+.bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark {
+  background: rgb(41, 41, 41);
+}
