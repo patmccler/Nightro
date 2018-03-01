@@ -12,6 +12,10 @@
   background-color: #303030 !important;
 } */
 
+div.message-body {
+    color: #ACE !important;
+}
+
 article.message.me div.contents div.message-meta div.message-avatar {
   display: inline-block;
   float: right;
@@ -91,7 +95,7 @@ div article.message.me div.contents div.message-meta span.message-sender {
 div article.message {
   background-image: none !important;
   background-color: #404040 !important;
-  margin: none;
+  margin: 0 !important;
 }
 
 div.message-body {
