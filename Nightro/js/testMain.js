@@ -6,7 +6,18 @@ function onError(e) {
 document.addEventListener("DOMContentLoaded", setup);
 
 function setup() {
+  chrome.storage.local.get([]"darkmodeDomain"],
+  function (response) {
+    let domain = false;
+    if(response.darkmodDomain != undefined) {
+        domain = response.domain;
+    }
+
+    console.log(domain);
+  }
+)
   setupPageAction();
+
 
 }
 
