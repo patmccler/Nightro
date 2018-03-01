@@ -6,6 +6,7 @@
   background: rgb(41, 41, 41);
 }
 
+<<<<<<< HEAD
 article.message{
   background-image: none !important;
   background-color: #404040 !important;
@@ -40,3 +41,37 @@ div article.message.me div.contents div.message-meta span.message-sender {
 article.message.me div.contents div.message-body-reactions-container div.message-body {
   float: right
 }
+=======
+
+/*--------------- Branding & Top Bars --------------- */
+.branding-bar {
+  background-color: #00447C;
+  border-bottom: 1px solid #455a6B;
+  color: #fff;
+  display: block;
+  height: 44px;
+  position: relative;
+  text-align: center;
+}
+
+.section-header {
+  background: #00447C;
+  border-bottom: 1px solid #455a6B;
+  color: #fff;
+  display: flex;
+  flex: 0 0 45px;
+  font-size: 18px;
+  font-weight: 400;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bookmarks-subheader {
+    background: #00447C;
+    border-bottom: 1px solid #455a6B;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 36px;
+    padding-left: 12px;
+>>>>>>> 65b4a07f38b1d0d9cabf5c8e9ac00fd31c8de0f6
