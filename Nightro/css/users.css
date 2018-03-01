@@ -1,0 +1,4 @@
+/* --------------- Name Boxes --------------- */
+.table-striped tbody > tr:nth-child(2n+1) > td.sort {
+  background-color: rgb(48, 48, 48) !important;
+}

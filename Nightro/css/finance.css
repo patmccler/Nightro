@@ -3,6 +3,14 @@ form {
   background: none !important;
   background-color: #383838 !important;
 }
+/*--------------- Owner Info --------------- */
+span.label, legend {
+  color: #ACE !important;
+}
+
+#text, small {
+  color: white !important;
+}
 /*--------------- Borders around Tables --------------- */
 thead * {
   border: none !important;
@@ -23,6 +31,7 @@ div.actions_and_details, fieldset.finance_project_actions {
   background-image: none !important;
   background-color: #383838 !important;
 }
+
 
 div.history table {
   background-color: transparent !important;
