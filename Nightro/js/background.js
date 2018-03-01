@@ -44,6 +44,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         }
         break;
 
+      case "darkmodeDomain cleared":
+        darkmodeDomain = false;
+        response += "clear domain recieved";
+        break;
+
       default:
         response += "unknown message";
         console.log("unknown message: " + request.greeting);
