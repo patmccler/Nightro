@@ -16,4 +16,3 @@ function clearDomain() {
 }
 
 document.addEventListener("DOMContentLoaded", setup);
-console.log(document.getElementById("clearDomainButton"))//.addEventListener("click", clearDomain);

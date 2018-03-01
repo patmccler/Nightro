@@ -21,6 +21,9 @@ chrome.pageAction.onClicked.addListener((tab) => {
       darkmodeDomain: domain
       }/*optional callback can go here*/
     );
+    for(let i = 0; i < tabsWithPageAction.length; i++) {
+      chrome.pageAction.hide(tabsWithPageAction[i]);
+    }
   }
   catch (e) {
     onError(e);
@@ -38,7 +41,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         if(needPageAction()) {
           response += "need page action";
           chrome.pageAction.show(sender.tab.id);
-          tabsWithPageAction.push(tab.id);
+          tabsWithPageAction.push(sender.tab.id);
         }
         else {
           response += "no page action needed";
@@ -63,10 +66,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 function needPageAction() {
-
-  if(darkmodeDomain)
-    return true;
-  return false;
+  console.log(darkmodeDomain);
+  if(darkmodeDomain) {
+    return false;
+  }
+  return true;
 }
 
 function onError(e) {
