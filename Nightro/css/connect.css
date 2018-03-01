@@ -86,7 +86,15 @@ div article.message.me div.contents div.message-meta span.message-sender {
     position: relative;
 }
 
-
+message-input-container {
+    background: #f9f9f9;
+    border-top: 1px solid #d3d3d3;
+    position: relative;
+    padding: 7px 0;
+    white-space: pre-wrap;
+    width: 100%;
+    word-wrap: break-word;
+}
 /*--------------- Messages --------------- */
 div article.message {
   background-image: none !important;
