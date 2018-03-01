@@ -1,5 +1,6 @@
 console.log("BG START");
 var darkmodeDomain = false;
+var tabsWithPageAction = [];
 
 chrome.storage.local.get(["darkmodeDomain"],
   function(response) {
@@ -37,7 +38,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         if(needPageAction()) {
           response += "need page action";
           chrome.pageAction.show(sender.tab.id);
-
+          tabsWithPageAction.push(tab.id);
         }
         else {
           response += "no page action needed";
@@ -62,8 +63,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 function needPageAction() {
-  //TODO
-  return true;
+
+  if(darkmodeDomain)
+    return true;
+  return false;
 }
 
 function onError(e) {
