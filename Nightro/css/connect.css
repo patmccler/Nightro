@@ -5,3 +5,38 @@
 .bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark {
   background: rgb(41, 41, 41);
 }
+
+article.message{
+  background-image: none !important;
+  background-color: #404040 !important;
+  margin: none;
+}
+/*525252*/
+/* article.message{
+  background-image: none !important;
+  background-color: #303030 !important;
+} */
+
+
+div.message-body {
+    color: #ACE !important;
+}
+
+article.message.me div.contents div.message-meta div.message-avatar {
+  display: inline-block;
+  float: right;
+  height: 34px;
+  margin-right: 4px;
+  width: 34px;
+}
+
+div article.message.me div.contents div.message-meta span.message-sender {
+  font-weight: 700;
+  vertical-align: top;
+  float: right;
+  margin-right: 4px;
+}
+
+article.message.me div.contents div.message-body-reactions-container div.message-body {
+  float: right
+}
