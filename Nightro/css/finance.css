@@ -27,3 +27,9 @@ div.actions_and_details, fieldset.finance_project_actions {
 div.history table {
   background-color: transparent !important;
 }
+
+/*--------------- Navbar --------------- */
+div.row nav.navbar-default, div.navbar:nth-child(1) {
+  background-color: #383838;
+  border-color: #455A6B;
+}
