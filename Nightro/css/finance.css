@@ -1,0 +1,29 @@
+/*--------------- Body --------------- */
+form {
+  background: none !important;
+  background-color: #383838 !important;
+}
+/*--------------- Borders around Tables --------------- */
+thead * {
+  border: none !important;
+}
+/*--------------- Actions Box --------------- */
+div.actions_and_details, fieldset.finance_project_actions {
+  background-color: #7F8FA4 !important;
+}
+
+/*--------------- Notes --------------- */
+
+.history.odd.activity * {
+  background-image: none !important;
+  background-color: #303030 !important;
+}
+
+.history.even.activity * {
+  background-image: none !important;
+  background-color: #383838 !important;
+}
+
+div.history table {
+  background-color: transparent !important;
+}
