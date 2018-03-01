@@ -24,11 +24,13 @@ span.pill.pill-warning {
 div.ticket-comment {
   background-image: none !important;
   background-color: #303030 !important;
+  border-radius: 4px;
 }
 
-div.ticket-comment.me {
+div.ticket-comment:nth-child(even) {
   background-image: none !important;
   background-color: #383838 !important;
+  border-radius: 4px;
 }
 
 span {
@@ -37,4 +39,7 @@ span {
 
 div.tags.form-control {
   background-color: #6B6B6B
+}
+pre code {
+  color: white
 }
