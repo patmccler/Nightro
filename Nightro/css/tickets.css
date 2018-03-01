@@ -22,6 +22,18 @@ h3.panel-tile, i {
 p, h1, h4, span.help-block {
   color: #ACE !important;
 }
+
+div.panel-default {
+    border-color: #455a6B;
+}
+
+div.panel-body:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+  background-color: transparent !important;
+}
+
+div.panel-heading {
+  border-color: #455a6B !important;
+}
 /*--------------- Tag Pills ---------------*/
 
 span.pill.pill-warning {
