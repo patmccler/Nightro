@@ -1,3 +1,5 @@
+
+/*--------------- Body of Ticket Box ---------------*/
 div.panel-body, div.ticket-comment {
   background-image: none !important;
   background-color: #383838 !important;
@@ -16,11 +18,12 @@ h3.panel-tile, i {
 p, h4, span.help-block {
   color: #ACE !important;
 }
+/*--------------- Tag Pills ---------------*/
 
 span.pill.pill-warning {
   background-color: #f9423a;
-}
-
+}\
+/*--------------- Ticket Comments ---------------*/
 div.ticket-comment {
   background-image: none !important;
   background-color: #303030 !important;
@@ -36,7 +39,7 @@ div.ticket-comment:nth-child(even) {
 span {
   color: white;
 }
-
+/*--------------- Input Boxes ---------------*/
 div.tags.form-control {
   background-color: #6B6B6B
 }
