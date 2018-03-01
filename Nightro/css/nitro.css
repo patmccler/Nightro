@@ -142,6 +142,14 @@ li.pill.pill-default {
   color: #292929 !important;
 }
 
+.nitro-search-form .predicate-input .input-group-addon {
+
+    width: auto;
+    padding: 0;
+    background-color: #6B6B6B;
+
+}
+
 /*--------------- Filter & Sorting Buttons ---------------*/
 
 .filter-display>div:nth-child(4)>a:nth-child(1) {
@@ -202,7 +210,6 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
   background-color: #B7B7B7 !important;
 }
 
-<<<<<<< HEAD
 /* Support Tags */
 .badge-info, .pill-info{
   background-color: #749EB7 !important;
@@ -214,10 +221,20 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
   color: white !important;
 }
 
+/* Table Borders */
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857;
+  vertical-align: top;
+  border-top: 1px solid #455A6B;
+}
+
+.table > thead > tr > th {
+  border-bottom: 2px solid #00447C;
+}
+
 /* Page Title */
-=======
-/*--------------- Page Title ---------------*/
->>>>>>> master
 
 .row h2 {
   color: white;
