@@ -2,7 +2,7 @@
 
 /*--------------- Bookmarks ---------------*/
 
-.bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark {
+.bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message {
   background: rgb(41, 41, 41);
 }
 
@@ -11,6 +11,15 @@
   background-image: none !important;
   background-color: #303030 !important;
 } */
+
+div.message-body {
+    color: #ACE !important;
+}
+article.message.me div.contents div.message-body-reactions-container div.message-body{
+color: #ACE !important;
+text-align: right;
+padding-right: 50px;
+}
 
 article.message.me div.contents div.message-meta div.message-avatar {
   display: inline-block;
@@ -99,7 +108,7 @@ message-input-container {
 div article.message {
   background-image: none !important;
   background-color: #404040 !important;
-  margin: none;
+  margin: 0 !important;
 }
 
 div.message-body {
