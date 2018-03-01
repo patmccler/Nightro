@@ -8,7 +8,7 @@
  */
 
 
-/* Page backgrounds handled in main.js */
+/*--------------- Page backgrounds handled in main.js ---------------*/
 body {
   background: rgb(41, 41, 41) !important;
 }
@@ -16,7 +16,7 @@ body {
   bg color: 292929 41,41,41
  */
 
-/*Nitro Header bar */
+/*--------------- Nitro Header bar ---------------*/
 
 div#header.main-header {
   background-image: none !important;
@@ -27,7 +27,7 @@ span.fa-search, span.fa-phone, .fa-microphone, .fa-bars {
   color: white !important;
 }
 
-/* Breadcrumbs */
+/*--------------- Breadcrumbs--------------- */
 
 div#main-crumbs.navbar {
   background-image: none !important;
@@ -39,21 +39,21 @@ div#main-crumbs.li {
   color: #749EB7 !important;
 }
 
-/*Hovering over breadcrumbs */
+/*---------------Hovering over breadcrumbs--------------- */
 
 a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
   color: #B7B7B7 !important;
   background-color: #00447C !important;
 }
 
-/* -- SIDE MENU -- */
+/* --------------- SIDE MENU --------------- */
 
 ul.full-menu * {
   background-image: none !important;
   background-color: #141A1E !important;
 }
 
-/* Dropdown Menus */
+/* --------------- Dropdown Menus ---------------*/
 
 div.dropdown-menu {
   background-image: none !important;
@@ -68,7 +68,7 @@ li.bg-success {
   background-color: #265234
 }
 
-/* Search Dropdown */
+/* --------------- Search Dropdown --------------- */
 
 .tt-input {
   color: #b7b7b7 !important;
@@ -78,13 +78,13 @@ li.bg-success {
   background-color: #455A6B !important;
 }
 
-/* Spot Nitro */
+/*--------------- Spot Nitro ---------------*/
 span.tt-dropdown-menu {
   background-image: none !important;
   background-color: #141A1E !important;
 }
 
-/* TEXT AREAS */
+/*--------------- TEXT AREAS ---------------*/
 
 textarea {
   background-color: #6B6B6B !important;
@@ -94,7 +94,7 @@ input {
   background-color: #6B6B6B !important;
 }
 
-/* Pill for Filter Display */
+/*--------------- Pill for Filter Display ---------------*/
 
 li.pill.pill-default {
   background-image: none !important;
@@ -108,7 +108,7 @@ li.pill.pill-default {
   background-color: #292929 !important;
 }
 
-/* -----SEARCH/FILTERS----- */
+/* ---------------SEARCH/FILTERS---------------*/
 
 /* Pill for Filter Display */
 
@@ -122,14 +122,14 @@ li.pill.pill-default {
   color: #292929 !important;
 }
 
-/* Filter & Sorting Buttons */
+/*--------------- Filter & Sorting Buttons ---------------*/
 
 .filter-display>div:nth-child(4)>a:nth-child(1) {
   background-color: #455A6B !important;
   color: #749EB7 !important;
 }
 
-/* Change Filter Button */
+/*--------------- Change Filter Button ---------------*/
 
 a.btn.btn-default {
   background-image: none !important;
@@ -137,7 +137,7 @@ a.btn.btn-default {
   color: #749EB7 !important;
 }
 
-/* Sort Button */
+/*--------------- Sort Button ---------------*/
 
 button.btn.btn-default {
   background-image: none !important;
@@ -145,7 +145,7 @@ button.btn.btn-default {
   color: #749EB7 !important;
 }
 
-/* Filter Window */
+/*--------------- Filter Window ---------------*/
 
 div.filter-form {
   background-image: none !important;
@@ -153,7 +153,7 @@ div.filter-form {
   color: #749EB7 !important;
 }
 
-/* DROPDOWNS */
+/*--------------- DROPDOWNS ---------------*/
 
 .form-control.collection_select.optional, select.form-control, ul.select2-choices, select#q_reported_by_territory_id_eq {
   background-image: none !important;
@@ -161,7 +161,7 @@ div.filter-form {
   color: white
 }
 
-/*Sort Dropdown*/
+/*---------------Sort Dropdown---------------*/
 
 ul.dropdown-menu {
   background-image: none !important;
@@ -169,26 +169,26 @@ ul.dropdown-menu {
   color: #749EB7 !important;
 }
 
-/* Box around count and filter display */
+/*--------------- Box around count and filter display ---------------*/
 
 .filter-display-description {
   background-color: green
 }
 
-/* Submit Buttons */
+/*--------------- Submit Buttons ---------------*/
 
 input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
   color: #ACE !important;
   background-color: #B7B7B7 !important;
 }
 
-/* Page Title */
+/*--------------- Page Title ---------------*/
 
 .row h2 {
   color: white;
 }
 
-/* Page Numbers */
+/*--------------- Page Numbers ---------------*/
 
 .pagination * {
   background-image: none !important;
@@ -209,7 +209,7 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
   background-color: red !important;
 } */
 
-/* Body of Lists like Tickets */
+/*--------------- Body of Lists like Tickets ---------------*/
 
 thead *, .table th {
   background-image: none !important;
@@ -229,7 +229,7 @@ tr:nth-child(even) {
   text: #3B3B3B;
 }
 
-/* Status Text Color */
+/*--------------- Status Text Color ---------------*/
 
 span.status.new {
   color: green;
@@ -260,9 +260,8 @@ div.panel-container {
   color: red
 }
 
-/* DON'T ADJUST YET! */
 
-/* GLOBAL CODE */
+/*------------------------------ GLOBAL CODE ------------------------------*/
 
 /* html, html * {
   color: #eeeeee !important;
@@ -355,14 +354,6 @@ abbr, progress, time, label, .date {
 mark, code, pre, blockquote, [class*="quote"], td[style*="inset"][class="alt2"] {
   background-color: #00090F !important;
 }
-
-/* Removed because dropdown icons were having black background unnecessarily.
-nav, menu, html body [class*="open"], html body [id*="Dropdown"], html body [id*="dropdown"], html body [class*="Dropdown"],
-html body [class*="dropdown"], html body [id*="menu"]:not(SELECT), html body [class*="menu"]:NOT(SELECT), html body [class*="tooltip"],
-html body [class*="popup"], html body [id*="popup"], html body [class*="note"], html body [class*="detail"], html body [class*="description"] {
-  background-color: #232323 !important;
-}
- */
 
 [onclick]:hover, [ondblclick]:hover, [onmousedown]:hover {
   color: #FEFF97 !important
