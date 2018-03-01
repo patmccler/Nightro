@@ -21,14 +21,30 @@ function setup() {
       let domain = false;
       if(response.darkmodeDomain != undefined) {
           domain = response.darkmodeDomain;
+          if(domain) {
+            let needsDarkMode = currentDomainNeedsDarkMode(domain);
+            console.log(needsDarkMode);
+            if(needsDarkMode) {
+              turnOnDarkMode();
+            }
+          }
       }
 
-      console.log(domain);
     }
   );
   setupPageAction();
+}
+
+function turnOnDarkMode() {
+  //TODO
+}
+
+function currentDomainNeedsDarkMode(darkModeDomain) {
+  let currDomain = window.location.hostname;
+  console.log(currDomain);
 
 
+  return darkModeDomain == currDomain;
 }
 
 
