@@ -6,13 +6,12 @@ function onError(e) {
 document.addEventListener("DOMContentLoaded", setup);
 
 function setup() {
-  tryWipe();
   setupPageAction();
 
 }
 
 
-
+//not useful as we imagined, will save for black and white mode maybe?
 function wipeAll() {
    console.log("testMain.js");
   let body = document.getElementsByTagName("body")[0];
