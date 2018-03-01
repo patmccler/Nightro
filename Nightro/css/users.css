@@ -1,4 +1,26 @@
 /* --------------- Name Boxes --------------- */
-.table-striped tbody > tr:nth-child(2n+1) > td.sort {
+
+.table-striped tbody>tr:nth-child(2n+1)>td.sort {
   background-color: rgb(48, 48, 48) !important;
+}
+
+/* --------------- User Profile ---------------*/
+
+div.tabBodyWrapper {
+  background-color: #455A6B !important;
+}
+
+dl {
+  background: none !important;
+  background-color: #383838 !important;
+}
+
+span.textHelp {
+  color: #ACE !important;
+}
+
+/*--------------- Role --------------- */
+
+dd {
+  color: white !important;
 }
