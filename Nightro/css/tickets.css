@@ -1,4 +1,8 @@
 
+/*--------------- Panel Heading ---------------*/
+div.panel-heading {
+    background-color: #6B6B6B !important;
+}
 /*--------------- Body of Ticket Box ---------------*/
 div.panel-body, div.ticket-comment {
   background-image: none !important;
@@ -15,7 +19,7 @@ h3.panel-tile, i {
   color: white;
 }
 
-p, h4, span.help-block {
+p, h1, h4, span.help-block {
   color: #ACE !important;
 }
 /*--------------- Tag Pills ---------------*/
@@ -40,9 +44,19 @@ span {
   color: white;
 }
 /*--------------- Input Boxes ---------------*/
-div.tags.form-control {
+div.tags.form-control, .filepicker {
   background-color: #6B6B6B
 }
 pre code {
   color: white
 }
+
+/*--------------- Private Comments --------------- */
+.new-comment.private {
+  background-color: rgb(249, 66, 58, .5) !important;
+}
+
+ /*--------------- Attachments --------------- */
+ a.thumbnail *{
+     opacity: .8 !important;
+ }
