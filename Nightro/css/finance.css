@@ -3,6 +3,7 @@ form {
   background: none !important;
   background-color: #383838 !important;
 }
+<<<<<<< HEAD
 /*--------------- Owner Info --------------- */
 span.label, legend {
   color: #ACE !important;
@@ -11,6 +12,8 @@ span.label, legend {
 #text, small {
   color: white !important;
 }
+=======
+>>>>>>> nitro-css-test-nick
 /*--------------- Borders around Tables --------------- */
 thead * {
   border: none !important;
@@ -32,7 +35,10 @@ div.actions_and_details, fieldset.finance_project_actions {
   background-color: #383838 !important;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> nitro-css-test-nick
 div.history table {
   background-color: transparent !important;
 }
