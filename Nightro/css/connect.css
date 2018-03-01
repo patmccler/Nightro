@@ -1,6 +1,7 @@
 /* rgb(41, 41, 41) */
 
 /*--------------- Bookmarks ---------------*/
+
 .bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark {
   background: rgb(41, 41, 41);
 }

@@ -20,7 +20,6 @@ table.viewTable .csz, h3 {
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-
 /*--------------- Current Owners Text ---------------*/
 
 h2 {
@@ -32,17 +31,19 @@ h2 {
 table.listTable.home thead tr * {
   color: white !important;
 }
+
 /*--------------- Homes Search Results ---------------*/
-table.listTable.home tbody tr *, tbody#results tr *{
+
+table.listTable.home tbody tr *, tbody#results tr * {
   background-image: none !important;
   background-color: #303030 !important;
 }
 
-table.listTable.home tbody tr:nth-child(even) *, tbody#results tr:nth-child(even)
-* {
+table.listTable.home tbody tr:nth-child(even) *, tbody#results tr:nth-child(even) * {
   background-image: none !important;
   background-color: #383838 !important;
 }
+
 .old-style .leads .csz {
   color: #ACE !important;
 }

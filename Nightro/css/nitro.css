@@ -7,11 +7,12 @@
 
  */
 
-
 /*--------------- Page backgrounds handled in main.js ---------------*/
+
 body {
   background: rgb(41, 41, 41) !important;
 }
+
 /* Page backgrounds handled in main.js
   bg color: 292929 41,41,41
  */
@@ -79,6 +80,7 @@ li.bg-success {
 }
 
 /*--------------- Spot Nitro ---------------*/
+
 span.tt-dropdown-menu {
   background-image: none !important;
   background-color: #141A1E !important;
@@ -215,7 +217,6 @@ thead *, .table th {
   background-image: none !important;
   background-color: #455A6B !important;
   color: white;
-
 }
 
 tr {
@@ -259,7 +260,6 @@ div.panel-container {
   /* Fuck this one ticket */
   color: red
 }
-
 
 /*------------------------------ GLOBAL CODE ------------------------------*/
 
