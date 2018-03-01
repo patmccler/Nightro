@@ -32,7 +32,7 @@ h2 {
 table.listTable.home thead tr * {
   color: white !important;
 }
-
+/* Homes Search Results */
 table.listTable.home tbody tr *, tbody#results tr *{
   background-image: none !important;
   background-color: #303030 !important;

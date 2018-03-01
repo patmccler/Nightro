@@ -48,7 +48,7 @@ ul.full-menu * {
   background-color: #141A1E !important;
 }
 
-/* Dropdown menus */
+/* Dropdown Menus */
 
 div.dropdown-menu {
   background-image: none !important;
@@ -71,6 +71,12 @@ li.bg-success {
 
 .tt-input, input {
   background-color: #455A6B !important;
+}
+
+/* Spot Nitro */
+span.tt-dropdown-menu {
+  background-image: none !important;
+  background-color: #141A1E !important;
 }
 
 /* TEXT AREAS */
@@ -179,7 +185,7 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
 
 /* Page Numbers */
 
-ul.pagination * {
+.pagination * {
   background-image: none !important;
   background-color: #383838 !important;
 }
