@@ -1,12 +1,29 @@
 console.log("BG START");
+var darkmodeDomain = false;
 
+chrome.storage.local.get(["darkmodeDomain"],
+  function(response) {
+    if(response.darkmodeDomain != undefined) {
+      darkmodeDomain = response.darkmodeDomain;
+      console.log("domain was loaded: " + darkmodeDomain);
+    }
+  }
+);
 
 //called when pageAction is clicked
-chrome.pageAction.onClicked.addListener(() => {
-  console.log("Saving this URL as domain to use");
-
-
-
+chrome.pageAction.onClicked.addListener((tab) => {
+  console.log("Saving this URL as domain to use from tab: " + tab.url);
+  try {
+    let domain = /https?:\/\/(?:www.)?\S{1,30}.com\/|file:\/\/\/\S*.html/i.exec(tab.url)[0];
+    darkmodeDomain = domain;
+    chrome.storage.local.set({
+      darkmodeDomain: domain
+      }/*optional callback can go here*/
+    );
+  }
+  catch (e) {
+    onError(e);
+  }
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
@@ -42,4 +59,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 function needPageAction() {
   //TODO
   return true;
+}
+
+function onError(e) {
+  console.log(e);
 }
