@@ -23,6 +23,10 @@ div#header.main-header {
   background-color: #00447C !important;
 }
 
+span.fa-search, span.fa-phone, .fa-microphone, .fa-bars {
+  color: white !important;
+}
+
 /* Breadcrumbs */
 
 div#main-crumbs.navbar {
@@ -37,7 +41,7 @@ div#main-crumbs.li {
 
 /*Hovering over breadcrumbs */
 
- a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
+a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
   color: #B7B7B7 !important;
   background-color: #00447C !important;
 }
@@ -54,6 +58,24 @@ ul.full-menu * {
 div.dropdown-menu {
   background-image: none !important;
   background-color: #141A1E !important;
+}
+
+li.bg-danger {
+  background-color: #5D2925
+}
+
+li.bg-success {
+  background-color: #265234
+}
+
+/* Search Dropdown */
+
+.tt-input {
+  color: #b7b7b7 !important;
+}
+
+.tt-input, input {
+  background-color: #455A6B !important;
 }
 
 /* TEXT AREAS */
@@ -125,6 +147,14 @@ div.filter-form {
   color: #749EB7 !important;
 }
 
+/* DROPDOWNS */
+
+.form-control.collection_select.optional, select.form-control, ul.select2-choices, select#q_reported_by_territory_id_eq {
+  background-image: none !important;
+  background-color: #6B6B6B;
+  color: white
+}
+
 /*Sort Dropdown*/
 
 ul.dropdown-menu {
@@ -142,14 +172,14 @@ ul.dropdown-menu {
 /* Submit Buttons */
 
 input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
-  color: pink !important;
-  background-color: orange !important;
+  color: #ACE !important;
+  background-color: #B7B7B7 !important;
 }
 
 /* Page Title */
 
 .row h2 {
-  color: white
+  color: white;
 }
 
 /* Page Numbers */
@@ -159,11 +189,12 @@ ul.pagination * {
   background-color: #383838 !important;
 }
 
-.pagination > li > a {
+.pagination>li>a {
   color: white !important;
   border-color: #455A6B !important;
 }
-.pagination > li > a:hover {
+
+.pagination>li>a:hover {
   background-color: #00447C !important;
 }
 
@@ -174,10 +205,11 @@ div#tickets_table {
 
 /* Body of Lists like Tickets */
 
-thead * {
+thead *, .table th {
   background-image: none !important;
   background-color: #455A6B !important;
-  color: #292929;
+  color: white;
+
 }
 
 tr {
@@ -207,7 +239,7 @@ span.status.closed-resolved {
 
 /* Panel Containers */
 
-div.panel-heading {
+/* div.panel-heading {
   background-image: none !important;
   background-color: green !important;
 }
@@ -215,7 +247,7 @@ div.panel-heading {
 div.panel-container {
   background-image: none !important;
   background-color: red !important;
-}
+} */
 
 #ticket-560158 {
   /* Fuck this one ticket */
@@ -288,7 +320,7 @@ a.highlight, a.highlight *, a.active, a.active *, .selected, .selected *, [href=
   font-weight: bold !important
 }
 
-textarea, i, td {
+textarea, td {
   color: #ACE !important;
   /* text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000 !important; */
 }

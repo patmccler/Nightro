@@ -1,10 +1,45 @@
-div.panel-body {
+div.panel-body, div.ticket-comment {
   background-image: none !important;
   background-color: #383838 !important;
   text: #3B3B3B;
 }
 
 div.list-view {
-    background-image: none !important;
-    background-color: #303030 !important;
+  background-image: none !important;
+  background-color: #303030 !important;
+}
+
+h3.panel-tile, i {
+  color: white;
+}
+
+p, h4, span.help-block {
+  color: #ACE !important;
+}
+
+span.pill.pill-warning {
+  background-color: #f9423a;
+}
+
+div.ticket-comment {
+  background-image: none !important;
+  background-color: #303030 !important;
+  border-radius: 4px;
+}
+
+div.ticket-comment:nth-child(even) {
+  background-image: none !important;
+  background-color: #383838 !important;
+  border-radius: 4px;
+}
+
+span {
+  color: white;
+}
+
+div.tags.form-control {
+  background-color: #6B6B6B
+}
+pre code {
+  color: white
 }
