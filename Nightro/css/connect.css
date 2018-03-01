@@ -5,3 +5,27 @@
 .bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark {
   background: rgb(41, 41, 41);
 }
+
+
+/*--------------- Branding & Top Bars --------------- */
+.branding-bar {
+  background-color: #00447C;
+  border-bottom: 1px solid #455a6B;
+  color: #fff;
+  display: block;
+  height: 44px;
+  position: relative;
+  text-align: center;
+}
+
+.section-header {
+  background: #00447C;
+  border-bottom: 1px solid #455a6B;
+  color: #fff;
+  display: flex;
+  flex: 0 0 45px;
+  font-size: 18px;
+  font-weight: 400;
+  justify-content: center;
+  overflow: hidden;
+}
