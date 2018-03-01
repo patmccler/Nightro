@@ -193,10 +193,10 @@ ul.pagination * {
   background-color: #00447C !important;
 }
 
-div#tickets_table {
+/* div#tickets_table {
   background-image: none !important;
   background-color: red !important;
-}
+} */
 
 /* Body of Lists like Tickets */
 

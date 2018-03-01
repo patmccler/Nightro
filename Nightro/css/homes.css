@@ -6,7 +6,43 @@ div#homes_FilterForm.filterForm {
   border-radius: 4px;
 }
 
+/* Input on homes search */
+
 input {
   border-radius: 4px;
-  color: #ACE;
+  color: #ACE !important;
+}
+
+/* Address and Name */
+
+table.viewTable .csz, h3 {
+  color: White !important;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+
+/* Current Owners Text */
+
+h2 {
+  color: #ACE !important;
+}
+
+/*Table Headings */
+
+table.listTable.home thead tr * {
+  color: white !important;
+}
+
+table.listTable.home tbody tr *, tbody#results tr *{
+  background-image: none !important;
+  background-color: #303030 !important;
+}
+
+table.listTable.home tbody tr:nth-child(even) *, tbody#results tr:nth-child(even)
+* {
+  background-image: none !important;
+  background-color: #383838 !important;
+}
+.old-style .leads .csz {
+  color: #ACE !important;
 }
