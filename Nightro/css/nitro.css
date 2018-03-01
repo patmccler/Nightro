@@ -56,6 +56,22 @@ div.dropdown-menu {
   background-color: #141A1E !important;
 }
 
+/* Spot Nitro Drop */
+
+.spotnitro .tt-dropdown-menu {
+  background-color: #6f6f6f;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  padding: 8px 8px;
+  width: 422px;
+}
+
+.spotnitro .tt-dropdown-menu div * :hover {
+  background-color: #383838 !important;
+
+}
+
 li.bg-danger {
   background-color: #5D2925
 }
@@ -173,6 +189,12 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
 /* Support Tags */
 .badge-info, .pill-info{
   background-color: #749EB7 !important;
+  color: #292929 !important;
+}
+/* Table Headers */
+
+.table th {
+  color: white !important;
 }
 
 /* Page Title */
@@ -232,7 +254,7 @@ span.status.wip {
 }
 
 span.status.closed-resolved {
-  color: red;
+  color: #f9423a;
 }
 
 /* Panel Containers */
