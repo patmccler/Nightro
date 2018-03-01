@@ -9,14 +9,12 @@
 div article.message {
   background-image: none !important;
   background-color: #404040 !important;
-  margin: none;
 }
 /*525252*/
 /* article.message{
   background-image: none !important;
   background-color: #303030 !important;
 } */
-
 
 div.message-body {
     color: #ACE !important;
