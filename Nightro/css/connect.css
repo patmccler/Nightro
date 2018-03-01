@@ -6,8 +6,7 @@
   background: rgb(41, 41, 41);
 }
 
-<<<<<<< HEAD
-article.message{
+div article.message {
   background-image: none !important;
   background-color: #404040 !important;
   margin: none;
