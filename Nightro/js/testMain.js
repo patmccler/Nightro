@@ -3,19 +3,29 @@ function onError(e) {
   console.log(e);
 }
 
-document.addEventListener("DOMContentLoaded", setup);
+document.addEventListener("DOMContentLoaded", testSetup);
+
+function testSetup() {
+  try {
+    setup();
+  }
+  catch(e) {
+    onError(e);
+  }
+}
+
 
 function setup() {
-  chrome.storage.local.get([]"darkmodeDomain"],
-  function (response) {
-    let domain = false;
-    if(response.darkmodDomain != undefined) {
-        domain = response.domain;
-    }
+  chrome.storage.local.get(["darkmodeDomain"],
+    function (response) {
+      let domain = false;
+      if(response.darkmodeDomain != undefined) {
+          domain = response.darkmodeDomain;
+      }
 
-    console.log(domain);
-  }
-)
+      console.log(domain);
+    }
+  );
   setupPageAction();
 
 
