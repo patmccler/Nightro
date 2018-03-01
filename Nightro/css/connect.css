@@ -2,6 +2,10 @@
 
 /*--------------- Bookmarks ---------------*/
 
+bookmarks-bar, .main, .roster {
+    background: #404040 !important;
+}
+
 .bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message {
   background: rgb(41, 41, 41);
 }
@@ -95,15 +99,22 @@ div article.message.me div.contents div.message-meta span.message-sender {
     position: relative;
 }
 
-message-input-container {
-    background: #f9f9f9;
-    border-top: 1px solid #d3d3d3;
+.message-input-container {
+    background: #292929;;
+    border-top: 2px solid #002340;
     position: relative;
     padding: 7px 0;
     white-space: pre-wrap;
     width: 100%;
     word-wrap: break-word;
 }
+
+.message-input-container .DraftEditor-editorContainer {
+    background-color: #404040 !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
 /*--------------- Messages --------------- */
 div article.message {
   background-image: none !important;
