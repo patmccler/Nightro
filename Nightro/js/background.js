@@ -15,7 +15,9 @@ chrome.storage.local.get(["darkmodeDomain"],
 chrome.pageAction.onClicked.addListener((tab) => {
   console.log("Saving this URL as domain to use from tab: " + tab.url);
   try {
-    let domain = /https?:\/\/(?:www.)?\S{1,30}.com\/|file:\/\/\/\S*.html/i.exec(tab.url)[0];
+    let parser = document.createElement('a');
+    parser.href = tab.url;
+    let domain = parser.hostname;
     darkmodeDomain = domain;
     chrome.storage.local.set({
       darkmodeDomain: domain
