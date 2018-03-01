@@ -1,0 +1,7 @@
+/* Homes Search */
+
+div#homes_FilterForm.filterForm {
+    background-image: none;
+    background-color: #383838;
+    border-radius: 4px;
+}
