@@ -146,6 +146,7 @@ div article.message, main.main section.messages {
   background-color: #404040 !important;
   margin: 0 !important;
 }
+
 div.ReactModal__Overlay.ReactModal__Overlay--after-open.modal-overlay {
   background-image: none !important;
   background-color: #404040 !important;
