@@ -4,6 +4,8 @@
   background-color: rgb(48, 48, 48) !important;
 }
 
+
+
 /* --------------- User Profile ---------------*/
 
 div.tabBodyWrapper {
@@ -23,7 +25,4 @@ span.textHelp {
 
 dd {
   color: white !important;
-}
-.table td.sort {
-  background: transparent !important;
 }
