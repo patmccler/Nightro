@@ -20,9 +20,12 @@ bookmarks-bar, .main, .roster {
 div.message-body {
     color: #ACE !important;
 }
+
+/*--------------- Self Messages --------------- */
 article.message.me div.contents div.message-body-reactions-container div.message-body{
 color: #ACE !important;
 text-align: right;
+padding-left: 35%;
 padding-right: 50px;
 }
 
@@ -39,6 +42,11 @@ div article.message.me div.contents div.message-meta span.message-sender {
   vertical-align: top;
   float: right;
   margin-right: 4px;
+}
+
+/* --------------- Other Messages --------------- */
+article.message div.contents div.message-body-reactions-container div.message-body {
+  padding-right: 35%;
 }
 
 /*--------------- Branding & Top Bars --------------- */
@@ -126,6 +134,7 @@ div article.message {
 div.message-body {
     color: #ACE !important;
 }
+<<<<<<< HEAD
 
 /* Mentions */
 .user-mention.me {
@@ -139,4 +148,14 @@ div.message-body {
     border: 1px solid #a9a9a9;
     padding: 0 5px;
     white-space: nowrap;
+=======
+/* --------------- Chat Box UI --------------- */
+
+div.message-input-container{
+  background-color: #292929 !important;
+}
+div.DraftEditor-editorContainer * {
+  background-color: #6B6B6B !important;
+  color: #ACE !important;
+>>>>>>> 9a478edfd6717ec456a2e52430b412220c5703c9
 }
