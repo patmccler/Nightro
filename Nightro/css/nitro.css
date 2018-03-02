@@ -392,8 +392,8 @@ textarea, td {
 }
 
  ::-webkit-selection {
-  color: #0FF !important;
-  background-color: #333 !important;
+  color: #282828 !important;
+  background-color: #fefefe !important;
 }
 
 abbr, progress, time, label, .date {
