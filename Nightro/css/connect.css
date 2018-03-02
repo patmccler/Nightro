@@ -102,10 +102,17 @@ article.message div.contents div.message-body-reactions-container div.message-bo
     margin: 0 auto;
     position: relative;
 }
-
+span.user-mention {
+  background-color: rgb(41, 41, 41);
+}
 
 /*--------------- Messages --------------- */
-div article.message {
+div article.message, main.main section.messages {
+  background-image: none !important;
+  background-color: #404040 !important;
+  margin: 0 !important;
+}
+div.ReactModal__Overlay.ReactModal__Overlay--after-open.modal-overlay {
   background-image: none !important;
   background-color: #404040 !important;
   margin: 0 !important;
