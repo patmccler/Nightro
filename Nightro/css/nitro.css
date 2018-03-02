@@ -87,6 +87,11 @@ li.bg-success {
   background-color: #265234
 }
 
+/* --------------- HIGHLIGHTER ---------------*/
+span.highlighter {
+  background-color: black !important;
+
+}
 /* --------------- Search Dropdown --------------- */
 
 .tt-input {
