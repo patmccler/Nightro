@@ -20,7 +20,7 @@ div.message-body {
 article.message.me div.contents div.message-body-reactions-container div.message-body{
 color: #ACE !important;
 text-align: right;
-padding-left: 150px;
+padding-left: 35%;
 padding-right: 50px;
 }
 
@@ -41,7 +41,7 @@ div article.message.me div.contents div.message-meta span.message-sender {
 
 /* --------------- Other Messages --------------- */
 article.message div.contents div.message-body-reactions-container div.message-body {
-  padding-right: 150px;
+  padding-right: 35%;
 }
 
 /*--------------- Branding & Top Bars --------------- */
@@ -113,4 +113,13 @@ div article.message {
 
 div.message-body {
     color: #ACE !important;
+}
+/* --------------- Chat Box UI --------------- */
+
+div.message-input-container{
+  background-color: #292929 !important;
+}
+div.DraftEditor-editorContainer * {
+  background-color: #6B6B6B !important;
+  color: #ACE !important;
 }
