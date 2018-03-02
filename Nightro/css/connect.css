@@ -20,6 +20,7 @@ div.message-body {
 article.message.me div.contents div.message-body-reactions-container div.message-body{
 color: #ACE !important;
 text-align: right;
+padding-left: 150px;
 padding-right: 50px;
 }
 
@@ -40,7 +41,7 @@ div article.message.me div.contents div.message-meta span.message-sender {
 
 /* --------------- Other Messages --------------- */
 article.message div.contents div.message-body-reactions-container div.message-body {
-  max-width: 75%
+  padding-right: 150px;
 }
 
 /*--------------- Branding & Top Bars --------------- */
