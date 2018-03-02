@@ -3,20 +3,23 @@
 /* color pallete hex codes:
    Header bg: 204F6B
    body bg: 00111F
-
-
  */
 
+ /*--------------- Image Opacity Filter ---------------*/
+img {
+  opacity: .8
+}
+/*--------------- Page backgrounds handled in main.js ---------------*/
 
-/* Page backgrounds handled in main.js */
 body {
   background: rgb(41, 41, 41) !important;
 }
+
 /* Page backgrounds handled in main.js
   bg color: 292929 41,41,41
  */
 
-/*Nitro Header bar */
+/*--------------- Nitro Header bar ---------------*/
 
 div#header.main-header {
   background-image: none !important;
@@ -27,7 +30,7 @@ span.fa-search, span.fa-phone, .fa-microphone, .fa-bars {
   color: white !important;
 }
 
-/* Breadcrumbs */
+/*--------------- Breadcrumbs--------------- */
 
 div#main-crumbs.navbar {
   background-image: none !important;
@@ -39,25 +42,41 @@ div#main-crumbs.li {
   color: #749EB7 !important;
 }
 
-/*Hovering over breadcrumbs */
+/*---------------Hovering over breadcrumbs--------------- */
 
 a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
   color: #B7B7B7 !important;
   background-color: #00447C !important;
 }
 
-/* -- SIDE MENU -- */
+/* --------------- SIDE MENU --------------- */
 
 ul.full-menu * {
   background-image: none !important;
   background-color: #141A1E !important;
 }
 
-/* Dropdown menus */
+/* --------------- Dropdown Menus ---------------*/
 
 div.dropdown-menu {
   background-image: none !important;
   background-color: #141A1E !important;
+}
+
+/* Spot Nitro Drop */
+
+.spotnitro .tt-dropdown-menu {
+  background-color: #6f6f6f;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  padding: 8px 8px;
+  width: 422px;
+}
+
+.spotnitro .tt-dropdown-menu div * :hover {
+  background-color: #383838 !important;
+
 }
 
 li.bg-danger {
@@ -68,7 +87,7 @@ li.bg-success {
   background-color: #265234
 }
 
-/* Search Dropdown */
+/* --------------- Search Dropdown --------------- */
 
 .tt-input {
   color: #b7b7b7 !important;
@@ -78,7 +97,14 @@ li.bg-success {
   background-color: #455A6B !important;
 }
 
-/* TEXT AREAS */
+/*--------------- Spot Nitro ---------------*/
+
+span.tt-dropdown-menu {
+  background-image: none !important;
+  background-color: #141A1E !important;
+}
+
+/*--------------- TEXT AREAS ---------------*/
 
 textarea {
   background-color: #6B6B6B !important;
@@ -88,7 +114,7 @@ input {
   background-color: #6B6B6B !important;
 }
 
-/* Pill for Filter Display */
+/*--------------- Pill for Filter Display ---------------*/
 
 li.pill.pill-default {
   background-image: none !important;
@@ -102,7 +128,7 @@ li.pill.pill-default {
   background-color: #292929 !important;
 }
 
-/* -----SEARCH/FILTERS----- */
+/* ---------------SEARCH/FILTERS---------------*/
 
 /* Pill for Filter Display */
 
@@ -116,14 +142,22 @@ li.pill.pill-default {
   color: #292929 !important;
 }
 
-/* Filter & Sorting Buttons */
+.nitro-search-form .predicate-input .input-group-addon {
+
+    width: auto;
+    padding: 0;
+    background-color: #6B6B6B;
+
+}
+
+/*--------------- Filter & Sorting Buttons ---------------*/
 
 .filter-display>div:nth-child(4)>a:nth-child(1) {
   background-color: #455A6B !important;
   color: #749EB7 !important;
 }
 
-/* Change Filter Button */
+/*--------------- Change Filter Button ---------------*/
 
 a.btn.btn-default {
   background-image: none !important;
@@ -131,7 +165,7 @@ a.btn.btn-default {
   color: #749EB7 !important;
 }
 
-/* Sort Button */
+/*--------------- Sort Button ---------------*/
 
 button.btn.btn-default {
   background-image: none !important;
@@ -139,15 +173,16 @@ button.btn.btn-default {
   color: #749EB7 !important;
 }
 
-/* Filter Window */
+/*--------------- Filter Window ---------------*/
 
 div.filter-form {
   background-image: none !important;
   background-color: #455A6B !important;
   color: #749EB7 !important;
+  border-color:
 }
 
-/* DROPDOWNS */
+/*--------------- DROPDOWNS ---------------*/
 
 .form-control.collection_select.optional, select.form-control, ul.select2-choices, select#q_reported_by_territory_id_eq {
   background-image: none !important;
@@ -155,7 +190,7 @@ div.filter-form {
   color: white
 }
 
-/*Sort Dropdown*/
+/*---------------Sort Dropdown---------------*/
 
 ul.dropdown-menu {
   background-image: none !important;
@@ -163,17 +198,41 @@ ul.dropdown-menu {
   color: #749EB7 !important;
 }
 
-/* Box around count and filter display */
+/*--------------- Box around count and filter display ---------------*/
 
 .filter-display-description {
   background-color: green
 }
 
-/* Submit Buttons */
+/*--------------- Submit Buttons ---------------*/
 
 input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
   color: #ACE !important;
   background-color: #B7B7B7 !important;
+}
+
+/* Support Tags */
+.badge-info, .pill-info{
+  background-color: #749EB7 !important;
+  color: #292929 !important;
+}
+/* Table Headers */
+
+.table th {
+  color: white !important;
+}
+
+/* Table Borders */
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857;
+  vertical-align: top;
+  border-top: 1px solid #455A6B;
+}
+
+.table > thead > tr > th {
+  border-bottom: 2px solid #00447C;
 }
 
 /* Page Title */
@@ -182,9 +241,9 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
   color: white;
 }
 
-/* Page Numbers */
+/*--------------- Page Numbers ---------------*/
 
-ul.pagination * {
+.pagination * {
   background-image: none !important;
   background-color: #383838 !important;
 }
@@ -198,18 +257,17 @@ ul.pagination * {
   background-color: #00447C !important;
 }
 
-div#tickets_table {
+/* div#tickets_table {
   background-image: none !important;
   background-color: red !important;
-}
+} */
 
-/* Body of Lists like Tickets */
+/*--------------- Body of Lists like Tickets ---------------*/
 
 thead *, .table th {
   background-image: none !important;
   background-color: #455A6B !important;
   color: white;
-
 }
 
 tr {
@@ -223,7 +281,7 @@ tr:nth-child(even) {
   text: #3B3B3B;
 }
 
-/* Status Text Color */
+/*--------------- Status Text Color ---------------*/
 
 span.status.new {
   color: green;
@@ -234,7 +292,7 @@ span.status.wip {
 }
 
 span.status.closed-resolved {
-  color: red;
+  color: #f9423a;
 }
 
 /* Panel Containers */
@@ -254,9 +312,7 @@ div.panel-container {
   color: red
 }
 
-/* DON'T ADJUST YET! */
-
-/* GLOBAL CODE */
+/*------------------------------ GLOBAL CODE ------------------------------*/
 
 /* html, html * {
   color: #eeeeee !important;
@@ -349,14 +405,6 @@ abbr, progress, time, label, .date {
 mark, code, pre, blockquote, [class*="quote"], td[style*="inset"][class="alt2"] {
   background-color: #00090F !important;
 }
-
-/* Removed because dropdown icons were having black background unnecessarily.
-nav, menu, html body [class*="open"], html body [id*="Dropdown"], html body [id*="dropdown"], html body [class*="Dropdown"],
-html body [class*="dropdown"], html body [id*="menu"]:not(SELECT), html body [class*="menu"]:NOT(SELECT), html body [class*="tooltip"],
-html body [class*="popup"], html body [id*="popup"], html body [class*="note"], html body [class*="detail"], html body [class*="description"] {
-  background-color: #232323 !important;
-}
- */
 
 [onclick]:hover, [ondblclick]:hover, [onmousedown]:hover {
   color: #FEFF97 !important

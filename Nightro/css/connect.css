@@ -1,0 +1,108 @@
+/* rgb(41, 41, 41) */
+
+/*--------------- Bookmarks ---------------*/
+
+.bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message {
+  background: rgb(41, 41, 41);
+}
+
+/*525252*/
+/* article.message{
+  background-image: none !important;
+  background-color: #303030 !important;
+} */
+
+div.message-body {
+    color: #ACE !important;
+}
+article.message.me div.contents div.message-body-reactions-container div.message-body{
+color: #ACE !important;
+text-align: right;
+padding-right: 50px;
+}
+
+article.message.me div.contents div.message-meta div.message-avatar {
+  display: inline-block;
+  float: right;
+  height: 34px;
+  margin-right: 4px;
+  width: 34px;
+}
+
+div article.message.me div.contents div.message-meta span.message-sender {
+  font-weight: 700;
+  vertical-align: top;
+  float: right;
+  margin-right: 4px;
+}
+
+/*--------------- Branding & Top Bars --------------- */
+.branding-bar {
+  background-color: #00447C;
+  border-bottom: 2px solid #002340;
+  color: #fff;
+  display: block;
+  height: 44px;
+  position: relative;
+  text-align: center;
+}
+.section-header {
+  background: #00447C;
+  border-bottom: 2px solid #002340;
+  color: #fff;
+  display: flex;
+  flex: 0 0 45px;
+  font-size: 18px;
+  font-weight: 400;
+  justify-content: center;
+  overflow: hidden;
+}
+.bookmarks-subheader {
+    background: #00447C;
+    border-bottom: 2px solid #002340;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 36px;
+    padding-left: 12px;
+}
+
+.bookmarks-bar {
+  border-bottom: 2px solid #002340;
+  border-right: 2px solid #002340;
+}
+
+.roster {
+  background-color: inherit;
+  border-left: 2px solid #002340;
+}
+
+/*--------------- Messages Fields & Top Bars  --------------- */
+
+.messages .message-separator {
+    background-color: #292929;
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.messages .message-separator-label {
+    color: #ACE;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 35px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/*--------------- Messages --------------- */
+div article.message {
+  background-image: none !important;
+  background-color: #404040 !important;
+  margin: 0 !important;
+}
+
+div.message-body {
+    color: #ACE !important;
+}
