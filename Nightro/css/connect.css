@@ -21,6 +21,14 @@ div.message-body {
     color: #ACE !important;
 }
 
+.bookmark-label, .bookmark-label-name {
+  color: #fff !important;
+}
+
+.bookmark +.bookmark {
+  border-top: 1px solid #455a6b;
+}
+
 /*--------------- Self Messages --------------- */
 article.message.me div.contents div.message-body-reactions-container div.message-body{
 color: #ACE !important;
@@ -134,9 +142,24 @@ div article.message {
 div.message-body {
     color: #ACE !important;
 }
-<<<<<<< HEAD
 
-/* Mentions */
+/*--------------- Badge Icons --------------- */
+.activity-indicator .activity-badge-me {
+  background: #daaa00;
+  color: #505050;
+  font-weight: bold;
+}
+
+/* --------------- Chat Box UI --------------- */
+
+div.message-input-container{
+  background-color: #292929 !important;
+}
+div.DraftEditor-editorContainer * {
+  background-color: #6B6B6B !important;
+  color: #ACE !important;
+}
+
 .user-mention.me {
   background: #00447c;
   border-color: #ace;
@@ -148,14 +171,60 @@ div.message-body {
     border: 1px solid #a9a9a9;
     padding: 0 5px;
     white-space: nowrap;
-=======
-/* --------------- Chat Box UI --------------- */
+  }
 
-div.message-input-container{
-  background-color: #292929 !important;
+  .message-input-container .user-picker {
+      position: absolute;
+      bottom: 46px;
+      width: 100%;
+      border: 2px solid #455a6b;
+      border-radius: 4px;
+      z-index: 100;
+  }
+  
+  /* --------------- User Card --------------- */
+
+  .vcard, .user-photo {
+    background-color: #404040 !important;
+  }
+
+  .vcard {
+    color: #fff !important;
+  }
+
+/* --------------- People Who Liked Modal **BROKEN, DOES NOT DISAPPEAR** --------------- */
+  /* .ReactModalPortal, info-content {
+    background: #505050;
+    border-radius: 8px;
+    left: 30%;
+    max-height: 80vh;
+    overflow: hidden;
+        overflow-y: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+.info-content {
+    background: #505050;
+    border-radius: 8px;
+    left: 30%;
+    max-height: 80vh;
+    overflow: hidden;
+        overflow-y: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    transform: translateY(-50%);
 }
-div.DraftEditor-editorContainer * {
-  background-color: #6B6B6B !important;
-  color: #ACE !important;
->>>>>>> 9a478edfd6717ec456a2e52430b412220c5703c9
+
+.filterable-list, .form-area .memberships-container, .simple-list {
+    background: #455a6b;
+    border: none !important;
+    flex: 1;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
