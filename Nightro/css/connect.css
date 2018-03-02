@@ -117,7 +117,7 @@ article.message div.contents div.message-body-reactions-container div.message-bo
     margin: 0 auto;
     position: relative;
 }
-<<<<<<< HEAD
+
 span.user-mention {
   background-color: rgb(41, 41, 41);
 }
@@ -138,7 +138,7 @@ span.user-mention {
     border: none !important;
     border-radius: 0 !important;
   }
->>>>>>> nitro-css-test-nick
+
 
 /*--------------- Messages --------------- */
 div article.message, main.main section.messages {
