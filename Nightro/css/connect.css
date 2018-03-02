@@ -39,6 +39,8 @@ div article.message.me div.contents div.message-meta span.message-sender {
   margin-right: 4px;
 }
 
+div article.message.me div.contents div.message-meta span.message-time
+
 /* --------------- Other Messages --------------- */
 article.message div.contents div.message-body-reactions-container div.message-body {
   padding-right: 35%;
