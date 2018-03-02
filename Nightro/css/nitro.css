@@ -386,22 +386,15 @@ textarea, td {
   /* text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000 !important; */
 }
 
-/* Removed selection color
- ::-moz-selection {
-  color: #0FF !important;
-  background-color: #333 !important;
-}
-
- ::selection {
-  color: #0FF !important;
-  background-color: #333 !important;
+::-moz-selection {
+  background-color: #282828 !important;
+  color: #fefefe !important;
 }
 
  ::-webkit-selection {
   color: #0FF !important;
   background-color: #333 !important;
 }
-*/
 
 abbr, progress, time, label, .date {
   color: #CDEFC2 !important;
