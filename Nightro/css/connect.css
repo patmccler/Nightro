@@ -2,6 +2,11 @@
 
 /*--------------- Bookmarks ---------------*/
 
+
+bookmarks-bar, .main, .roster {
+    background: #404040 !important;
+}
+
 .bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message {
   background: rgb(41, 41, 41);
 }
@@ -14,6 +19,14 @@
 
 div.message-body {
     color: #ACE !important;
+}
+
+.bookmark-label, .bookmark-label-name {
+  color: #fff !important;
+}
+
+.bookmark +.bookmark {
+  border-top: 1px solid #455a6b;
 }
 
 /*--------------- Self Messages --------------- */
@@ -104,9 +117,28 @@ article.message div.contents div.message-body-reactions-container div.message-bo
     margin: 0 auto;
     position: relative;
 }
+<<<<<<< HEAD
 span.user-mention {
   background-color: rgb(41, 41, 41);
 }
+=======
+
+.message-input-container {
+    background: #292929;;
+    border-top: 2px solid #002340;
+    position: relative;
+    padding: 7px 0;
+    white-space: pre-wrap;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.message-input-container .DraftEditor-editorContainer {
+    background-color: #404040 !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+>>>>>>> nitro-css-test-nick
 
 /*--------------- Messages --------------- */
 div article.message, main.main section.messages {
@@ -123,6 +155,14 @@ div.ReactModal__Overlay.ReactModal__Overlay--after-open.modal-overlay {
 div.message-body {
     color: #ACE !important;
 }
+
+/*--------------- Badge Icons --------------- */
+.activity-indicator .activity-badge-me {
+  background: #daaa00;
+  color: #505050;
+  font-weight: bold;
+}
+
 /* --------------- Chat Box UI --------------- */
 
 div.message-input-container{
@@ -131,4 +171,73 @@ div.message-input-container{
 div.DraftEditor-editorContainer * {
   background-color: #6B6B6B !important;
   color: #ACE !important;
+}
+
+.user-mention.me {
+  background: #00447c;
+  border-color: #ace;
+}
+
+.user-mention {
+    background: #292929;
+    border-radius: 2px;
+    border: 1px solid #a9a9a9;
+    padding: 0 5px;
+    white-space: nowrap;
+  }
+
+  .message-input-container .user-picker {
+      position: absolute;
+      bottom: 46px;
+      width: 100%;
+      border: 2px solid #455a6b;
+      border-radius: 4px;
+      z-index: 100;
+  }
+  
+  /* --------------- User Card --------------- */
+
+  .vcard, .user-photo {
+    background-color: #404040 !important;
+  }
+
+  .vcard {
+    color: #fff !important;
+  }
+
+/* --------------- People Who Liked Modal **BROKEN, DOES NOT DISAPPEAR** --------------- */
+  /* .ReactModalPortal, info-content {
+    background: #505050;
+    border-radius: 8px;
+    left: 30%;
+    max-height: 80vh;
+    overflow: hidden;
+        overflow-y: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+.info-content {
+    background: #505050;
+    border-radius: 8px;
+    left: 30%;
+    max-height: 80vh;
+    overflow: hidden;
+        overflow-y: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.filterable-list, .form-area .memberships-container, .simple-list {
+    background: #455a6b;
+    border: none !important;
+    flex: 1;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
