@@ -2,6 +2,7 @@
 
 /*--------------- Bookmarks ---------------*/
 
+
 bookmarks-bar, .main, .roster {
     background: #404040 !important;
 }
@@ -124,4 +125,18 @@ div article.message {
 
 div.message-body {
     color: #ACE !important;
+}
+
+/* Mentions */
+.user-mention.me {
+  background: #00447c;
+  border-color: #ace;
+}
+
+.user-mention {
+    background: #292929;
+    border-radius: 2px;
+    border: 1px solid #a9a9a9;
+    padding: 0 5px;
+    white-space: nowrap;
 }
