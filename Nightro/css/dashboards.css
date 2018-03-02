@@ -1,0 +1,18 @@
+/*--------------- Jumbo headers ---------------*/
+
+div.panel-heading {
+  background-color: #383838 !important;
+  border-color: #455A6B !important;
+}
+
+/*--------------- Pills ---------------*/
+
+span.pill.pill-info {
+  background-color: #749EB7 !important;
+}
+
+/*--------------- "Callers Waiting" Text ---------------*/
+
+div.jumbo-stat-description {
+  color: white
+}

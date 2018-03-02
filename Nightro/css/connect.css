@@ -1,0 +1,134 @@
+/* rgb(41, 41, 41) */
+
+/*--------------- Bookmarks ---------------*/
+
+.bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message {
+  background: rgb(41, 41, 41);
+}
+
+/*525252*/
+/* article.message{
+  background-image: none !important;
+  background-color: #303030 !important;
+} */
+
+div.message-body {
+    color: #ACE !important;
+}
+
+/*--------------- Self Messages --------------- */
+article.message.me div.contents div.message-body-reactions-container div.message-body{
+color: #ACE !important;
+text-align: right;
+padding-left: 35%;
+padding-right: 50px;
+}
+
+article.message.me div.contents div.message-meta div.message-avatar {
+  display: inline-block;
+  float: right;
+  height: 34px;
+  margin-right: 4px;
+  width: 34px;
+}
+
+div article.message.me div.contents div.message-meta span.message-sender {
+  font-weight: 700;
+  vertical-align: top;
+  float: right;
+  margin-right: 4px;
+}
+
+div article.message.me div.contents div.message-meta span.message-time
+
+/* --------------- Other Messages --------------- */
+article.message div.contents div.message-body-reactions-container div.message-body {
+  padding-right: 35%;
+}
+
+/*--------------- Branding & Top Bars --------------- */
+.branding-bar {
+  background-color: #00447C;
+  border-bottom: 2px solid #002340;
+  color: #fff;
+  display: block;
+  height: 44px;
+  position: relative;
+  text-align: center;
+}
+.section-header {
+  background: #00447C;
+  border-bottom: 2px solid #002340;
+  color: #fff;
+  display: flex;
+  flex: 0 0 45px;
+  font-size: 18px;
+  font-weight: 400;
+  justify-content: center;
+  overflow: hidden;
+}
+.bookmarks-subheader {
+    background: #00447C;
+    border-bottom: 2px solid #002340;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 36px;
+    padding-left: 12px;
+}
+
+.bookmarks-bar {
+  border-bottom: 2px solid #002340;
+  border-right: 2px solid #002340;
+}
+
+.roster {
+  background-color: inherit;
+  border-left: 2px solid #002340;
+}
+
+/*--------------- Messages Fields & Top Bars  --------------- */
+
+.messages .message-separator {
+    background-color: #292929;
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.messages .message-separator-label {
+    color: #ACE;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 35px;
+    margin: 0 auto;
+    position: relative;
+}
+span.user-mention {
+  background-color: rgb(41, 41, 41);
+}
+
+/*--------------- Messages --------------- */
+div article.message, main.main section.messages {
+  background-image: none !important;
+  background-color: #404040 !important;
+  margin: 0 !important;
+}
+div.ReactModal__Overlay.ReactModal__Overlay--after-open.modal-overlay {
+  background-image: none !important;
+  background-color: #404040 !important;
+  margin: 0 !important;
+}
+
+div.message-body {
+    color: #ACE !important;
+}
+/* --------------- Chat Box UI --------------- */
+
+div.message-input-container{
+  background-color: #292929 !important;
+}
+div.DraftEditor-editorContainer * {
+  background-color: #6B6B6B !important;
+  color: #ACE !important;
+}

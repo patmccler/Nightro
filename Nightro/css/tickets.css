@@ -1,0 +1,77 @@
+
+/*--------------- Panel Heading ---------------*/
+div.panel-heading {
+    background-color: #6B6B6B !important;
+}
+/*--------------- Body of Ticket Box ---------------*/
+div.panel-body, div.ticket-comment {
+  background-image: none !important;
+  background-color: #383838 !important;
+  text: #3B3B3B;
+}
+
+div.list-view {
+  background-image: none !important;
+  background-color: #303030 !important;
+}
+
+h3.panel-tile, i {
+  color: white;
+}
+
+p, h1, h4, span.help-block {
+  color: #ACE !important;
+}
+
+div.panel-default {
+    border-color: #455a6B;
+}
+
+div.panel-body:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+  background-color: transparent !important;
+}
+
+div.panel-heading {
+  border-color: #455a6B !important;
+}
+/*--------------- Tag Pills ---------------*/
+
+span.pill.pill-warning {
+  background-color: transparent;
+  border-color: #f9423a;
+  color: #f9423a;
+
+}\
+/*--------------- Ticket Comments ---------------*/
+div.ticket-comment {
+  background-image: none !important;
+  background-color: #303030 !important;
+  border-radius: 4px;
+}
+
+div.ticket-comment:nth-child(even) {
+  background-image: none !important;
+  background-color: #383838 !important;
+  border-radius: 4px;
+}
+
+span {
+  color: white;
+}
+/*--------------- Input Boxes ---------------*/
+div.tags.form-control, .filepicker {
+  background-color: #6B6B6B
+}
+pre code {
+  color: white
+}
+
+/*--------------- Private Comments --------------- */
+.new-comment.private {
+  background-color: rgb(249, 66, 58, .5) !important;
+}
+
+ /*--------------- Attachments --------------- */
+ a.thumbnail *{
+     opacity: .8 !important;
+ }

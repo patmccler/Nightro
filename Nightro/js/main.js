@@ -1,3 +1,4 @@
+console.log("main loaded");
 var is_head_added = false,
   is_black_colred = false,
   is_custom_css = false,
@@ -14,7 +15,7 @@ var document_observer = new MutationObserver(function(mutations) {
       dnm_set_brg(data.document_brightness);
     });
     dark_mode_main.remove_link_element();
-    document.body.style.setProperty('background', 'rgb(23, 23, 23)', 'important');
+    document.body.style.setProperty('background', 'rgb(41, 41, 41)', 'important');
     document_observer.disconnect();
   }
 });
@@ -41,7 +42,7 @@ var dark_mode_main = {
    * Initialize Color Object Varialbe
    */
   curr_obj: {
-    'rgb(255, 255, 255)': 'rgb(23, 23, 23)',
+    'rgb(255, 255, 255)': 'rgb(41, 41, 41)',
     'rgb(245, 245, 245)': 'rgb(22, 22, 22)'
   },
   current_dfc: document.defaultView,
@@ -83,7 +84,9 @@ var dark_mode_main = {
    * @type Object list
    */
   custom_sites: {
-    "nitro": "nitro.com"
+    "nitro": "nitro.com",
+    "tickets": "nitro.com/support_tickets",
+    "dashboards": "nitro.com/dashboards"
   },
   /**
    * Add Link Element to head
@@ -109,7 +112,9 @@ var dark_mode_main = {
    * @version 1.0
    */
   cs: {
-    "nitro": "nitro"
+    "nitro": "nitro",
+    "tickets": "tickets",
+    "dashboards": "dashboards"
   },
   /**
    * Runs custom css check
