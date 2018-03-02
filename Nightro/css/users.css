@@ -24,3 +24,6 @@ span.textHelp {
 dd {
   color: white !important;
 }
+.table td.sort {
+  background: transparent !important;
+}
