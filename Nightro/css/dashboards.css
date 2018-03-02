@@ -1,6 +1,9 @@
 /*--------------- Jumbo headers ---------------*/
 
-div.panel-heading {}
+div.panel-heading {
+  background-color: #383838 !important;
+  border-color: #455A6B !important;
+}
 
 /*--------------- Pills ---------------*/
 
