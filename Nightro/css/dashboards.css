@@ -2,6 +2,7 @@
 
 div.panel-heading {
   background-color: #383838 !important;
+  border: 2px;
   border-color: #455A6B !important;
 }
 

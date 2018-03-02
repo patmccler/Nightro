@@ -2,7 +2,7 @@
 
 /*--------------- Bookmarks ---------------*/
 
-.bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message {
+.bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message, main.main, div.roster {
   background: rgb(41, 41, 41);
 }
 
@@ -39,7 +39,9 @@ div article.message.me div.contents div.message-meta span.message-sender {
   margin-right: 4px;
 }
 
-div article.message.me div.contents div.message-meta span.message-time
+div article.message.me div.contents div.message-meta span.message-time {
+  text-align: right !important;
+}
 
 /* --------------- Other Messages --------------- */
 article.message div.contents div.message-body-reactions-container div.message-body {
@@ -131,4 +133,15 @@ div.message-input-container{
 div.DraftEditor-editorContainer * {
   background-color: #6B6B6B !important;
   color: #ACE !important;
+}
+
+/*--------------- LOADING BAR --------------- */
+main.main div.message-loader.bottom {
+  background: black;
+}
+/*--------------- Estimate Window ---------------*/
+div.lead-info div.est-appt-block div.head{
+  background-color: #383838 !important;
+  border: 2px;
+  border-color: #455A6B !important;
 }
