@@ -1,0 +1,6 @@
+/* --------------- Adjustments Window/Success Bubble --------------- */
+
+div#nam-modal-content.modal-content, span.label.label-default {
+  background: none;
+  background-color: #383838 !important;
+}

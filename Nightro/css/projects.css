@@ -1,0 +1,14 @@
+/*--------------- Models ---------------*/
+div.modal-content {
+  background: none;
+  background-color: #383838 !important;
+}
+/*--------------- Inspection Time and Product Details --------------- */
+div.product-desc, div.alert.alert-warning.text-center, div.modal-header.bg-info, div.options {
+ background: none;
+ background-color: #6B6B6B !important;
+}
+
+div.navbar.navbar-default.project-tab-block ul.nav.nav-pills li.active a {
+  color: white !important;
+}

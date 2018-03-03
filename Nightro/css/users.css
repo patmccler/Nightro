@@ -4,6 +4,11 @@
   background-color: rgb(48, 48, 48) !important;
 }
 
+.table td.sort {
+  background-color: inherit;
+  }
+
+
 /* --------------- User Profile ---------------*/
 
 div.tabBodyWrapper {
