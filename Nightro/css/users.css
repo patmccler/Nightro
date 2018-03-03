@@ -29,3 +29,10 @@ span.textHelp {
 dd {
   color: white !important;
 }
+
+/*--------------- The stupid fucking tabs that are annoyingly white... ---------------*/
+/* .old-style ul.tabs li.active {
+    background: transparent url(/Nightro/icons/pinksquare.png) no-repeat 100%  !important;
+    background-color: pink !important;
+    border-bottom: solid 1px #fff;
+} */
