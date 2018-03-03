@@ -36,3 +36,11 @@ dd {
     background-color: pink !important;
     border-bottom: solid 1px #fff;
 } */
+
+/*--------------- Working code for those stupid fucking tabs ---------------*/
+
+div.infoSheet ul.tabs li a {
+  background-image: none !important;
+  background-color: #002340 !important;
+  color: white;
+}

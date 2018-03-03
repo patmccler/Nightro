@@ -20,6 +20,14 @@ table.viewTable .csz, h3 {
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
+span.given-name, div.street-address, div#pii-details.row div.col-md-12.text-right div {
+  color: white !important;
+}
+
+div.col-xs-3.col-sm-2.col-md-2 small {
+  color: #ACE;
+}
+
 /*--------------- Current Owners Text ---------------*/
 
 h2 {
