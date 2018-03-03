@@ -31,12 +31,6 @@
    "options_ui": {
       "page": "templates/options.html"
      },
-   "page_action": {
-     "default_icon": {
-       "16": "icons/icon48.png"
-       },
-       "default_title": "Click this on the page you want to make darkmode"
-   },
    "permissions": [ "tabs", "storage", "<all_urls>", "contextMenus" ],
    "short_name": "Nightro",
    "version": "1.0",
