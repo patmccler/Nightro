@@ -245,9 +245,6 @@ div.DraftEditor-editorContainer * {
     color: #fff !important;
   }
 
-  .user-presence-offline::before {=
-    color: #a13131;
-}
 /* --------------- People Who Liked Modal **BROKEN, DOES NOT DISAPPEAR** --------------- */
   /* .ReactModalPortal, info-content {
     background: #505050;

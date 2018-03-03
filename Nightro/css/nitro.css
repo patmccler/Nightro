@@ -42,6 +42,10 @@ div#main-crumbs.li {
   color: #749EB7 !important;
 }
 
+div#main-crumbs.navbar, ol, li, a:visited {
+  color: pink;
+}
+
 /*---------------Hovering over breadcrumbs--------------- */
 
 a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
@@ -220,6 +224,7 @@ input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="
 .badge-info, .pill-info{
   background-color: #749EB7 !important;
   color: #292929 !important;
+  font-weight: bold;
 }
 /* Table Headers */
 
@@ -372,9 +377,9 @@ b {
   color: #7AF !important;
 }
 
-a:visited, a:visited * {
-  color: #607069 !important
-}
+/* a:visited, a:visited * {
+  color: #607069 !important;
+} */
 
 a.highlight, a.highlight *, a.active, a.active *, .selected, .selected *, [href="#"] {
   color: #DDD !important;
