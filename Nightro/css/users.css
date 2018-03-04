@@ -42,5 +42,7 @@ dd {
 div.infoSheet ul.tabs li a {
   background-image: none !important;
   background-color: #002340 !important;
-  color: white;
+}
+div.contentContainer div.infoSheet ul.tabs li {
+  padding: 0 !important;
 }
