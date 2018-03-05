@@ -10,6 +10,7 @@ function setup() {
   tryWipe();
   setupPageAction();
 <<<<<<< HEAD
+<<<<<<< HEAD
   //TODO Send check request to BG, if need to load, load css
 =======
 }
@@ -26,6 +27,12 @@ function currentDomainNeedsDarkMode(darkModeDomain) {
 
 
   return darkModeDomain == currDomain;
+=======
+
+  chrome.runtime.getPackageDirectoryEntry(function(dirEntry) {
+    console.log(dirEntry);
+  });
+>>>>>>> fixed addon name in manifest.
 }
 
 =======

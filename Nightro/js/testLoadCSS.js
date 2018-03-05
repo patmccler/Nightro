@@ -2,6 +2,9 @@ head = document.documentElement || document.head || document.querySelector("head
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fixed addon name in manifest.
 /*
 chrome.tabs.insertCSS(integer tabId, object details, function callback)
 
@@ -12,11 +15,14 @@ details {
   runAt: "document_start"
 }
 *
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> pulling master before continuing
+=======
+>>>>>>> fixed addon name in manifest.
 
 
 
