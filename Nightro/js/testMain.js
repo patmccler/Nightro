@@ -4,18 +4,33 @@ function onError(e) {
   console.log(e);
 }
 
-document.addEventListener("DOMContentLoaded", setup);
+document.addEventListener("DOMContentLoaded", testSetup);
 
-function setup() {
-  tryWipe();
-  setupPageAction();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  //TODO Send check request to BG, if need to load, load css
-=======
+function testSetup() {
+  try {
+    setup();
+  } catch (e) {
+    onError(e);
+  }
 }
 
-<<<<<<< HEAD
+function setup() {
+  chrome.storage.local.get(["darkmodeDomain"], function(response) {
+    let domain = false;
+    if (response.darkmodeDomain != undefined) {
+      domain = response.darkmodeDomain;
+      if (domain) {
+        let needsDarkMode = currentDomainNeedsDarkMode(domain);
+        console.log(needsDarkMode);
+        if (needsDarkMode) {
+          turnOnDarkMode();
+        }
+      }
+    }
+  });
+  setupPageAction();
+}
+
 function turnOnDarkMode() {
   //TODO
 }
@@ -23,32 +38,19 @@ function turnOnDarkMode() {
 function currentDomainNeedsDarkMode(darkModeDomain) {
   let currDomain = window.location.hostname;
   console.log(currDomain);
->>>>>>> updated bg get url hostname. logic in place for dark mode on/off
-
 
   return darkModeDomain == currDomain;
-=======
-
-  chrome.runtime.getPackageDirectoryEntry(function(dirEntry) {
-    console.log(dirEntry);
-  });
->>>>>>> fixed addon name in manifest.
 }
 
-=======
-
-
->>>>>>> pulling master before continuing
 function wipeAll() {
-   console.log("testMain.js");
+  console.log("testMain.js");
   let body = document.getElementsByTagName("body")[0];
   body.style.removeProperty("background");
 
   let allElem = body.getElementsByTagName("*");
   let count = 0;
-  for(let i = 0; i< allElem.length; i++ ) {
-
-    if(allElem[i] instanceof HTMLElement) {
+  for (let i = 0; i < allElem.length; i++) {
+    if (allElem[i] instanceof HTMLElement) {
       allElem[i].style.removeProperty("background");
       allElem[i].style.background = "inherit";
       allElem[i].style.color = "inherit";
@@ -61,18 +63,15 @@ function wipeAll() {
 function tryWipe() {
   try {
     wipeAll();
-  }
-  catch (e)
-  {
+  } catch (e) {
     onError(e);
   }
 }
 
 function setupPageAction() {
-
-  chrome.runtime.sendMessage({greeting: "try darkmode page action"},
-    function (response) {
-      console.log(response.response);
-    }
-  )
+  chrome.runtime.sendMessage({ greeting: "try darkmode page action" }, function(
+    response
+  ) {
+    console.log(response.response);
+  });
 }
