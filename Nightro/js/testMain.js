@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", setup);
 function setup() {
   tryWipe();
   setupPageAction();
+
+  chrome.runtime.getPackageDirectoryEntry(function(dirEntry) {
+    console.log(dirEntry);
+  });
 }
 
 
