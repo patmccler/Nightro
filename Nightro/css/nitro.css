@@ -42,6 +42,10 @@ div#main-crumbs.li {
   color: #749EB7 !important;
 }
 
+div#main-crumbs.navbar, ol, li, a:visited {
+  color: pink;
+}
+
 /*---------------Hovering over breadcrumbs--------------- */
 
 a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
@@ -87,6 +91,17 @@ li.bg-success {
   background-color: #265234
 }
 
+/* --------------- HIGHLIGHTER ---------------*/
+span.highlighter {
+  background-color: rgb(41, 41, 41) !important;
+
+}
+
+/* --------------- ANIMATIONS ---------------*/
+@keyframes flash-alert {
+    from {border-color: red;}
+    to {border-color: yellow;}
+}
 /* --------------- Search Dropdown --------------- */
 
 .tt-input {
@@ -95,6 +110,27 @@ li.bg-success {
 
 .tt-input, input {
   background-color: #455A6B !important;
+}
+
+/* --------------- Alert Messages --------------- */
+.alert-dismissable.alert-danger {
+  border-color: red;
+  background-color: transparent !important;
+
+  animation-name: flash-alert;
+  animation-duration: 2s;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+}
+
+
+.alert.alert-dismissable.alert-warning{
+  background-color: transparent !important;
+}
+
+button.close{
+  text-shadow: none !important;
+  box-shadow: none !important;
 }
 
 /*--------------- Spot Nitro ---------------*/
@@ -173,6 +209,11 @@ button.btn.btn-default {
   color: #749EB7 !important;
 }
 
+/*--------------- Sign In Button ---------------*/
+button.btn.btn-lg.btn-primary.btn-block.show-spinner {
+  border-color : #1d5ec6 !important;
+}
+
 /*--------------- Filter Window ---------------*/
 
 div.filter-form {
@@ -206,15 +247,16 @@ ul.dropdown-menu {
 
 /*--------------- Submit Buttons ---------------*/
 
-input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
+/* input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
   color: #ACE !important;
   background-color: #B7B7B7 !important;
-}
+} */
 
 /* Support Tags */
 .badge-info, .pill-info{
   background-color: #749EB7 !important;
   color: #292929 !important;
+  font-weight: bold;
 }
 /* Table Headers */
 
@@ -367,9 +409,13 @@ b {
   color: #7AF !important;
 }
 
-a:visited, a:visited * {
-  color: #607069 !important
+input {
+  border-color: rgb(41, 41, 41) !important;
 }
+
+/* a:visited, a:visited * {
+  color: #607069 !important;
+} */
 
 a.highlight, a.highlight *, a.active, a.active *, .selected, .selected *, [href="#"] {
   color: #DDD !important;
@@ -381,22 +427,15 @@ textarea, td {
   /* text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000 !important; */
 }
 
-/* Removed selection color
- ::-moz-selection {
-  color: #0FF !important;
-  background-color: #333 !important;
-}
-
- ::selection {
-  color: #0FF !important;
-  background-color: #333 !important;
+::-moz-selection {
+  background-color: #282828 !important;
+  color: #fefefe !important;
 }
 
  ::-webkit-selection {
-  color: #0FF !important;
-  background-color: #333 !important;
+  color: #282828 !important;
+  background-color: #fefefe !important;
 }
-*/
 
 abbr, progress, time, label, .date {
   color: #CDEFC2 !important;

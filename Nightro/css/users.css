@@ -4,6 +4,11 @@
   background-color: rgb(48, 48, 48) !important;
 }
 
+.table td.sort {
+  background-color: inherit;
+  }
+
+
 /* --------------- User Profile ---------------*/
 
 div.tabBodyWrapper {
@@ -23,4 +28,39 @@ span.textHelp {
 
 dd {
   color: white !important;
+}
+
+/*--------------- The stupid fucking tabs that are annoyingly white... ---------------*/
+/* .old-style ul.tabs li.active {
+    background: transparent url(/Nightro/icons/pinksquare.png) no-repeat 100%  !important;
+    background-color: pink !important;
+    border-bottom: solid 1px #fff;
+} */
+
+/*--------------- Tabs and Profile Box ---------------*/
+
+div.infoSheet ul.tabs li a {
+  background-image: none !important;
+  background-color: #002340 !important;
+}
+div.contentContainer div.infoSheet ul.tabs li {
+  padding: 0 !important;
+}
+
+div.tabBodyWrapper {
+    background-color: none !important;
+    padding: 10px 0 10px 10px;
+    border-top: none !important;
+}
+
+input[type="button"], input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select {
+    color: #ACE !important;
+    background-color: #6b6b6b !important;
+}
+
+
+/*--------------- Input fields ---------------*/
+
+div.plainForm dd input[type="text"], input[type="password"] {
+  border: none !important;
 }
