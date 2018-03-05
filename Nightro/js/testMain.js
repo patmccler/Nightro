@@ -3,52 +3,15 @@ function onError(e) {
   console.log(e);
 }
 
-document.addEventListener("DOMContentLoaded", testSetup);
-
-function testSetup() {
-  try {
-    setup();
-  }
-  catch(e) {
-    onError(e);
-  }
-}
-
+document.addEventListener("DOMContentLoaded", setup);
 
 function setup() {
-  chrome.storage.local.get(["darkmodeDomain"],
-    function (response) {
-      let domain = false;
-      if(response.darkmodeDomain != undefined) {
-          domain = response.darkmodeDomain;
-          if(domain) {
-            let needsDarkMode = currentDomainNeedsDarkMode(domain);
-            console.log(needsDarkMode);
-            if(needsDarkMode) {
-              turnOnDarkMode();
-            }
-          }
-      }
-
-    }
-  );
+  tryWipe();
   setupPageAction();
 }
 
-function turnOnDarkMode() {
-  //TODO
-}
-
-function currentDomainNeedsDarkMode(darkModeDomain) {
-  let currDomain = window.location.hostname;
-  console.log(currDomain);
 
 
-  return darkModeDomain == currDomain;
-}
-
-
-//not useful as we imagined, will save for black and white mode maybe?
 function wipeAll() {
    console.log("testMain.js");
   let body = document.getElementsByTagName("body")[0];
