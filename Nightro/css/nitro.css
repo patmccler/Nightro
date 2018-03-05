@@ -252,10 +252,10 @@ a.positive{
 
 /*--------------- Submit Buttons ---------------*/
 
-input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
+/* input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
   color: #ACE !important;
   background-color: #B7B7B7 !important;
-}
+} */
 
 /* Support Tags */
 .badge-info, .pill-info{

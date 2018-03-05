@@ -37,7 +37,7 @@ dd {
     border-bottom: solid 1px #fff;
 } */
 
-/*--------------- Working code for those stupid fucking tabs ---------------*/
+/*--------------- Tabs and Profile Box ---------------*/
 
 div.infoSheet ul.tabs li a {
   background-image: none !important;
@@ -45,4 +45,22 @@ div.infoSheet ul.tabs li a {
 }
 div.contentContainer div.infoSheet ul.tabs li {
   padding: 0 !important;
+}
+
+div.tabBodyWrapper {
+    background-color: none !important;
+    padding: 10px 0 10px 10px;
+    border-top: none !important;
+}
+
+input[type="button"], input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select {
+    color: #ACE !important;
+    background-color: #6b6b6b !important;
+}
+
+
+/*--------------- Input fields ---------------*/
+
+div.plainForm dd input[type="text"], input[type="password"] {
+  border: none !important;
 }
