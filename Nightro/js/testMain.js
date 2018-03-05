@@ -1,4 +1,5 @@
 console.log("test main loaded");
+
 function onError(e) {
   console.log(e);
 }
@@ -8,13 +9,9 @@ document.addEventListener("DOMContentLoaded", setup);
 function setup() {
   tryWipe();
   setupPageAction();
+  //TODO Send check request to BG, if need to load, load css
 
-  chrome.runtime.getPackageDirectoryEntry(function(dirEntry) {
-    console.log(dirEntry);
-  });
 }
-
-
 
 function wipeAll() {
    console.log("testMain.js");

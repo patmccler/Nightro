@@ -1,11 +1,16 @@
 console.log("BG START");
 var darkmodeDomain = false;
 var tabsWithPageAction = [];
+var cssToLoad =
+  ["css/nitro.css","css/tickets.css","css/dashboards.css",
+  "css/homes.css", "css/connect.css", "css/finance.css",
+  "css/users.css", "css/aeriel-measurements.css"];
+
 
 try {
-chrome.runtime.getPackageDirectoryEntry((DE) => {
-    console.log(DE);
-});
+  chrome.runtime.getPackageDirectoryEntry((DE) => {
+      console.log(DE);
+  });
 }
 catch(e){
   console.log(e);
@@ -19,6 +24,9 @@ chrome.storage.local.get(["darkmodeDomain"],
     }
   }
 );
+
+
+
 
 //called when pageAction is clicked
 chrome.pageAction.onClicked.addListener((tab) => {
@@ -47,6 +55,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   var response = "response: ";
 
   switch(request.greeting) {
+      case "check css load":
+
+
+        break;
+
       case "try darkmode page action":
         console.log("trying page action");
         if(needPageAction()) {
