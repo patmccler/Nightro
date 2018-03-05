@@ -74,3 +74,9 @@ div.plainForm dd input[type="text"], input[type="password"] {
   background-color: #383838;
   border-top: solid 1px #455a6b !important;
 }
+
+/*--------------- Equipment Tab ---------------*/
+.well {
+  background-color: #303030 !important;
+  border-color: #455a6b !important;
+}
