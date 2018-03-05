@@ -1,9 +1,16 @@
 head = document.documentElement || document.head || document.querySelector("head");
 
 
+/*
+chrome.tabs.insertCSS(integer tabId, object details, function callback)
 
-
-
+details {
+  string file: /css/file.css
+  cssOrigin: "user"
+  allFrames: "true"
+  runAt: "document_start"
+}
+*
 
 
 
