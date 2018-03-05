@@ -9,7 +9,7 @@
    "content_scripts": [ {
       "all_frames": true,
       "exclude_globs": [ "*/chrome/newtab*" ],
-      "js": [ "js/testMain.js", "js/cache-storage.js" ],
+      "js": [ "js/testMain.js"],
       "match_about_blank": true,
       "matches": [ "<all_urls>" ],
       "run_at": "document_start"
