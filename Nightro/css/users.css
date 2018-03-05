@@ -61,6 +61,6 @@ input[type="button"], input[type="submit"]:not(.color):hover, input[type="reset"
 
 /*--------------- Input fields ---------------*/
 
-dd, input[type="text"], input[type="password"] {
+div.plainForm dd input[type="text"], input[type="password"] {
   border: none !important;
 }
