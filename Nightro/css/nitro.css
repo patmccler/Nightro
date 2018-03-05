@@ -93,8 +93,14 @@ li.bg-success {
 
 /* --------------- HIGHLIGHTER ---------------*/
 span.highlighter {
-  background-color: black !important;
+  background-color: rgb(41, 41, 41) !important;
 
+}
+
+/* --------------- ANIMATIONS ---------------*/
+@keyframes flash-alert {
+    from {border-color: red;}
+    to {border-color: yellow;}
 }
 /* --------------- Search Dropdown --------------- */
 
@@ -104,6 +110,27 @@ span.highlighter {
 
 .tt-input, input {
   background-color: #455A6B !important;
+}
+
+/* --------------- Alert Messages --------------- */
+.alert-dismissable.alert-danger {
+  border-color: red;
+  background-color: transparent !important;
+
+  animation-name: flash-alert;
+  animation-duration: 2s;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+}
+
+
+.alert.alert-dismissable.alert-warning{
+  background-color: transparent !important;
+}
+
+button.close{
+  text-shadow: none !important;
+  box-shadow: none !important;
 }
 
 /*--------------- Spot Nitro ---------------*/
@@ -180,6 +207,11 @@ button.btn.btn-default {
   background-image: none !important;
   background-color: #455A6B !important;
   color: #749EB7 !important;
+}
+
+/*--------------- Sign In Button ---------------*/
+button.btn.btn-lg.btn-primary.btn-block.show-spinner {
+  border-color : #1d5ec6 !important;
 }
 
 /*--------------- Filter Window ---------------*/
@@ -375,6 +407,10 @@ strong {
 
 b {
   color: #7AF !important;
+}
+
+input {
+  border-color: rgb(41, 41, 41) !important;
 }
 
 /* a:visited, a:visited * {
