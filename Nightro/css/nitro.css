@@ -242,7 +242,12 @@ ul.dropdown-menu {
 /*--------------- Box around count and filter display ---------------*/
 
 .filter-display-description {
-  background-color: green
+  background-color: green;
+}
+
+/*--------------- Search Buttons ---------------*/
+a.positive{
+  background-color: none !important;
 }
 
 /*--------------- Submit Buttons ---------------*/
