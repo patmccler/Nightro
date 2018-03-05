@@ -2,6 +2,15 @@ console.log("BG START");
 var darkmodeDomain = false;
 var tabsWithPageAction = [];
 
+try {
+chrome.runtime.getPackageDirectoryEntry((DE) => {
+    console.log(DE);
+});
+}
+catch(e){
+  console.log(e);
+}
+
 chrome.storage.local.get(["darkmodeDomain"],
   function(response) {
     if(response.darkmodeDomain != undefined) {
