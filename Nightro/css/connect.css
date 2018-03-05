@@ -100,6 +100,13 @@ article.message div.contents div.message-body-reactions-container div.message-bo
   border-left: 2px solid #002340;
 }
 
+.message-separator.sticky {
+  background-color : none !important;
+}
+.messages.message-separator {
+  background-color : none !important;
+}
+
 /*--------------- Messages Fields & Top Bars  --------------- */
 
 .messages .message-separator {
