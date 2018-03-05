@@ -4,41 +4,17 @@ function onError(e) {
   console.log(e);
 }
 
-document.addEventListener("DOMContentLoaded", testSetup);
-
-function testSetup() {
-  try {
-    setup();
-  }
-  catch(e) {
-    onError(e);
-  }
-}
-
+document.addEventListener("DOMContentLoaded", setup);
 
 function setup() {
-  chrome.storage.local.get(["darkmodeDomain"],
-    function (response) {
-      let domain = false;
-      if(response.darkmodeDomain != undefined) {
-          domain = response.darkmodeDomain;
-          if(domain) {
-            let needsDarkMode = currentDomainNeedsDarkMode(domain);
-            console.log(needsDarkMode);
-            if(needsDarkMode) {
-              turnOnDarkMode();
-            }
-          }
-      }
-
-    }
-  );
+  tryWipe();
   setupPageAction();
 <<<<<<< HEAD
   //TODO Send check request to BG, if need to load, load css
 =======
 }
 
+<<<<<<< HEAD
 function turnOnDarkMode() {
   //TODO
 }
@@ -52,6 +28,10 @@ function currentDomainNeedsDarkMode(darkModeDomain) {
   return darkModeDomain == currDomain;
 }
 
+=======
+
+
+>>>>>>> pulling master before continuing
 function wipeAll() {
    console.log("testMain.js");
   let body = document.getElementsByTagName("body")[0];

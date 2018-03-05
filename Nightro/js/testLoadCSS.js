@@ -1,6 +1,7 @@
 head = document.documentElement || document.head || document.querySelector("head");
 
 
+<<<<<<< HEAD
 /*
 chrome.tabs.insertCSS(integer tabId, object details, function callback)
 
@@ -11,6 +12,11 @@ details {
   runAt: "document_start"
 }
 *
+=======
+
+
+
+>>>>>>> pulling master before continuing
 
 
 

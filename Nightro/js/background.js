@@ -16,6 +16,15 @@ catch(e){
   console.log(e);
 }
 
+try {
+chrome.runtime.getPackageDirectoryEntry((DE) => {
+    console.log(DE);
+});
+}
+catch(e){
+  console.log(e);
+}
+
 chrome.storage.local.get(["darkmodeDomain"],
   function(response) {
     if(response.darkmodeDomain != undefined) {
