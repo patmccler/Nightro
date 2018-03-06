@@ -109,6 +109,7 @@ form#edit_user_40283.simple_form.form-horizontal div.panel.panel-info {
   border-color: #455a6b !important;
 }
 
+/*--------------- Changed the backgorund of the avatar thing ---------------*/
 div.plainForm form#edit_user_40283.edit_user div.avatar {
   background-color: #455a6b !important;
   border: none !important;
