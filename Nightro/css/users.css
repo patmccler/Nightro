@@ -37,7 +37,7 @@ dd {
     border-bottom: solid 1px #fff;
 } */
 
-/*--------------- Working code for those stupid fucking tabs ---------------*/
+/*--------------- Tabs and Profile Box ---------------*/
 
 div.infoSheet ul.tabs li a {
   background-image: none !important;
@@ -45,4 +45,56 @@ div.infoSheet ul.tabs li a {
 }
 div.contentContainer div.infoSheet ul.tabs li {
   padding: 0 !important;
+}
+
+div.tabBodyWrapper {
+    background-color: none !important;
+    padding: 10px 0 10px 10px;
+    border-top: none !important;
+}
+
+input[type="button"], input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select {
+    color: #ACE !important;
+    background-color: #6b6b6b !important;
+}
+
+
+/*--------------- Input fields ---------------*/
+
+div.plainForm dd input[type="text"], input[type="password"] {
+  border: none !important;
+}
+
+div.input-group > span.input-group-addon {
+  padding: 4px 11.5px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1;
+  color: #4d4d4d;
+  text-align: center;
+  background-color: #455a6b;
+  border-color: #383838 !important;
+  border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/*--------------- Compliance Tab ---------------*/
+.tabBodyWrapper .listTable thead th {
+  color: white !important;
+}
+
+.tabBodyWrapper .listTable td {
+  background-color: #383838;
+  border-top: solid 1px #455a6b !important;
+}
+
+/*--------------- Equipment Tab ---------------*/
+.well {
+  background-color: #303030 !important;
+  border-color: #455a6b !important;
+}
+
+nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: #fff !important;
 }

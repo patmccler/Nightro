@@ -93,8 +93,14 @@ li.bg-success {
 
 /* --------------- HIGHLIGHTER ---------------*/
 span.highlighter {
-  background-color: black !important;
+  background-color: rgb(41, 41, 41) !important;
 
+}
+
+/* --------------- ANIMATIONS ---------------*/
+@keyframes flash-alert {
+    from {border-color: red;}
+    to {border-color: yellow;}
 }
 /* --------------- Search Dropdown --------------- */
 
@@ -104,6 +110,27 @@ span.highlighter {
 
 .tt-input, input {
   background-color: #455A6B !important;
+}
+
+/* --------------- Alert Messages --------------- */
+.alert-dismissable.alert-danger {
+  border-color: red;
+  background-color: transparent !important;
+
+  animation-name: flash-alert;
+  animation-duration: 2s;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+}
+
+
+.alert.alert-dismissable.alert-warning{
+  background-color: transparent !important;
+}
+
+button.close{
+  text-shadow: none !important;
+  box-shadow: none !important;
 }
 
 /*--------------- Spot Nitro ---------------*/
@@ -182,6 +209,11 @@ button.btn.btn-default {
   color: #749EB7 !important;
 }
 
+/*--------------- Sign In Button ---------------*/
+button.btn.btn-lg.btn-primary.btn-block.show-spinner {
+  border-color : #1d5ec6 !important;
+}
+
 /*--------------- Filter Window ---------------*/
 
 div.filter-form {
@@ -196,6 +228,7 @@ div.filter-form {
 .form-control.collection_select.optional, select.form-control, ul.select2-choices, select#q_reported_by_territory_id_eq {
   background-image: none !important;
   background-color: #6B6B6B;
+  border-color: #383838 !important;
   color: white
 }
 
@@ -210,15 +243,20 @@ ul.dropdown-menu {
 /*--------------- Box around count and filter display ---------------*/
 
 .filter-display-description {
-  background-color: green
+  background-color: green;
+}
+
+/*--------------- Search Buttons ---------------*/
+a.positive{
+  background-color: none !important;
 }
 
 /*--------------- Submit Buttons ---------------*/
 
-input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
+/* input[type="button"]:hover, input[type="submit"]:not(.color):hover, input[type="reset"]:hover, button:hover, select:hover {
   color: #ACE !important;
   background-color: #B7B7B7 !important;
-}
+} */
 
 /* Support Tags */
 .badge-info, .pill-info{
@@ -375,6 +413,10 @@ strong {
 
 b {
   color: #7AF !important;
+}
+
+input {
+  border-color: rgb(41, 41, 41) !important;
 }
 
 /* a:visited, a:visited * {

@@ -4,7 +4,7 @@
 
 
 bookmarks-bar, .main, .roster {
-    background: #404040 !important;
+    background: #292929 !important;
 }
 
 .bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message {
@@ -98,6 +98,13 @@ article.message div.contents div.message-body-reactions-container div.message-bo
 .roster {
   background-color: inherit;
   border-left: 2px solid #002340;
+}
+
+.message-separator.sticky {
+  background-color : none !important;
+}
+.messages.message-separator {
+  background-color : none !important;
 }
 
 /*--------------- Messages Fields & Top Bars  --------------- */
@@ -234,7 +241,10 @@ div.DraftEditor-editorContainer * {
       z-index: 100;
   }
 
+<<<<<<< current
 
+=======
+>>>>>>> before discard
   /* --------------- User Card --------------- */
 
   .vcard, .user-photo {
