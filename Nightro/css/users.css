@@ -80,3 +80,7 @@ div.plainForm dd input[type="text"], input[type="password"] {
   background-color: #303030 !important;
   border-color: #455a6b !important;
 }
+
+nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: #fff !important;
+}
