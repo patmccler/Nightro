@@ -65,6 +65,20 @@ div.plainForm dd input[type="text"], input[type="password"] {
   border: none !important;
 }
 
+div.input-group > span.input-group-addon {
+  padding: 4px 11.5px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1;
+  color: #4d4d4d;
+  text-align: center;
+  background-color: #455a6b;
+  border-color: #383838 !important;
+  border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
 /*--------------- Compliance Tab ---------------*/
 .tabBodyWrapper .listTable thead th {
   color: white !important;

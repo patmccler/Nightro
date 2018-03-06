@@ -228,6 +228,7 @@ div.filter-form {
 .form-control.collection_select.optional, select.form-control, ul.select2-choices, select#q_reported_by_territory_id_eq {
   background-image: none !important;
   background-color: #6B6B6B;
+  border-color: #383838 !important;
   color: white
 }
 
