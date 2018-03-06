@@ -98,3 +98,13 @@ div.input-group > span.input-group-addon {
 nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: #fff !important;
 }
+
+/*--------------- Documents Tab ---------------*/
+div.nitro-form.full-width.col-xs-12 div.panel.panel-info {
+  border-color: #455a6b !important;
+}
+
+
+form#edit_user_40283.simple_form.form-horizontal div.panel.panel-info {
+  border-color: #455a6b !important;
+}
