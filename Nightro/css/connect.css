@@ -56,7 +56,7 @@ div article.message.me div.contents div.message-meta span.message-time
 
 /* --------------- Other Messages --------------- */
 article.message div.contents div.message-body-reactions-container div.message-body {
-  padding-right: 35%;
+  padding-right: 40% !important;
 }
 
 /*--------------- Branding & Top Bars --------------- */
