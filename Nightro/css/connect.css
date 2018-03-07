@@ -4,7 +4,7 @@
 
 
 bookmarks-bar, .main, .roster {
-    background: #404040 !important;
+    background: #292929 !important;
 }
 
 .bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message {
@@ -56,7 +56,7 @@ div article.message.me div.contents div.message-meta span.message-time
 
 /* --------------- Other Messages --------------- */
 article.message div.contents div.message-body-reactions-container div.message-body {
-  padding-right: 35%;
+  padding-right: 40% !important;
 }
 
 /*--------------- Branding & Top Bars --------------- */
@@ -241,7 +241,10 @@ div.DraftEditor-editorContainer * {
       z-index: 100;
   }
 
+<<<<<<< current
 
+=======
+>>>>>>> before discard
   /* --------------- User Card --------------- */
 
   .vcard, .user-photo {
