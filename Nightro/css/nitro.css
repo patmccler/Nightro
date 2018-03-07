@@ -30,6 +30,11 @@ span.fa-search, span.fa-phone, .fa-microphone, .fa-bars {
   color: white !important;
 }
 
+/*--------------- Error Pages ---------------*/
+.jumbotron {
+  background-color: transparent !important;
+}
+
 /*--------------- Breadcrumbs--------------- */
 
 div#main-crumbs.navbar {

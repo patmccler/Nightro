@@ -1,4 +1,5 @@
 console.log("main loaded");
+
 var is_head_added = false,
   is_black_colred = false,
   is_custom_css = false,
@@ -97,14 +98,15 @@ var dark_mode_main = {
   add_link_element: function(c_path) {
     var link = document.createElement("link"),
       href = chrome.runtime.getURL('css/' + c_path + '.css');
-    link.setAttribute("type", "text/css");
-    link.setAttribute("id", c_path + '-custom-css');
-    link.setAttribute("class", 'dmn-custom-append-data');
-    link.setAttribute("rel", "stylesheet");
-    link.setAttribute("href", href);
+      link.setAttribute("type", "text/css");
+      link.setAttribute("id", c_path + '-custom-css');
+      link.setAttribute("class", 'dmn-custom-append-data');
+      link.setAttribute("rel", "stylesheet");
+      link.setAttribute("href", href);
     if (head) {
       head.appendChild(link);
     }
+  
   },
   /**
    * Custom css hostname and css name
@@ -171,27 +173,40 @@ var dark_mode_main = {
     if (is_custom_css === true) {
       return;
     }
-    var link = document.createElement("link"),
-      href = chrome.runtime.getURL('css/global-new.css');
-    link.setAttribute("type", "text/css");
-    link.setAttribute("id", "dma-temp-global-css");
-    link.setAttribute("class", "dmn-custom-append-data");
-    link.setAttribute("rel", "stylesheet");
-    link.setAttribute("href", href);
-    //Style Attribute
-    var style = document.createElement('style'),
-      css = '';
-    css += 'html:before {content: "";position: absolute;width: 100%;height: 100%;background: #171717 !important;z-index: 99999;opacity: 0.98;}';
-    css += 'span, p, h1, h2, h3, h4, h5, h6, a{z-index: 100000 !important; position:relative;color: rgb(183, 183, 183) !important;}';
-    css += 'video, img{z-index: 10000 !important;}';
-    css += 'h1{color:#f5f5f5 !important;}h2{color:#e9e9e9 !important;}h3{color:#cddce9 !important;}h4{color:#b2dbff !important;}h5{color:#9acdf9 !important;}h6{color:#78c0ff !important;}a{color:#4887b5 !important;}p{color:#e9e9e9 !important;}span{color:#b3b3b3 !important;}';
-    style.type = 'text/css';
-    style.setAttribute("id", "dma-temp-global-style");
-    style.setAttribute("class", "dmn-custom-remove-after-load");
-    style.appendChild(document.createTextNode(css));
-    if (head) {
-      head.appendChild(link);
-      head.appendChild(style);
+
+    let storageItem = localStorage.inputURL;
+    let currURL = window.location.href + ' ';
+    let ree = /^(.*?)\.com/
+
+    curURL = ree.exec(currURL)[1];
+
+
+    if(currURL === storageItem){
+
+      var link = document.createElement("link"),
+        href = chrome.runtime.getURL('css/global-new.css');
+      link.setAttribute("type", "text/css");
+      link.setAttribute("id", "dma-temp-global-css");
+      link.setAttribute("class", "dmn-custom-append-data");
+      link.setAttribute("rel", "stylesheet");
+      link.setAttribute("href", href);
+      //Style Attribute
+      var style = document.createElement('style'),
+        css = '';
+      css += 'html:before {content: "";position: absolute;width: 100%;height: 100%;background: #171717 !important;z-index: 99999;opacity: 0.98;}';
+      css += 'span, p, h1, h2, h3, h4, h5, h6, a{z-index: 100000 !important; position:relative;color: rgb(183, 183, 183) !important;}';
+      css += 'video, img{z-index: 10000 !important;}';
+      css += 'h1{color:#f5f5f5 !important;}h2{color:#e9e9e9 !important;}h3{color:#cddce9 !important;}h4{color:#b2dbff !important;}h5{color:#9acdf9 !important;}h6{color:#78c0ff !important;}a{color:#4887b5 !important;}p{color:#e9e9e9 !important;}span{color:#b3b3b3 !important;}';
+      style.type = 'text/css';
+      style.setAttribute("id", "dma-temp-global-style");
+      style.setAttribute("class", "dmn-custom-remove-after-load");
+      style.appendChild(document.createTextNode(css));
+      if (head) {
+        head.appendChild(link);
+        head.appendChild(style);
+      }
+    } else {
+      alert('I have lost control over my life. I am lost without hope')
     }
   },
   remove_css_properties: function() {
@@ -701,3 +716,4 @@ function dnm_is_auto_time_active() {
   }
   return true;
 }
+
