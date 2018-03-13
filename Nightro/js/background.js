@@ -1,6 +1,7 @@
 console.log("BG START");
 var darkmodeDomain = false;
 var tabsWithPageAction = [];
+<<<<<<< HEAD
 var cssToLoad = [
   "css/nitro.css",
   "css/tickets.css",
@@ -11,6 +12,13 @@ var cssToLoad = [
   "css/users.css",
   "css/aeriel-measurements.css"
 ];
+=======
+var cssToLoad =
+  ["nitro.css","tickets.css","dashboards.css",
+  "homes.css", "connect.css", "finance.css",
+  "users.css", "aeriel-measurements.css"];
+
+>>>>>>> Selectively loads based on domain matching
 
 try {
   chrome.runtime.getPackageDirectoryEntry(DE => {
@@ -61,9 +69,20 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   let answer = new Object();
   var response = "response: ";
 
+<<<<<<< HEAD
   switch (request.greeting) {
     case "check css load":
       break;
+=======
+  switch(request.greeting) {
+      case "check css load":
+        checkCSSNeeded(sender);
+
+
+        console.log(sender.tab.url);
+
+        break;
+>>>>>>> Selectively loads based on domain matching
 
     case "try darkmode page action":
       console.log("trying page action");
@@ -98,6 +117,36 @@ function needPageAction() {
     return false;
   }
   return true;
+}
+
+function checkCSSNeeded(sender) {
+  let parser = document.createElement('a');
+  parser.href = sender.tab.url;
+
+  let newPageDomain = parser.hostname;
+  console.log(newPageDomain);
+
+  if(newPageDomain == darkmodeDomain) {
+    console.log("loading CSS");
+    loadCSSInTab(sender.tab);
+  }
+}
+
+function loadCSSInTab(tab) {
+  console.log(tab.id);
+  let details = {
+    "cssOrigin": "user",
+    "runAt": "document_start",
+    "allFrames": true,
+    "file": "will be changed"
+  }
+  for(let i = 0; i < cssToLoad.length; i++) {
+    details.file = "/css/" + cssToLoad[i];
+
+    chrome.tabs.insertCSS(tab.id, details, function () {
+        console.log("CSS Injected");
+    });
+  }
 }
 
 function onError(e) {

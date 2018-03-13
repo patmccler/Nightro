@@ -4,15 +4,10 @@ function onError(e) {
   console.log(e);
 }
 
-document.addEventListener("DOMContentLoaded", testSetup);
-
-function testSetup() {
-  try {
-    setup();
-  } catch (e) {
-    onError(e);
-  }
-}
+chrome.runtime.sendMessage({ greeting: "check css load" }, function(resp) {
+  //do nothing
+});
+document.addEventListener("DOMContentLoaded", setup);
 
 function setup() {
   chrome.storage.local.get(["darkmodeDomain"], function(response) {
