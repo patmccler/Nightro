@@ -13,14 +13,7 @@
       "match_about_blank": true,
       "matches": [ "<all_urls>" ],
       "run_at": "document_start"
-   }, {
-      "all_frames": true,
-      "css": [ "css/nitro.css","css/tickets.css","css/dashboards.css", "css/homes.css", "css/connect.css", "css/finance.css", "css/users.css", "css/aeriel-measurements.css", "css/projects.css" ],
-      "exclude_globs": [ "*/chrome/newtab*" ],
-      "match_about_blank": true,
-      "matches": [ "<all_urls>" ],
-      "run_at": "document_start"
-   } ],
+   }],
    "description": "Night version for a particular website",
    "icons": {
 
@@ -32,6 +25,12 @@
       "page": "templates/options.html"
      },
    "permissions": [ "tabs", "storage", "<all_urls>", "contextMenus" ],
+   "page_action": {
+     "default_icon": {
+       "16": "icons/icon48.png"
+       },
+       "default_title": "Click this on the page you want to make darkmode"
+   },
    "short_name": "Nightro",
    "version": "1.0",
    "web_accessible_resources": [ "css/*.css" ]

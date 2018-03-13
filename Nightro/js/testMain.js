@@ -4,6 +4,9 @@ function onError(e) {
   console.log(e);
 }
 
+chrome.runtime.sendMessage({greeting:"check css load"}, function (resp) {
+  //do nothing
+} );
 document.addEventListener("DOMContentLoaded", setup);
 
 function setup() {
