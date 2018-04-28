@@ -225,8 +225,9 @@ div.filter-form {
   background-image: none !important;
   background-color: #455A6B !important;
   color: #749EB7 !important;
-  border-color:
+  border-color: #749EB7 !important;
 }
+
 
 /*--------------- DROPDOWNS ---------------*/
 
@@ -331,7 +332,7 @@ tr {
 tr:nth-child(even) {
   background-image: none !important;
   background-color: #383838 !important;
-  text: #3B3B3B;
+  color: #3B3B3B;
 }
 
 /*--------------- Status Text Color ---------------*/
