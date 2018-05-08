@@ -72,6 +72,18 @@ div.dropdown-menu {
   background-color: #141A1E !important;
 }
 
+#header div.settings-box .profile-navigation li:hover {
+  background: #00447c !important;
+}
+
+[onclick]:hover, [ondblclick]:hover, [onmousedown]:hover {
+  color: #ace !important;
+}
+
+li.connect-link {
+  color: white !important;
+}
+
 /* Spot Nitro Drop */
 
 .spotnitro .tt-dropdown-menu {
@@ -435,7 +447,7 @@ a.highlight, a.highlight *, a.active, a.active *, .selected, .selected *, [href=
 }
 
 textarea, td {
-  color: #ACE !important;
+  color: #ace !important;
   /* text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000 !important; */
 }
 
@@ -457,6 +469,6 @@ mark, code, pre, blockquote, [class*="quote"], td[style*="inset"][class="alt2"] 
   background-color: #00090F !important;
 }
 
-[onclick]:hover, [ondblclick]:hover, [onmousedown]:hover {
+/* [onclick]:hover, [ondblclick]:hover, [onmousedown]:hover {
   color: #FEFF97 !important
-}
+} */
