@@ -62,8 +62,22 @@ a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div
 
 ul.full-menu * {
   background-image: none !important;
-  background-color: #141A1E !important;
+  background-color: #141a1e !important;
+  border-color: #455a6b !important;
+  color: #ace !important; 
+
 }
+
+ul.full-menu span.badge {
+  background-color: transparent !important;
+  border-color: #f9423a !important; 
+  color: #f9423a !important;
+}
+
+ul.full-menu li a span.badge badge-danger {
+}
+
+
 
 /* --------------- Dropdown Menus ---------------*/
 
