@@ -391,7 +391,7 @@ cite {
 }
 
 input {
-  color: #257 !important;
+  color: #ACE !important;
 }
 
 em {
@@ -415,7 +415,8 @@ b {
 }
 
 input {
-  border-color: rgb(41, 41, 41) !important;
+  border-color: white !important;
+  border-width: 1px !important;
 }
 
 /* a:visited, a:visited * {

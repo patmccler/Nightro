@@ -288,3 +288,37 @@ div.DraftEditor-editorContainer * {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
+ /* Room Creation */
+ ul.radio-button-group li {
+   background: #404040 !important;
+   border-color: #455A6B !important;
+ }
+
+ul.radio-button-group li:hover {
+  background: #00447C !important;
+}
+
+ ul.radio-button-group {
+  border-color: #455A6B !important;
+ }
+
+ ul.radio-button-group li i.fa.option.selected {
+   color: #06ad0f !important;
+ }
+
+div.room-form div ul.radio-button-group li div.description h2 span {
+  color: #ace !important;
+}
+
+.input-container .input-icon {
+  color: #d8d8d8 !important;
+}
+
+div.input-group .filterable-list, .form-area .memberships-container, .simple-list {
+  background-color: #383838 !important;
+}
+
+div.room-form li.bookmark:hover, article.bookmark.user-bookmark:hover, section.bookmark-label: {
+  background-color: #00447C !important;
+}
+
