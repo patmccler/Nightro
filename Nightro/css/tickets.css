@@ -86,6 +86,11 @@ pre code {
 }
 
  /*--------------- TODO BY --------------- */
- .date { 
+ .date {
 background-color: #808080 !important;
+}
+
+/*--------------- fixing the damn ticket field in filters ---------------*/
+#q_ticket_number_start {
+  box-sizing: inherit !important;
 }

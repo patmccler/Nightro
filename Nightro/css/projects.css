@@ -12,3 +12,7 @@ div.product-desc, div.alert.alert-warning.text-center, div.modal-header.bg-info,
 div.navbar.navbar-default.project-tab-block ul.nav.nav-pills li.active a {
   color: white !important;
 }
+
+body.body-projects div.page-container div.row-offcanvas.row-offcanvas-left div#main-view div.new-style div.container-fluid div.row.project-info.lead-info.mb-3 div.col-xs-3.col-sm-2.col-md-2 {
+  color: #daaa00 !important;
+}

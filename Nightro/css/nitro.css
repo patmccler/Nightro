@@ -30,6 +30,11 @@ span.fa-search, span.fa-phone, .fa-microphone, .fa-bars {
   color: white !important;
 }
 
+/*--------------- Error Pages ---------------*/
+.jumbotron {
+  background-color: transparent !important;
+}
+
 /*--------------- Breadcrumbs--------------- */
 
 div#main-crumbs.navbar {
@@ -57,14 +62,40 @@ a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div
 
 ul.full-menu * {
   background-image: none !important;
-  background-color: #141A1E !important;
+  background-color: #141a1e !important;
+  border-color: #455a6b !important;
+  color: #ace !important; 
+
 }
+
+ul.full-menu span.badge {
+  background-color: transparent !important;
+  border-color: #f9423a !important; 
+  color: #f9423a !important;
+}
+
+ul.full-menu li a span.badge badge-danger {
+}
+
+
 
 /* --------------- Dropdown Menus ---------------*/
 
 div.dropdown-menu {
   background-image: none !important;
   background-color: #141A1E !important;
+}
+
+#header div.settings-box .profile-navigation li:hover {
+  background: #00447c !important;
+}
+
+[onclick]:hover, [ondblclick]:hover, [onmousedown]:hover {
+  color: #ace !important;
+}
+
+li.connect-link {
+  color: white !important;
 }
 
 /* Spot Nitro Drop */
@@ -220,14 +251,16 @@ div.filter-form {
   background-image: none !important;
   background-color: #455A6B !important;
   color: #749EB7 !important;
-  border-color:
+  border-color: #749EB7 !important;
 }
+
 
 /*--------------- DROPDOWNS ---------------*/
 
 .form-control.collection_select.optional, select.form-control, ul.select2-choices, select#q_reported_by_territory_id_eq {
   background-image: none !important;
   background-color: #6B6B6B;
+  border-color: #383838 !important;
   color: white
 }
 
@@ -325,7 +358,7 @@ tr {
 tr:nth-child(even) {
   background-image: none !important;
   background-color: #383838 !important;
-  text: #3B3B3B;
+  color: #3B3B3B;
 }
 
 /*--------------- Status Text Color ---------------*/
@@ -429,7 +462,7 @@ a.highlight, a.highlight *, a.active, a.active *, .selected, .selected *, [href=
 }
 
 textarea, td {
-  color: #ACE !important;
+  color: #ace !important;
   /* text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000 !important; */
 }
 
@@ -451,6 +484,6 @@ mark, code, pre, blockquote, [class*="quote"], td[style*="inset"][class="alt2"] 
   background-color: #00090F !important;
 }
 
-[onclick]:hover, [ondblclick]:hover, [onmousedown]:hover {
+/* [onclick]:hover, [ondblclick]:hover, [onmousedown]:hover {
   color: #FEFF97 !important
-}
+} */

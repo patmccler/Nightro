@@ -15,6 +15,28 @@ span.label, legend {
 thead * {
   border: none !important;
 }
+
+/* Notes table on FP page */
+div.history table td  {
+  border: 1px solid #455a6b !important;
+  padding-right: 1em;
+  padding-bottom: .5em;
+  padding-top: .5em;
+}
+
+div.history table tr.even td {
+  background-color: #292929 !important;
+}
+
+div.history table th {
+  font-weight: bold;
+  background-color: #455a6b ;
+  padding-left: 1em;
+  border: none !important;
+  padding: 0.5em 1em; 
+  color: #daaa00 !important;
+}
+
 /*--------------- Actions Box --------------- */
 div.actions_and_details, fieldset.finance_project_actions {
   background-color: #7F8FA4 !important;
@@ -35,10 +57,21 @@ div.actions_and_details, fieldset.finance_project_actions {
 
 div.history table {
   background-color: transparent !important;
+  
 }
 
 /*--------------- Navbar --------------- */
 div.row nav.navbar-default, div.navbar:nth-child(1) {
   background-color: #383838;
   border-color: #455A6B;
+}
+
+/* Pop Up Box on FP page */
+div#cboxContent {
+  background: #292929 !important;
+}
+
+body.empty.body-projects div.page-container div#main-view div.old-style div div#container.emptyContainer table.listTable {
+  border-bottom: 2px solid #00447C;
+  color: pink !important;
 }

@@ -65,6 +65,20 @@ div.plainForm dd input[type="text"], input[type="password"] {
   border: none !important;
 }
 
+div.input-group > span.input-group-addon {
+  padding: 4px 11.5px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1;
+  color: #4d4d4d;
+  text-align: center;
+  background-color: #455a6b;
+  border-color: #383838 !important;
+  border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
 /*--------------- Compliance Tab ---------------*/
 .tabBodyWrapper .listTable thead th {
   color: white !important;
@@ -83,4 +97,20 @@ div.plainForm dd input[type="text"], input[type="password"] {
 
 nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: #fff !important;
+}
+
+/*--------------- Documents Tab ---------------*/
+div.nitro-form.full-width.col-xs-12 div.panel.panel-info {
+  border-color: #455a6b !important;
+}
+
+
+form#edit_user_40283.simple_form.form-horizontal div.panel.panel-info {
+  border-color: #455a6b !important;
+}
+
+/*--------------- Changed the backgorund of the avatar thing ---------------*/
+div.plainForm form#edit_user_40283.edit_user div.avatar {
+  background-color: #455a6b !important;
+  border: none !important;
 }
