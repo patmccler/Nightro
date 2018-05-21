@@ -317,10 +317,7 @@ div.input-group .filterable-list, .form-area .memberships-container, .simple-lis
   background-color: #383838 !important;
 }
 
-li.bookmark:hover, article.bookmark.user-bookmark:hover, section.bookmark-label:hover, p:hover {
+div.room-form li.bookmark:hover, article.bookmark.user-bookmark:hover, section.bookmark-label: {
   background-color: #00447C !important;
 }
 
-li.bookmark:hover article.bookmark.user-bookmark, li.bookmark:hover seciton.bookmark-label {
-  background-color: #00447c !important;
-}
