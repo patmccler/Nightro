@@ -3,20 +3,28 @@ console.log("main loaded");
 var is_head_added = false,
   is_black_colred = false,
   is_custom_css = false,
-  head = document.documentElement || document.head || document.querySelector("head");
+  head =
+    document.documentElement || document.head || document.querySelector("head");
 var document_observer = new MutationObserver(function(mutations) {
   if (document.head && is_head_added === false) {
     dark_mode_main.append_css_element();
     is_head_added = true;
   }
   if (document.body) {
-    chrome.storage.local.get({
-      'document_brightness': 55
-    }, function(data) {
-      dnm_set_brg(data.document_brightness);
-    });
+    chrome.storage.local.get(
+      {
+        document_brightness: 55
+      },
+      function(data) {
+        dnm_set_brg(data.document_brightness);
+      }
+    );
     dark_mode_main.remove_link_element();
-    document.body.style.setProperty('background', 'rgb(41, 41, 41)', 'important');
+    document.body.style.setProperty(
+      "background",
+      "rgb(41, 41, 41)",
+      "important"
+    );
     document_observer.disconnect();
   }
 });
@@ -38,13 +46,13 @@ var dark_mode_main = {
   /**
    * Initialize colors
    */
-  blank_color: 'rgba(0, 0, 0, 0)',
+  blank_color: "rgba(0, 0, 0, 0)",
   /**
    * Initialize Color Object Varialbe
    */
   curr_obj: {
-    'rgb(255, 255, 255)': 'rgb(41, 41, 41)',
-    'rgb(245, 245, 245)': 'rgb(22, 22, 22)'
+    "rgb(255, 255, 255)": "rgb(41, 41, 41)",
+    "rgb(245, 245, 245)": "rgb(22, 22, 22)"
   },
   current_dfc: document.defaultView,
   /**
@@ -63,9 +71,9 @@ var dark_mode_main = {
   get_rgb_data: function(color) {
     var rgb = color.match(/\d+/g);
     return {
-      'sum': rgb.reduce(this.get_sum),
-      'value': rgb
-    }
+      sum: rgb.reduce(this.get_sum),
+      value: rgb
+    };
   },
   /**
    * Blend black color
@@ -75,9 +83,9 @@ var dark_mode_main = {
    * @return {string} Returns darked rgb color
    */
   get_darker_shade: function(c1, p) {
-    var new_R = Math.round((parseInt(c1[0]) * p)),
-      new_G = Math.round((parseInt(c1[1]) * p)),
-      new_B = Math.round((parseInt(c1[2]) * p));
+    var new_R = Math.round(parseInt(c1[0]) * p),
+      new_G = Math.round(parseInt(c1[1]) * p),
+      new_B = Math.round(parseInt(c1[2]) * p);
     return "rgb(" + new_R + "," + new_G + "," + new_B + ")";
   },
   /**
@@ -85,9 +93,9 @@ var dark_mode_main = {
    * @type Object list
    */
   custom_sites: {
-    "nitro": "nitro.com",
-    "tickets": "nitro.com/support_tickets",
-    "dashboards": "nitro.com/dashboards"
+    nitro: "nitro.com",
+    tickets: "nitro.com/support_tickets",
+    dashboards: "nitro.com/dashboards"
   },
   /**
    * Add Link Element to head
@@ -97,16 +105,15 @@ var dark_mode_main = {
    */
   add_link_element: function(c_path) {
     var link = document.createElement("link"),
-      href = chrome.runtime.getURL('css/' + c_path + '.css');
-      link.setAttribute("type", "text/css");
-      link.setAttribute("id", c_path + '-custom-css');
-      link.setAttribute("class", 'dmn-custom-append-data');
-      link.setAttribute("rel", "stylesheet");
-      link.setAttribute("href", href);
+      href = chrome.runtime.getURL("css/" + c_path + ".css");
+    link.setAttribute("type", "text/css");
+    link.setAttribute("id", c_path + "-custom-css");
+    link.setAttribute("class", "dmn-custom-append-data");
+    link.setAttribute("rel", "stylesheet");
+    link.setAttribute("href", href);
     if (head) {
       head.appendChild(link);
     }
-  
   },
   /**
    * Custom css hostname and css name
@@ -114,9 +121,9 @@ var dark_mode_main = {
    * @version 1.0
    */
   cs: {
-    "nitro": "nitro",
-    "tickets": "tickets",
-    "dashboards": "dashboards"
+    nitro: "nitro",
+    tickets: "tickets",
+    dashboards: "dashboards"
   },
   /**
    * Runs custom css check
@@ -175,29 +182,30 @@ var dark_mode_main = {
     }
 
     let storageItem = localStorage.inputURL;
-    let currURL = window.location.href + ' ';
-    let ree = /^(.*?)\.com/
+    let currURL = window.location.href + " ";
+    let ree = /^(.*?)\.com/;
 
     curURL = ree.exec(currURL)[1];
 
-
-    if(currURL === storageItem){
-
+    if (currURL === storageItem) {
       var link = document.createElement("link"),
-        href = chrome.runtime.getURL('css/global-new.css');
+        href = chrome.runtime.getURL("css/global-new.css");
       link.setAttribute("type", "text/css");
       link.setAttribute("id", "dma-temp-global-css");
       link.setAttribute("class", "dmn-custom-append-data");
       link.setAttribute("rel", "stylesheet");
       link.setAttribute("href", href);
       //Style Attribute
-      var style = document.createElement('style'),
-        css = '';
-      css += 'html:before {content: "";position: absolute;width: 100%;height: 100%;background: #171717 !important;z-index: 99999;opacity: 0.98;}';
-      css += 'span, p, h1, h2, h3, h4, h5, h6, a{z-index: 100000 !important; position:relative;color: rgb(183, 183, 183) !important;}';
-      css += 'video, img{z-index: 10000 !important;}';
-      css += 'h1{color:#f5f5f5 !important;}h2{color:#e9e9e9 !important;}h3{color:#cddce9 !important;}h4{color:#b2dbff !important;}h5{color:#9acdf9 !important;}h6{color:#78c0ff !important;}a{color:#4887b5 !important;}p{color:#e9e9e9 !important;}span{color:#b3b3b3 !important;}';
-      style.type = 'text/css';
+      var style = document.createElement("style"),
+        css = "";
+      css +=
+        'html:before {content: "";position: absolute;width: 100%;height: 100%;background: #171717 !important;z-index: 99999;opacity: 0.98;}';
+      css +=
+        "span, p, h1, h2, h3, h4, h5, h6, a{z-index: 100000 !important; position:relative;color: rgb(183, 183, 183) !important;}";
+      css += "video, img{z-index: 10000 !important;}";
+      css +=
+        "h1{color:#f5f5f5 !important;}h2{color:#e9e9e9 !important;}h3{color:#cddce9 !important;}h4{color:#b2dbff !important;}h5{color:#9acdf9 !important;}h6{color:#78c0ff !important;}a{color:#4887b5 !important;}p{color:#e9e9e9 !important;}span{color:#b3b3b3 !important;}";
+      style.type = "text/css";
       style.setAttribute("id", "dma-temp-global-style");
       style.setAttribute("class", "dmn-custom-remove-after-load");
       style.appendChild(document.createTextNode(css));
@@ -206,20 +214,20 @@ var dark_mode_main = {
         head.appendChild(style);
       }
     } else {
-      alert('I have lost control over my life. I am lost without hope')
+      alert("I have lost control over my life. I am lost without hope");
     }
   },
   remove_css_properties: function() {
-    document.body.classList.remove('dma-document-is-in-dark-mode');
-    var styles = document.getElementsByClassName('dmn-custom-append-data'),
-      style = '';
+    document.body.classList.remove("dma-document-is-in-dark-mode");
+    var styles = document.getElementsByClassName("dmn-custom-append-data"),
+      style = "";
     if (styles) {
       for (var i = 0; i < styles.length; i++) {
         style = styles[i];
         style.parentNode.removeChild(style);
       }
     }
-    var div = document.getElementById('dma-global-overlay-id');
+    var div = document.getElementById("dma-global-overlay-id");
     if (div) {
       div.parentNode.removeChild(div);
     }
@@ -231,7 +239,7 @@ var dark_mode_main = {
    *
    */
   remove_link_object: function() {
-    var link = document.getElementById('dma-temp-global-css');
+    var link = document.getElementById("dma-temp-global-css");
     if (link) {
       link.parentNode.removeChild(link);
     }
@@ -243,13 +251,15 @@ var dark_mode_main = {
    * @return void
    */
   remove_link_element: function() {
-    var styles = document.getElementsByClassName('dmn-custom-remove-after-load');
+    var styles = document.getElementsByClassName(
+      "dmn-custom-remove-after-load"
+    );
     if (styles) {
       while (styles.length > 0) {
         styles[0].parentNode.removeChild(styles[0]);
       }
       if (is_black_colred === true) {
-        document.documentElement.style.removeProperty('background-color');
+        document.documentElement.style.removeProperty("background-color");
       }
     }
   },
@@ -260,14 +270,14 @@ var dark_mode_main = {
    * @return {string} Returns hostname from url
    */
   get_hostname: function(url) {
-    url = url.replace("www.", '');
+    url = url.replace("www.", "");
     var s = url.indexOf("//") + 2;
     if (s > 1) {
-      var o = url.indexOf('/', s);
+      var o = url.indexOf("/", s);
       if (o > 0) {
         return url.substring(s, o);
       } else {
-        o = url.indexOf('?', s);
+        o = url.indexOf("?", s);
         if (o > 0) {
           return url.substring(s, o);
         } else {
@@ -285,7 +295,11 @@ var dark_mode_main = {
    */
   update_loaded_document: function() {
     if (!dmn_is_processed()) {
-      document.body.style.setProperty('background', 'rgb(23, 23, 23)', 'important');
+      document.body.style.setProperty(
+        "background",
+        "rgb(23, 23, 23)",
+        "important"
+      );
       document.body.classList.add("dma-document-is-in-dark-mode");
       this.append_css_element();
       if (is_custom_css === false) {
@@ -293,11 +307,14 @@ var dark_mode_main = {
         dark_mode_main.remove_link_element();
         dark_mode_main.start_observing();
       }
-      chrome.storage.local.get({
-        'document_brightness': 55
-      }, function(data) {
-        dnm_set_brg(data.document_brightness);
-      });
+      chrome.storage.local.get(
+        {
+          document_brightness: 55
+        },
+        function(data) {
+          dnm_set_brg(data.document_brightness);
+        }
+      );
     }
   },
   /**
@@ -307,14 +324,14 @@ var dark_mode_main = {
    * @return {string} returns hostname after extraction
    */
   hostname: function(url) {
-    url = url.replace("www.", '');
+    url = url.replace("www.", "");
     var s = url.indexOf("//") + 2;
     if (s > 1) {
-      var o = url.indexOf('/', s);
+      var o = url.indexOf("/", s);
       if (o > 0) {
         return url.substring(s, o);
       } else {
-        o = url.indexOf('?', s);
+        o = url.indexOf("?", s);
         if (o > 0) {
           return url.substring(s, o);
         } else {
@@ -332,33 +349,37 @@ var dark_mode_main = {
    * @return void
    */
   process_node: function(current_node) {
-    if ('is_dnm_processed' in current_node && current_node.is_dnm_processed === true) {
+    if (
+      "is_dnm_processed" in current_node &&
+      current_node.is_dnm_processed === true
+    ) {
       return;
     }
-    current_color = this.current_dfc.getComputedStyle(current_node, null).backgroundColor;
+    current_color = this.current_dfc.getComputedStyle(current_node, null)
+      .backgroundColor;
     if (current_color && current_color != this.blank_color) {
       if (!(current_color in this.curr_obj)) {
         data = this.get_rgb_data(current_color);
         sum_color = data.sum;
-        if (sum_color >= '740' && sum_color <= '765') {
+        if (sum_color >= "740" && sum_color <= "765") {
           curr_opacity = 0.09;
-        } else if (sum_color >= '710' && sum_color < '740') {
+        } else if (sum_color >= "710" && sum_color < "740") {
           curr_opacity = 0.18;
-        } else if (sum_color >= '680' && sum_color < '710') {
+        } else if (sum_color >= "680" && sum_color < "710") {
           curr_opacity = 0.24;
-        } else if (sum_color >= '580' && sum_color < '680') {
+        } else if (sum_color >= "580" && sum_color < "680") {
           curr_opacity = 0.28;
-        } else if (sum_color >= '500' && sum_color < '580') {
+        } else if (sum_color >= "500" && sum_color < "580") {
           curr_opacity = 0.35;
-        } else if (sum_color >= '400' && sum_color < '500') {
+        } else if (sum_color >= "400" && sum_color < "500") {
           curr_opacity = 0.45;
-        } else if (sum_color >= '300' && sum_color < '400') {
-          curr_opacity = 0.60;
-        } else if (sum_color >= '200' && sum_color < '300') {
+        } else if (sum_color >= "300" && sum_color < "400") {
+          curr_opacity = 0.6;
+        } else if (sum_color >= "200" && sum_color < "300") {
           curr_opacity = 0.75;
-        } else if (sum_color >= '80' && sum_color < '200') {
-          curr_opacity = 0.90;
-        } else if (sum_color < '80') {
+        } else if (sum_color >= "80" && sum_color < "200") {
+          curr_opacity = 0.9;
+        } else if (sum_color < "80") {
           curr_opacity = 1;
         }
         var bgcolor = this.get_darker_shade(data.value, curr_opacity);
@@ -366,7 +387,7 @@ var dark_mode_main = {
       } else {
         var bgcolor = this.curr_obj[current_color];
       }
-      current_node.style.setProperty('background', bgcolor, 'important');
+      current_node.style.setProperty("background", bgcolor, "important");
       current_node.is_dnm_processed = true;
     }
   },
@@ -376,9 +397,7 @@ var dark_mode_main = {
    *
    * @return void
    */
-  process_nodes: function(nodes) {
-
-  },
+  process_nodes: function(nodes) {},
   /**
    * Check if node is valid node
    * @param {string} name . Check if node is valid node
@@ -389,7 +408,7 @@ var dark_mode_main = {
     if (!name) {
       return false;
     }
-    if (name == 'SCRIPT' || name == 'STYLE' || name == 'LINK') {
+    if (name == "SCRIPT" || name == "STYLE" || name == "LINK") {
       return false;
     }
     return true;
@@ -422,7 +441,7 @@ var dark_mode_main = {
     document_body_observer.observe(document, {
       childList: true,
       subtree: true,
-      characterData: true,
+      characterData: true
     });
   },
   /**
@@ -434,7 +453,7 @@ var dark_mode_main = {
     document_attr_observer.observe(document, {
       attributes: true,
       subtree: true,
-      attributeFilter: ['class']
+      attributeFilter: ["class"]
     });
   },
   /**
@@ -447,40 +466,41 @@ var dark_mode_main = {
     if (!nodes) {
       nodes = document.body.getElementsByTagName("*");
     }
-    var current_color = '',
-      data = '',
-      sum_color = '',
-      curr_opacity = '',
-      current_node = '';
+    var current_color = "",
+      data = "",
+      sum_color = "",
+      curr_opacity = "",
+      current_node = "";
     for (var i = 0; i < nodes.length; i++) {
       current_node = nodes[i];
       if (current_node.is_dnm_processed == true) {
         continue;
       }
-      current_color = this.current_dfc.getComputedStyle(current_node, null).backgroundColor;
+      current_color = this.current_dfc.getComputedStyle(current_node, null)
+        .backgroundColor;
       if (current_color != this.blank_color) {
         if (!(current_color in this.curr_obj)) {
           data = this.get_rgb_data(current_color);
           sum_color = data.sum;
-          if (sum_color >= '740' && sum_color <= '765') {
+          if (sum_color >= "740" && sum_color <= "765") {
             curr_opacity = 0.09;
-          } else if (sum_color >= '710' && sum_color < '740') {
+          } else if (sum_color >= "710" && sum_color < "740") {
             curr_opacity = 0.18;
-          } else if (sum_color >= '680' && sum_color < '710') {
+          } else if (sum_color >= "680" && sum_color < "710") {
             curr_opacity = 0.24;
-          } else if (sum_color >= '580' && sum_color < '680') {
+          } else if (sum_color >= "580" && sum_color < "680") {
             curr_opacity = 0.28;
-          } else if (sum_color >= '500' && sum_color < '580') {
+          } else if (sum_color >= "500" && sum_color < "580") {
             curr_opacity = 0.35;
-          } else if (sum_color >= '400' && sum_color < '500') {
+          } else if (sum_color >= "400" && sum_color < "500") {
             curr_opacity = 0.45;
-          } else if (sum_color >= '300' && sum_color < '400') {
-            curr_opacity = 0.60;
-          } else if (sum_color >= '200' && sum_color < '300') {
+          } else if (sum_color >= "300" && sum_color < "400") {
+            curr_opacity = 0.6;
+          } else if (sum_color >= "200" && sum_color < "300") {
             curr_opacity = 0.75;
-          } else if (sum_color >= '80' && sum_color < '200') {
-            curr_opacity = 0.90;
-          } else if (sum_color < '80') {
+          } else if (sum_color >= "80" && sum_color < "200") {
+            curr_opacity = 0.9;
+          } else if (sum_color < "80") {
             curr_opacity = 1;
           }
           var bgcolor = this.get_darker_shade(data.value, curr_opacity);
@@ -488,7 +508,7 @@ var dark_mode_main = {
         } else {
           var bgcolor = this.curr_obj[current_color];
         }
-        current_node.style.setProperty('background', bgcolor, 'important');
+        current_node.style.setProperty("background", bgcolor, "important");
       }
       //current_node.style.setProperty('color', 'rgb(183, 183, 183)', 'important');
     }
@@ -504,20 +524,20 @@ var dark_mode_main = {
    * @return void
    */
   normalize_document: function(lock_brg) {
-    if (lock_brg == 'off') {
-      document.body.style.removeProperty('filter');
+    if (lock_brg == "off") {
+      document.body.style.removeProperty("filter");
       //debugger;
     }
     document_body_observer.disconnect();
     document_attr_observer.disconnect();
     this.remove_css_properties();
     this.remove_link_object();
-    document.body.style.removeProperty('background');
+    document.body.style.removeProperty("background");
     nodes = document.body.getElementsByTagName("*");
-    var current_node = '';
+    var current_node = "";
     for (var i = 0; i < nodes.length; i++) {
       current_node = nodes[i];
-      current_node.style.removeProperty('background');
+      current_node.style.removeProperty("background");
       current_node.is_dnm_processed = false;
     }
   },
@@ -529,149 +549,163 @@ var dark_mode_main = {
    * @return void
    */
   trigger_status_change: function(changes, namespace) {
-    chrome.storage.local.get({
-      'mode_status': 'on',
-      'document_brightness': 55,
-      'whitelist': {},
-      'lock_brightness': 'off'
-    }, function(data) {
-      var sitename = dark_mode_main.hostname(window.location.href),
-        main_data = data,
-        brg_applied = false;
-      if (main_data.lock_brightness == 'on' && !('document_brightness' in changes)) {
-        if (sitename in main_data.whitelist) {
-          document.body.style.removeProperty('filter');
-        } else {
-          brg_applied = true;
-          dnm_set_brg_fix();
-          dnm_set_brg(main_data.document_brightness);
-        }
-      }
-      if (('lock_brightness' in changes || 'document_brightness' in changes) && !(sitename in main_data.whitelist)) {
-        if ('document_brightness' in changes) {
-          if (main_data.lock_brightness == 'on') {
-            dnm_set_brg(changes.document_brightness.newValue);
-          }
-        } else {
-          if (changes.lock_brightness.newValue == 'off') {
-            document.body.style.removeProperty('filter');
-            document.documentElement.style.removeProperty('filter');
-            document.documentElement.style.removeProperty('background');
-            document.documentElement.style.removeProperty('height');
+    chrome.storage.local.get(
+      {
+        mode_status: "on",
+        document_brightness: 55,
+        whitelist: {},
+        lock_brightness: "off"
+      },
+      function(data) {
+        var sitename = dark_mode_main.hostname(window.location.href),
+          main_data = data,
+          brg_applied = false;
+        if (
+          main_data.lock_brightness == "on" &&
+          !("document_brightness" in changes)
+        ) {
+          if (sitename in main_data.whitelist) {
+            document.body.style.removeProperty("filter");
           } else {
+            brg_applied = true;
+            dnm_set_brg_fix();
             dnm_set_brg(main_data.document_brightness);
           }
         }
-      }
-      if (!(sitename in data.whitelist)) {
-        if ('mode_status' in changes) {
-          if (changes.mode_status.newValue == 'off') {
-            dark_mode_main.normalize_document(main_data.lock_brightness);
-          } else if (changes.mode_status.newValue == 'on') {
-            dark_mode_main.update_loaded_document();
-          } else if (changes.mode_status.newValue == 'auto') {
-            var date = new Date(),
-              hrs = date.getHours();
-            if ((hrs >= 20 && hrs <= 24) || (hrs >= 00 && hrs <= 06)) {
-              dark_mode_main.update_loaded_document();
+        if (
+          ("lock_brightness" in changes || "document_brightness" in changes) &&
+          !(sitename in main_data.whitelist)
+        ) {
+          if ("document_brightness" in changes) {
+            if (main_data.lock_brightness == "on") {
+              dnm_set_brg(changes.document_brightness.newValue);
+            }
+          } else {
+            if (changes.lock_brightness.newValue == "off") {
+              document.body.style.removeProperty("filter");
+              document.documentElement.style.removeProperty("filter");
+              document.documentElement.style.removeProperty("background");
+              document.documentElement.style.removeProperty("height");
             } else {
-              dark_mode_main.normalize_document(main_data.lock_brightness);
-            }
-          }
-          if (changes.mode_status.newValue != 'off') {
-            if (changes.mode_status.newValue == 'auto') {
-              if (!dnm_is_auto_time_active()) {
-                return;
-              }
-            }
-            if (brg_applied === false) {
               dnm_set_brg(main_data.document_brightness);
             }
           }
         }
-        if (data.mode_status != 'off') {
-          if (data.mode_status == 'auto') {
+        if (!(sitename in data.whitelist)) {
+          if ("mode_status" in changes) {
+            if (changes.mode_status.newValue == "off") {
+              dark_mode_main.normalize_document(main_data.lock_brightness);
+            } else if (changes.mode_status.newValue == "on") {
+              dark_mode_main.update_loaded_document();
+            } else if (changes.mode_status.newValue == "auto") {
+              var date = new Date(),
+                hrs = date.getHours();
+              if ((hrs >= 20 && hrs <= 24) || (hrs >= 00 && hrs <= 06)) {
+                dark_mode_main.update_loaded_document();
+              } else {
+                dark_mode_main.normalize_document(main_data.lock_brightness);
+              }
+            }
+            if (changes.mode_status.newValue != "off") {
+              if (changes.mode_status.newValue == "auto") {
+                if (!dnm_is_auto_time_active()) {
+                  return;
+                }
+              }
+              if (brg_applied === false) {
+                dnm_set_brg(main_data.document_brightness);
+              }
+            }
+          }
+          if (data.mode_status != "off") {
+            if (data.mode_status == "auto") {
+              if (!dnm_is_auto_time_active()) {
+                return;
+              }
+            }
+            if ("document_brightness" in changes) {
+              dnm_set_brg(changes.document_brightness.newValue);
+            }
+          }
+        }
+        if (data.mode_status == "on" || data.mode_status == "auto") {
+          if (data.mode_status == "auto") {
             if (!dnm_is_auto_time_active()) {
               return;
             }
           }
-          if ('document_brightness' in changes) {
-            dnm_set_brg(changes.document_brightness.newValue);
+          if ("whitelist" in changes) {
+            if (sitename in changes.whitelist.newValue) {
+              dark_mode_main.normalize_document(main_data.lock_brightness);
+            } else {
+              dark_mode_main.update_loaded_document();
+            }
           }
         }
       }
-      if (data.mode_status == 'on' || data.mode_status == 'auto') {
-        if (data.mode_status == 'auto') {
-          if (!dnm_is_auto_time_active()) {
-            return;
-          }
+    );
+  }
+};
+chrome.storage.local.get(
+  {
+    mode_status: "on",
+    document_brightness: 55,
+    whitelist: {},
+    lock_brightness: "off"
+  },
+  function(data) {
+    var sitename = dark_mode_main.hostname(window.location.href),
+      brg_applied = false,
+      main_data = data,
+      is_custom_site = dark_mode_main.is_custom_style_site();
+    if (data.lock_brightness == "on" && !(sitename in data.whitelist)) {
+      dnm_set_brg_fix();
+      var document_brightness_observer = new MutationObserver(function(
+        mutations
+      ) {
+        if (document.body) {
+          dnm_set_brg(data.document_brightness);
         }
-        if ('whitelist' in changes) {
-          if (sitename in changes.whitelist.newValue) {
-            dark_mode_main.normalize_document(main_data.lock_brightness);
-          } else {
-            dark_mode_main.update_loaded_document();
-          }
-        }
-      }
-    });
-  }
-}
-chrome.storage.local.get({
-  'mode_status': 'on',
-  'document_brightness': 55,
-  'whitelist': {},
-  'lock_brightness': 'off'
-}, function(data) {
-  var sitename = dark_mode_main.hostname(window.location.href),
-    brg_applied = false,
-    main_data = data,
-    is_custom_site = dark_mode_main.is_custom_style_site();
-  if (data.lock_brightness == 'on' && !(sitename in data.whitelist)) {
-    dnm_set_brg_fix();
-    var document_brightness_observer = new MutationObserver(function(mutations) {
-      if (document.body) {
-        dnm_set_brg(data.document_brightness);
-      }
-    });
-    document_brightness_observer.observe(document, {
-      childList: true,
-      characterData: true,
-      subtree: true
-    });
-  }
-  if (sitename in data.whitelist) {
-    return;
-  }
-  var status = data.mode_status;
-  if (status == 'on' || status == 'auto') {
-    if (status == 'auto') {
-      var date = new Date(),
-        hrs = date.getHours();
-      if (!((hrs >= 20 && hrs <= 24) || (hrs >= 00 && hrs <= 06))) {
-        return;
-      }
+      });
+      document_brightness_observer.observe(document, {
+        childList: true,
+        characterData: true,
+        subtree: true
+      });
     }
-    document.documentElement.style.backgroundColor = "rgb(0,0,0)";
-    is_black_colred = true;
-    if (is_custom_site === false) {
-      dark_mode_main.start_observing();
+    if (sitename in data.whitelist) {
+      return;
     }
-    document_observer.observe(document, {
-      childList: true,
-      characterData: true,
-      subtree: true
-    });
-    document.addEventListener("DOMContentLoaded", function(event) {
-      if (brg_applied === false) {
-        dnm_set_brg(data.document_brightness);
+    var status = data.mode_status;
+    if (status == "on" || status == "auto") {
+      if (status == "auto") {
+        var date = new Date(),
+          hrs = date.getHours();
+        if (!((hrs >= 20 && hrs <= 24) || (hrs >= 00 && hrs <= 06))) {
+          return;
+        }
       }
+      document.documentElement.style.backgroundColor = "rgb(0,0,0)";
+      is_black_colred = true;
       if (is_custom_site === false) {
-        dark_mode_main.update_document();
+        dark_mode_main.start_observing();
       }
-    });
+      document_observer.observe(document, {
+        childList: true,
+        characterData: true,
+        subtree: true
+      });
+      document.addEventListener("DOMContentLoaded", function(event) {
+        if (brg_applied === false) {
+          dnm_set_brg(data.document_brightness);
+        }
+        if (is_custom_site === false) {
+          dark_mode_main.update_document();
+        }
+      });
+    }
   }
-});
+);
 chrome.storage.onChanged.addListener(dark_mode_main.trigger_status_change);
 /**
  * Set Brightness of main body
@@ -681,10 +715,14 @@ chrome.storage.onChanged.addListener(dark_mode_main.trigger_status_change);
  */
 function dnm_set_brg(value) {
   if (value >= 50 && value <= 60) {
-    document.body.style.removeProperty('filter');
+    document.body.style.removeProperty("filter");
     return;
   }
-  document.body.style.setProperty('filter', 'brightness(' + value * 1.8 + '%)', 'important');
+  document.body.style.setProperty(
+    "filter",
+    "brightness(" + value * 1.8 + "%)",
+    "important"
+  );
 }
 /**
  * Set color to the html element so brightness works properly
@@ -692,8 +730,12 @@ function dnm_set_brg(value) {
  * @return void
  */
 function dnm_set_brg_fix() {
-  document.documentElement.style.setProperty('height', 'auto', 'important');
-  document.documentElement.style.setProperty('background', 'rgba(255, 255, 255, 0.01)', 'important');
+  document.documentElement.style.setProperty("height", "auto", "important");
+  document.documentElement.style.setProperty(
+    "background",
+    "rgba(255, 255, 255, 0.01)",
+    "important"
+  );
 }
 /**
  * Check if sheet already processed for dark mode
@@ -701,7 +743,7 @@ function dnm_set_brg_fix() {
  * @return {boolean} . Returns true if already processed
  */
 function dmn_is_processed() {
-  return document.body.className.match('dma-document-is-in-dark-mode');
+  return document.body.className.match("dma-document-is-in-dark-mode");
 }
 /**
  * Checks if it is time for auto mode
@@ -716,4 +758,3 @@ function dnm_is_auto_time_active() {
   }
   return true;
 }
-

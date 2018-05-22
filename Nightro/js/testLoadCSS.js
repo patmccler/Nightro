@@ -1,5 +1,5 @@
-head = document.documentElement || document.head || document.querySelector("head");
-
+head =
+  document.documentElement || document.head || document.querySelector("head");
 
 /*
 chrome.tabs.insertCSS(integer tabId, object details, function callback)

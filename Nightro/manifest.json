@@ -1,37 +1,38 @@
 {
-   "background": {
-     "scripts": [ "js/background.js" ]
-   },
-   "browser_action": {
-      "default_icon": "icons/icon48.png",
-      "default_popup": "templates/popup.html"
-   },
-   "content_scripts": [ {
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon48.png",
+    "default_popup": "templates/popup.html"
+  },
+  "content_scripts": [
+    {
       "all_frames": true,
-      "exclude_globs": [ "*/chrome/newtab*" ],
-      "js": [ "js/testMain.js"],
+      "exclude_globs": ["*/chrome/newtab*"],
+      "js": ["js/testMain.js"],
       "match_about_blank": true,
-      "matches": [ "<all_urls>" ],
+      "matches": ["<all_urls>"],
       "run_at": "document_start"
-   }],
-   "description": "Night version for a particular website",
-   "icons": {
-
-      "48": "icons/icon48.png"
-   },
-   "manifest_version": 2,
-   "name": "Nightro",
-   "options_ui": {
-      "page": "templates/options.html"
-     },
-   "permissions": [ "tabs", "storage", "<all_urls>", "contextMenus" ],
-   "page_action": {
-     "default_icon": {
-       "16": "icons/icon48.png"
-       },
-       "default_title": "Click this on the page you want to make darkmode"
-   },
-   "short_name": "Nightro",
-   "version": "1.0",
-   "web_accessible_resources": [ "css/*.css" ]
+    }
+  ],
+  "description": "Night version for a particular website",
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "manifest_version": 2,
+  "name": "Nightro",
+  "options_ui": {
+    "page": "templates/options.html"
+  },
+  "permissions": ["tabs", "storage", "<all_urls>", "contextMenus"],
+  "page_action": {
+    "default_icon": {
+      "16": "icons/icon48.png"
+    },
+    "default_title": "Click this on the page you want to make darkmode"
+  },
+  "short_name": "Nightro",
+  "version": "1.0",
+  "web_accessible_resources": ["css/*.css"]
 }

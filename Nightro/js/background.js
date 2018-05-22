@@ -12,32 +12,14 @@ var cssToLoad = [
   "css/users.css",
   "css/aeriel-measurements.css"
 ];
-var cssToLoad = [
-  "nitro.css",
-  "tickets.css",
-  "dashboards.css",
-  "homes.css",
-  "connect.css",
-  "finance.css",
-  "users.css",
-  "aeriel-measurements.css"
-];
 
-try {
-  chrome.runtime.getPackageDirectoryEntry(DE => {
-    console.log(DE);
-  });
-} catch (e) {
-  console.log(e);
-}
-
-try {
-  chrome.runtime.getPackageDirectoryEntry(DE => {
-    console.log(DE);
-  });
-} catch (e) {
-  console.log(e);
-}
+// try {
+//   chrome.runtime.getPackageDirectoryEntry(DE => {
+//     console.log(DE);
+//   });
+// } catch (e) {
+//   console.log(e);
+// }
 
 chrome.storage.local.get(["darkmodeDomain"], function(response) {
   if (response.darkmodeDomain != undefined) {
