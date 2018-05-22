@@ -2,6 +2,7 @@ console.log("BG START");
 var darkmodeDomain = false;
 var tabsWithPageAction = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 var cssToLoad = [
   "css/nitro.css",
   "css/tickets.css",
@@ -13,10 +14,25 @@ var cssToLoad = [
   "css/aeriel-measurements.css"
 ];
 =======
+=======
+>>>>>>> 5917ca19d3449c22cd0f696146f1eaa9dd84f218
 var cssToLoad =
   ["nitro.css","tickets.css","dashboards.css",
   "homes.css", "connect.css", "finance.css",
   "users.css", "aeriel-measurements.css"];
+<<<<<<< HEAD
+=======
+
+
+try {
+  chrome.runtime.getPackageDirectoryEntry((DE) => {
+      console.log(DE);
+  });
+}
+catch(e){
+  console.log(e);
+}
+>>>>>>> 5917ca19d3449c22cd0f696146f1eaa9dd84f218
 
 >>>>>>> Selectively loads based on domain matching
 
@@ -43,11 +59,18 @@ chrome.storage.local.get(["darkmodeDomain"], function(response) {
   }
 });
 
+
+
+
 //called when pageAction is clicked
 chrome.pageAction.onClicked.addListener(tab => {
   console.log("Saving this URL as domain to use from tab: " + tab.url);
   try {
+<<<<<<< HEAD
     let parser = document.createElement("a");
+=======
+    let parser = document.createElement('a');
+>>>>>>> 5917ca19d3449c22cd0f696146f1eaa9dd84f218
     parser.href = tab.url;
     let domain = parser.hostname;
     darkmodeDomain = domain;
@@ -80,6 +103,23 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 
         console.log(sender.tab.url);
+<<<<<<< HEAD
+=======
+
+        break;
+
+      case "try darkmode page action":
+        console.log("trying page action");
+        if(needPageAction()) {
+          response += "need page action";
+          chrome.pageAction.show(sender.tab.id);
+          tabsWithPageAction.push(sender.tab.id);
+        }
+        else {
+          response += "no page action needed";
+        }
+        break;
+>>>>>>> 5917ca19d3449c22cd0f696146f1eaa9dd84f218
 
         break;
 >>>>>>> Selectively loads based on domain matching

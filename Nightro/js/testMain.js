@@ -30,6 +30,7 @@ function turnOnDarkMode() {
   //TODO
 }
 
+<<<<<<< HEAD
 function currentDomainNeedsDarkMode(darkModeDomain) {
   let currDomain = window.location.hostname;
   console.log(currDomain);
@@ -37,6 +38,10 @@ function currentDomainNeedsDarkMode(darkModeDomain) {
   return darkModeDomain == currDomain;
 }
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 5917ca19d3449c22cd0f696146f1eaa9dd84f218
 function wipeAll() {
   console.log("testMain.js");
   let body = document.getElementsByTagName("body")[0];
@@ -62,6 +67,7 @@ function tryWipe() {
     onError(e);
   }
 }
+>>>>>>> 1b30493c4318cff99f9669f217d4d854609b9141
 
 function setupPageAction() {
   chrome.runtime.sendMessage({ greeting: "try darkmode page action" }, function(
