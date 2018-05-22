@@ -3,14 +3,14 @@ var darkmodeDomain = false;
 var tabsWithPageAction = [];
 
 var cssToLoad = [
-  "css/nitro.css",
-  "css/tickets.css",
-  "css/dashboards.css",
-  "css/homes.css",
-  "css/connect.css",
-  "css/finance.css",
-  "css/users.css",
-  "css/aeriel-measurements.css"
+  "nitro.css",
+  "tickets.css",
+  "dashboards.css",
+  "homes.css",
+  "connect.css",
+  "finance.css",
+  "users.css",
+  "aeriel-measurements.css"
 ];
 
 // try {
@@ -78,13 +78,20 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       response += "clear domain recieved";
       break;
 
+    case "turn on darkmode":
+      console.log("sending darkmode to tab " + sender.tab.id);
+      response += "sending dark mode";
+      enableDarkMode(tab);
+
+      break;
+
     default:
       response += "unknown message";
       console.log("unknown message: " + request.greeting);
       break;
   }
 
-  console.log("sending response: " + response);
+  console.log("sending " + response);
   answer["response"] = response;
   sendResponse(answer);
 });
@@ -110,6 +117,11 @@ function checkCSSNeeded(sender) {
   }
 }
 
+function enableDarkMode(tab) {
+  console.log("enabling for" + tab);
+  loadCSSInTab(tab);
+}
+
 function loadCSSInTab(tab) {
   console.log(tab.id);
   let details = {
@@ -119,7 +131,7 @@ function loadCSSInTab(tab) {
     file: "will be changed"
   };
   for (let i = 0; i < cssToLoad.length; i++) {
-    details.file = "/css/" + cssToLoad[i];
+    details.file = "css/" + cssToLoad[i];
 
     chrome.tabs.insertCSS(tab.id, details, function() {
       console.log("CSS Injected");

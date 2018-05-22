@@ -4,30 +4,33 @@ function onError(e) {
   console.log(e);
 }
 
-chrome.runtime.sendMessage({ greeting: "check css load" }, function(resp) {
-  //do nothing
-});
 document.addEventListener("DOMContentLoaded", setup);
 
 function setup() {
-  chrome.storage.local.get(["darkmodeDomain"], function(response) {
-    let domain = false;
-    if (response.darkmodeDomain != undefined) {
-      domain = response.darkmodeDomain;
-      if (domain) {
-        let needsDarkMode = currentDomainNeedsDarkMode(domain);
-        console.log(needsDarkMode);
-        if (needsDarkMode) {
-          turnOnDarkMode();
-        }
-      }
-    }
+  chrome.runtime.sendMessage({ greeting: "check css load" }, function(resp) {
+    //do nothing
   });
+
+  // chrome.storage.local.get(["darkmodeDomain"], function(response) {
+  //   let domain = false;
+  //   if (response.darkmodeDomain != undefined) {
+  //     domain = response.darkmodeDomain;
+  //     if (domain) {
+  //       let needsDarkMode = currentDomainNeedsDarkMode(domain);
+  //       console.log(needsDarkMode);
+  //       if (needsDarkMode) {
+  //         turnOnDarkMode();
+  //       }
+  //     }
+  //   }
+  // });
   setupPageAction();
 }
 
 function turnOnDarkMode() {
   //TODO
+  // console.log("turning on dark mode !");
+  // chrome.runtime.sendMessage({ greeting: "turn on darkmode" });
 }
 
 function currentDomainNeedsDarkMode(darkModeDomain) {
@@ -38,7 +41,7 @@ function currentDomainNeedsDarkMode(darkModeDomain) {
 }
 
 function wipeAll() {
-  console.log("testMain.js");
+  console.log("wipeall - should be unused");
   let body = document.getElementsByTagName("body")[0];
   body.style.removeProperty("background");
 
