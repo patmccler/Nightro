@@ -12,16 +12,9 @@
     <div id="container">
 
         <form id='google-chrome-options'>
-            <fieldset class="dma-darknightmode-block">
-                <label class='dnm-chrome-action-label dark1'>Nightrooo</label>
-                <div class="switch-toggle switch-3 switch-candy dnm-chrome-action-div">
-                    <input id="off" name="mode_status" type="radio" value='on' class='mode-status-radio'>
-                    <label for="off">On</label>
-                    <input id="on" name="mode_status" type="radio" checked="" value='off' class='mode-status-radio'>
-                    <label for="on">Off</label>
-                    <a></a>
-                </div>
-            </fieldset>
+            <span>Nightro is currently
+                <span id="nightro-toggle-status"></span>. Toggle it?</span>
+            <input type="button" value="Toggle" id="toggle-button">
 
             <div id="input-url">
                 <label id="name">URL: </label>
