@@ -1,6 +1,7 @@
 console.log("test main loaded");
 
 var darkmodeSliderOn;
+var defaultCSSSheets = ["nitro", "scrollbar"];
 
 function onError(e) {
   console.log(e);
@@ -9,12 +10,6 @@ function onError(e) {
 (function setup() {
   darkmodeSliderOn = true;
   setupDarkMode();
-
-  // works to load always. need to redo to check in content script
-  // going to check in content script instead
-  // chrome.runtime.sendMessage({ greeting: "check css load" }, function(resp) {
-  //   //do nothing
-  // });
 
   setupPageAction();
 })();
@@ -42,9 +37,13 @@ function setupDarkMode() {
 }
 
 function turnOnDarkMode() {
-  console.log("loading default file");
+  console.log("loading default files");
   var fileToLoad = "nitro";
-  loadCSS(fileToLoad);
+  //tries to loads all the default files
+  for (var i = 0; i < defaultCSSSheets.length; i++) {
+    fileToLoad = defaultCSSSheets[i];
+    loadCSS(fileToLoad);
+  }
 
   let pathPieces = location.pathname.split("/");
 
@@ -62,13 +61,13 @@ function turnOnDarkMode() {
       } else {
         fileToLoad = fileToLoad + "-" + pathPieces[i];
       }
-    }
 
-    try {
-      console.log(fileToLoad);
-      //loadCSS();
-    } catch (e) {
-      onError(e);
+      try {
+        console.log(fileToLoad);
+        loadCSS(fileToLoad);
+      } catch (e) {
+        onError(e);
+      }
     }
   }
 }
@@ -78,11 +77,21 @@ function loadCSS(file) {
   var link = document.createElement("link");
   link.href = chrome.extension.getURL("css/" + file + ".css");
   link.id = file;
+  link.classList.add("nightro-sheet");
   console.log("try to load " + file);
 
   link.type = "text/css";
   link.rel = "stylesheet";
   document.getElementsByTagName("head")[0].appendChild(link);
+}
+
+function removeAllCSS() {
+  var sheets = document.getElementsByClassName("nightro-sheet");
+
+  for (var i = 0; i < sheets.length; i++) {
+    thisSheet = sheets[i];
+    thisSheet.parentElement.removeChild(thisSheet);
+  }
 }
 
 function unloadCSS(file) {

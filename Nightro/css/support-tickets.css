@@ -1,13 +1,13 @@
-
 /*--------------- Panel Heading ---------------*/
 div.panel-heading {
-    background-color: #6B6B6B !important;
+  background-color: #6b6b6b !important;
 }
 /*--------------- Body of Ticket Box ---------------*/
-div.panel-body, div.ticket-comment {
+div.panel-body,
+div.ticket-comment {
   background-image: none !important;
   background-color: #383838 !important;
-  text: #3B3B3B;
+  color: #3b3b3b;
 }
 
 div.list-view {
@@ -15,16 +15,20 @@ div.list-view {
   background-color: #303030 !important;
 }
 
-h3.panel-tile, i {
+h3.panel-tile,
+i {
   color: white;
 }
 
-p, h1, h4, span.help-block {
-  color: #ACE !important;
+p,
+h1,
+h4,
+span.help-block {
+  color: #ace !important;
 }
 
 div.panel-default {
-    border-color: #455a6B;
+  border-color: #455a6b;
 }
 
 div.panel-body:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
@@ -32,7 +36,7 @@ div.panel-body:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
 }
 
 div.panel-heading {
-  border-color: #455a6B !important;
+  border-color: #455a6b !important;
 }
 
 /*--------------- Tag Pills ---------------*/
@@ -41,8 +45,7 @@ span.pill.pill-warning {
   background-color: transparent;
   border-color: #f9423a;
   color: #f9423a;
-
-}\
+}
 /*--------------- Ticket Comments ---------------*/
 div.ticket-comment {
   background-image: none !important;
@@ -60,11 +63,12 @@ span {
   color: white;
 }
 /*--------------- Input Boxes ---------------*/
-div.tags.form-control, .filepicker {
-  background-color: #6B6B6B
+div.tags.form-control,
+.filepicker {
+  background-color: #6b6b6b;
 }
 pre code {
-  color: white
+  color: white;
 }
 
 .alert-warning {
@@ -73,21 +77,21 @@ pre code {
 
 /*--------------- Private Comments --------------- */
 .new-comment.private {
-  background-color: rgb(249, 66, 58, .5) !important;
+  background-color: rgb(249, 66, 58, 0.5) !important;
 }
 
- /*--------------- Attachments --------------- */
- a.thumbnail *{
-     opacity: .8 !important;
- }
+/*--------------- Attachments --------------- */
+a.thumbnail * {
+  opacity: 0.8 !important;
+}
 
- .dropzone{
+.dropzone {
   background-color: #808080 !important;
 }
 
- /*--------------- TODO BY --------------- */
- .date {
-background-color: #808080 !important;
+/*--------------- TODO BY --------------- */
+.date {
+  background-color: #808080 !important;
 }
 
 /*--------------- fixing the damn ticket field in filters ---------------*/
