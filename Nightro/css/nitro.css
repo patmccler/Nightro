@@ -477,7 +477,7 @@ textarea, td {
 }
 
 abbr, progress, time, label, .date {
-  color: #CDEFC2 !important;
+  color: white !important;
 }
 
 mark, code, pre, blockquote, [class*="quote"], td[style*="inset"][class="alt2"] {

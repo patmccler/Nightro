@@ -29,6 +29,8 @@ div.message-body {
   border-top: 1px solid #455a6b;
 }
 
+
+
 /*--------------- Self Messages --------------- */
 article.message.me div.contents div.message-body-reactions-container div.message-body{
 color: #ACE !important;
@@ -316,7 +318,7 @@ div.input-group .filterable-list, .form-area .memberships-container, .simple-lis
   background-color: #383838 !important;
 }
 
-li.bookmark:hover, article.bookmark.user-bookmark:hover, section.bookmark-label:hover, p:hover {
+li.bookmark:hover, article.bookmark.user-bookmark:hover, section.bookmark-label:hover {
   background-color: #00447C !important;
 }
 
@@ -325,3 +327,12 @@ li.bookmark:hover article.bookmark.user-bookmark, li.bookmark:hover section.book
 }
 
 
+/*--------------- Notification Preferences ---------------*/
+div.notification-preferences-container div {
+  background-color: #00335d !important;
+  margin-bottom: 10px !important;
+}
+
+div.notification-preferences-container form {
+  background-color: #505050 !important;
+}
