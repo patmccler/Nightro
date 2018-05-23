@@ -318,15 +318,31 @@ div.input-group .filterable-list, .form-area .memberships-container, .simple-lis
   background-color: #383838 !important;
 }
 
-li.bookmark:hover, article.bookmark.user-bookmark:hover, section.bookmark-label:hover {
+ul.memberships-container li.bookmark:hover, article.bookmark.user-bookmark:hover, section.bookmark-label:hover {
   background-color: #00447C !important;
 }
 
-li.bookmark:hover article.bookmark.user-bookmark, li.bookmark:hover section.bookmark-label {
+div.bookmarks-selector ul.filterable-list li.bookmark.rooms-bookmark:hover {
+  background-color: #00447C !important;
+}
+
+ul.memberships-container li.bookmark:hover article.bookmark.user-bookmark, li.bookmark:hover section.bookmark-label {
   background-color: #00447c !important;
 }
 
+div.bookmark-list div section.bookmarks-users article:hover {
+  background-color: none !important;
+}
 
+
+
+div.bookmarks-selector ul.filterable-list:hover li.bookmark.people-bookmark:hover {
+  background-color: #00447c !important;
+}
+
+section.bookmarks-people article.bookmark.people-bookmark:hover section.bookmark-label:hover {
+  background-color: #00447C !important;
+}
 /*--------------- Notification Preferences ---------------*/
 div.notification-preferences-container div {
   background-color: #00335d !important;
