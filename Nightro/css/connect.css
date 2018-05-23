@@ -322,6 +322,10 @@ ul.memberships-container li.bookmark:hover, article.bookmark.user-bookmark:hover
   background-color: #00447C !important;
 }
 
+div.bookmarks-selector ul.filterable-list li.bookmark.rooms-bookmark:hover {
+  background-color: #00447C !important;
+}
+
 ul.memberships-container li.bookmark:hover article.bookmark.user-bookmark, li.bookmark:hover section.bookmark-label {
   background-color: #00447c !important;
 }
@@ -329,6 +333,8 @@ ul.memberships-container li.bookmark:hover article.bookmark.user-bookmark, li.bo
 div.bookmark-list div section.bookmarks-users article:hover {
   background-color: none !important;
 }
+
+
 
 div.bookmarks-selector ul.filterable-list:hover li.bookmark.people-bookmark:hover {
   background-color: #00447c !important;
