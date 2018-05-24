@@ -1,3 +1,4 @@
+//currently UNUSED - This code will be helpful if we need to refactor to use the BG later so I am leaving the file in
 // console.log("BG START");
 // var darkmodeDomain = false;
 // var tabsWithPageAction = [];
