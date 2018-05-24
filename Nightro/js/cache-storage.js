@@ -58,7 +58,7 @@ window.addEventListener("DOMContentLoaded", function() {
   }
 
   try {
-    toggleButton.addEventListener("click", function() {
+    toggleButton.addEventListener("click", function(e) {
       toggleNightro();
     });
   } catch (error) {
@@ -67,28 +67,47 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 function toggleNightro() {
-  state = checkState();
+  console.log("toggling");
+  var state = checkState();
   state = !state;
+  console.log("state after toggle is " + state);
+  console.log(!state);
   //toggle
   setState(state);
-  chrome.tabs.query({}, function(tabs() {
-    for (var i; i < tabs.length; i++) {
-      chrome.tabs.sendMessage(tab.id, {greeting: "toggle nightro", nightroState: state})
+
+  console.log("sending message");
+  chrome.tabs.query({ currentWindow: true }, function(tabs) {
+    console.log(tabs);
+    for (var i = 0; i < tabs.length; i++) {
+      chrome.tabs.sendMessage(tabs[i].id, {
+        greeting: "toggle nightro",
+        nightroState: state
+      });
     }
     //todo catch this message in content script
-  });;
+  });
 }
 
 function setState(state) {
+  console.log("setting state to " + state);
   localStorage.setItem("nightroState", state);
 }
 
 //checks state of night
 function checkState() {
   let state = localStorage.getItem("nightroState");
-  if (state == undefined) {
-    state = true;
+  console.log("state from local is : " + state);
+  switch (state) {
+    case "true":
+      state = true;
+      break;
+    case "false":
+      state = false;
+      break;
+    default:
+      state: true;
   }
 
+  console.log("returning state in check" + state);
   return state;
 }

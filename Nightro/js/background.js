@@ -2,6 +2,7 @@ console.log("BG START");
 var darkmodeDomain = false;
 var tabsWithPageAction = [];
 
+//files to load on every page
 var cssToLoad = [
   "nitro.css",
   "tickets.css",

@@ -1,7 +1,8 @@
 console.log("test main loaded");
 
 var darkmodeSliderOn;
-var defaultCSSSheets = ["nitro", "scrollbar"];
+var sheets = [];
+var defaultCSSSheets = ["nitro", "scrollbars"];
 
 function onError(e) {
   console.log(e);
@@ -12,7 +13,32 @@ function onError(e) {
   setupDarkMode();
 
   setupPageAction();
+
+  setupListeners();
 })();
+
+function setupListeners() {
+  chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    switch (request.greeting) {
+      case "toggle nightro":
+        toggleNightro(request.nightroState);
+        break;
+      default:
+        console.log("unknown message");
+    }
+    sendResponse("MSG GOT");
+  });
+}
+
+function toggleNightro(state) {
+  console.log("Nightro needs to be turned on: " + state);
+  if (state) {
+    turnOnDarkMode();
+  } else {
+    //needs to be turned off
+    removeAllCSS();
+  }
+}
 
 function setupDarkMode() {
   if (!darkmodeSliderOn) {
@@ -38,7 +64,7 @@ function setupDarkMode() {
 
 function turnOnDarkMode() {
   console.log("loading default files");
-  var fileToLoad = "nitro";
+  var fileToLoad;
   //tries to loads all the default files
   for (var i = 0; i < defaultCSSSheets.length; i++) {
     fileToLoad = defaultCSSSheets[i];
@@ -76,22 +102,37 @@ function turnOnDarkMode() {
 function loadCSS(file) {
   var link = document.createElement("link");
   link.href = chrome.extension.getURL("css/" + file + ".css");
-  link.id = file;
+  link.id = "nightro-" + file;
   link.classList.add("nightro-sheet");
   console.log("try to load " + file);
 
   link.type = "text/css";
   link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
+  if (!document.getElementById(link.id)) {
+    sheets.push(link.id);
+    document.getElementsByTagName("head")[0].appendChild(link);
+  }
 }
 
 function removeAllCSS() {
-  var sheets = document.getElementsByClassName("nightro-sheet");
-
   for (var i = 0; i < sheets.length; i++) {
-    thisSheet = sheets[i];
-    thisSheet.parentElement.removeChild(thisSheet);
+    thisSheet = document.getElementById(sheets[i]);
+
+    thisSheet && thisSheet.parentNode.removeChild(thisSheet);
   }
+  sheets = [];
+  // var sheets = document.getElementsByClassName("nightro-sheet");
+  // console.log(sheets);
+  // thisSheet = "";
+  // for (let i = 0; i < sheets.length; i++) {
+  //   thisSheet = sheets[i];
+  //     console.log("removing ");
+  //     console.log(thisSheet);
+
+  //   thisSheet && thisSheet.parentNode.removeChild(thisSheet);
+  //     //document.getElementsByTagName("head")[0].removeChild(thisSheet);
+  //   }
+  // }
 }
 
 function unloadCSS(file) {
@@ -104,32 +145,6 @@ function currentDomainNeedsDarkMode(darkModeDomain) {
   console.log(currDomain);
 
   return darkModeDomain == currDomain;
-}
-
-function wipeAll() {
-  console.log("wipeall - should be unused");
-  let body = document.getElementsByTagName("body")[0];
-  body.style.removeProperty("background");
-
-  let allElem = body.getElementsByTagName("*");
-  let count = 0;
-  for (let i = 0; i < allElem.length; i++) {
-    if (allElem[i] instanceof HTMLElement) {
-      allElem[i].style.removeProperty("background");
-      allElem[i].style.background = "inherit";
-      allElem[i].style.color = "inherit";
-      count++;
-    }
-  }
-  console.log(count);
-}
-
-function tryWipe() {
-  try {
-    wipeAll();
-  } catch (e) {
-    onError(e);
-  }
 }
 
 function setupPageAction() {
