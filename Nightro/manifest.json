@@ -10,7 +10,7 @@
     {
       "all_frames": true,
       "exclude_globs": ["*/chrome/newtab*"],
-      "js": ["js/testMain.js"],
+      "js": ["js/nightro-contentscript.js"],
       "match_about_blank": true,
       "matches": ["<all_urls>"],
       "run_at": "document_start"

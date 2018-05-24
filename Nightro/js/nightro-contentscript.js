@@ -10,8 +10,6 @@ function onError(e) {
 (function setup() {
   setupDarkMode();
 
-  // setupPageAction();
-
   setupListeners();
 })();
 
@@ -19,7 +17,6 @@ function setupListeners() {
   chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     switch (request.greeting) {
       case "toggle nightro":
-        //toggleNightro(request.nightroState);
         toggleNightro();
         break;
       default:
@@ -117,18 +114,6 @@ function removeAllCSS() {
     thisSheet && thisSheet.parentNode.removeChild(thisSheet);
   }
   sheets = [];
-  // var sheets = document.getElementsByClassName("nightro-sheet");
-  // console.log(sheets);
-  // thisSheet = "";
-  // for (let i = 0; i < sheets.length; i++) {
-  //   thisSheet = sheets[i];
-  //     console.log("removing ");
-  //     console.log(thisSheet);
-
-  //   thisSheet && thisSheet.parentNode.removeChild(thisSheet);
-  //     //document.getElementsByTagName("head")[0].removeChild(thisSheet);
-  //   }
-  // }
 }
 
 function unloadCSS(file) {
@@ -143,16 +128,7 @@ function currentDomainNeedsDarkMode(darkModeDomain) {
   return darkModeDomain == currDomain;
 }
 
-// function setupPageAction() {
-//   chrome.runtime.sendMessage({ greeting: "try darkmode page action" }, function(
-//     response
-//   ) {
-//     console.log(response.response);
-//   });
-// }
-
-//TODO maybe implement per - domain toggle check
-//on page load, check if this domain has toggle set or not
+//check if this domain has toggle set or not
 //if not, assume we aren't interested in this page and ignore it
 function getStateOfToggle() {
   let state = localStorage.getItem(NIGHTRO_STATE_KEY);
