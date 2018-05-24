@@ -1,18 +1,19 @@
+// //currently UNUSED - This code will be helpful if we need to refactor to use the BG later so I am leaving the file in
 // console.log("BG START");
 // var darkmodeDomain = false;
 // var tabsWithPageAction = [];
 
 // //files to load on every page
-// var cssToLoad = [
-//   "nitro.css",
-//   "tickets.css",
-//   "dashboards.css",
-//   "homes.css",
-//   "connect.css",
-//   "finance.css",
-//   "users.css",
-//   "aeriel-measurements.css"
-// ];
+// // var cssToLoad = [
+// //   "nitro.css",
+// //   "tickets.css",
+// //   "dashboards.css",
+// //   "homes.css",
+// //   "connect.css",
+// //   "finance.css",
+// //   "users.css",
+// //   "aeriel-measurements.css"
+// // ];
 
 // // try {
 // //   chrome.runtime.getPackageDirectoryEntry(DE => {
@@ -22,12 +23,12 @@
 // //   console.log(e);
 // // }
 
-// chrome.storage.local.get(["darkmodeDomain"], function(response) {
-//   if (response.darkmodeDomain != undefined) {
-//     darkmodeDomain = response.darkmodeDomain;
-//     console.log("domain was loaded: " + darkmodeDomain);
-//   }
-// });
+// // chrome.storage.local.get(["darkmodeDomain"], function(response) {
+// //   if (response.darkmodeDomain != undefined) {
+// //     darkmodeDomain = response.darkmodeDomain;
+// //     console.log("domain was loaded: " + darkmodeDomain);
+// //   }
+// // });
 
 // //called when pageAction is clicked
 // chrome.pageAction.onClicked.addListener(tab => {

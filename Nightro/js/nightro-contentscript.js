@@ -1,6 +1,5 @@
 console.log("test main loaded");
-
-var darkmodeSliderOn;
+const NIGHTRO_STATE_KEY = "nightroState";
 var sheets = [];
 var defaultCSSSheets = ["nitro", "scrollbars"];
 
@@ -9,10 +8,7 @@ function onError(e) {
 }
 
 (function setup() {
-  darkmodeSliderOn = true;
   setupDarkMode();
-
-  setupPageAction();
 
   setupListeners();
 })();
@@ -21,45 +17,40 @@ function setupListeners() {
   chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     switch (request.greeting) {
       case "toggle nightro":
-        toggleNightro(request.nightroState);
+        toggleNightro();
         break;
       default:
         console.log("unknown message");
     }
     sendResponse("MSG GOT");
   });
+
+  window.addEventListener("storage", function(e) {
+    console.log(e);
+    if (e.key == NIGHTRO_STATE_KEY || e.key == null) {
+      setupDarkMode();
+    }
+  });
 }
 
-function toggleNightro(state) {
-  console.log("Nightro needs to be turned on: " + state);
-  if (state) {
-    turnOnDarkMode();
-  } else {
-    //needs to be turned off
-    removeAllCSS();
-  }
+//function toggleNightro(state) {
+function toggleNightro() {
+  //console.log("Nightro needs to be turned on: " + state);
+  currentState = getStateOfToggle();
+  // toggle the state
+  currentState = !currentState;
+
+  setToggleState(currentState);
+
+  setupDarkMode();
 }
 
 function setupDarkMode() {
-  if (!getStateOfToggle()) {
-    // TODO maybe need to disable here?
-    return;
+  if (getStateOfToggle()) {
+    turnOnDarkMode();
+  } else {
+    removeAllCSS();
   }
-
-  //gets domain from local storage, and calls turnOnDarkMode if needed
-  chrome.storage.local.get(["darkmodeDomain"], function(response) {
-    let domain = false;
-    if (response.darkmodeDomain != undefined) {
-      domain = response.darkmodeDomain;
-      if (domain) {
-        let needsDarkMode = currentDomainNeedsDarkMode(domain);
-        console.log(needsDarkMode);
-        if (needsDarkMode) {
-          turnOnDarkMode();
-        }
-      }
-    }
-  });
 }
 
 function turnOnDarkMode() {
@@ -108,9 +99,11 @@ function loadCSS(file) {
 
   link.type = "text/css";
   link.rel = "stylesheet";
-  if (!document.getElementById(link.id)) {
-    sheets.push(link.id);
-    document.getElementsByTagName("head")[0].appendChild(link);
+  sheets.push(link.id);
+  try {
+    document.documentElement.appendChild(link);
+  } catch (e) {
+    onError(e);
   }
 }
 
@@ -121,18 +114,6 @@ function removeAllCSS() {
     thisSheet && thisSheet.parentNode.removeChild(thisSheet);
   }
   sheets = [];
-  // var sheets = document.getElementsByClassName("nightro-sheet");
-  // console.log(sheets);
-  // thisSheet = "";
-  // for (let i = 0; i < sheets.length; i++) {
-  //   thisSheet = sheets[i];
-  //     console.log("removing ");
-  //     console.log(thisSheet);
-
-  //   thisSheet && thisSheet.parentNode.removeChild(thisSheet);
-  //     //document.getElementsByTagName("head")[0].removeChild(thisSheet);
-  //   }
-  // }
 }
 
 function unloadCSS(file) {
@@ -147,16 +128,10 @@ function currentDomainNeedsDarkMode(darkModeDomain) {
   return darkModeDomain == currDomain;
 }
 
-function setupPageAction() {
-  chrome.runtime.sendMessage({ greeting: "try darkmode page action" }, function(
-    response
-  ) {
-    console.log(response.response);
-  });
-}
-
+//check if this domain has toggle set or not
+//if not, assume we aren't interested in this page and ignore it
 function getStateOfToggle() {
-  let state = localStorage.getItem("nightroState");
+  let state = localStorage.getItem(NIGHTRO_STATE_KEY);
   switch (state) {
     case "true":
       state = true;
@@ -167,4 +142,21 @@ function getStateOfToggle() {
 
   console.log("returning state in check" + state);
   return state;
+}
+
+//sets the state of the toggle to the one provided
+function setToggleState(state) {
+  if (state) {
+    setToggleOn();
+  } else {
+    setToggleOff();
+  }
+}
+
+function setToggleOn() {
+  localStorage.setItem(NIGHTRO_STATE_KEY, "true");
+}
+
+function setToggleOff() {
+  localStorage.removeItem(NIGHTRO_STATE_KEY);
 }
