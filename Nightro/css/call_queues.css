@@ -2,17 +2,17 @@
 
 div.panel-heading {
   background-color: #383838 !important;
-  border-color: #455A6B !important;
+  border-color: #455a6b !important;
 }
 
 /*--------------- Pills ---------------*/
 
 span.pill.pill-info {
-  background-color: #749EB7 !important;
+  background-color: #749eb7 !important;
 }
 
 /*--------------- "Callers Waiting" Text ---------------*/
 
 div.jumbo-stat-description {
-  color: white
+  color: white;
 }

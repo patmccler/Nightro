@@ -4,11 +4,13 @@ form {
   background-color: #383838 !important;
 }
 /*--------------- Owner Info --------------- */
-span.label, legend {
-  color: #ACE !important;
+span.label,
+legend {
+  color: #ace !important;
 }
 
-#text, small {
+#text,
+small {
   color: white !important;
 }
 /*--------------- Borders around Tables --------------- */
@@ -17,11 +19,11 @@ thead * {
 }
 
 /* Notes table on FP page */
-div.history table td  {
+div.history table td {
   border: 1px solid #455a6b !important;
   padding-right: 1em;
-  padding-bottom: .5em;
-  padding-top: .5em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
 }
 
 div.history table tr.even td {
@@ -30,16 +32,17 @@ div.history table tr.even td {
 
 div.history table th {
   font-weight: bold;
-  background-color: #455a6b ;
+  background-color: #455a6b;
   padding-left: 1em;
   border: none !important;
-  padding: 0.5em 1em; 
+  padding: 0.5em 1em;
   color: #daaa00 !important;
 }
 
 /*--------------- Actions Box --------------- */
-div.actions_and_details, fieldset.finance_project_actions {
-  background-color: #7F8FA4 !important;
+div.actions_and_details,
+fieldset.finance_project_actions {
+  background-color: #7f8fa4 !important;
 }
 
 /*--------------- Notes --------------- */
@@ -54,16 +57,15 @@ div.actions_and_details, fieldset.finance_project_actions {
   background-color: #383838 !important;
 }
 
-
 div.history table {
   background-color: transparent !important;
-  
 }
 
 /*--------------- Navbar --------------- */
-div.row nav.navbar-default, div.navbar:nth-child(1) {
+div.row nav.navbar-default,
+div.navbar:nth-child(1) {
   background-color: #383838;
-  border-color: #455A6B;
+  border-color: #455a6b;
 }
 
 /* Pop Up Box on FP page */
@@ -71,7 +73,13 @@ div#cboxContent {
   background: #292929 !important;
 }
 
-body.empty.body-projects div.page-container div#main-view div.old-style div div#container.emptyContainer table.listTable {
-  border-bottom: 2px solid #00447C;
+body.empty.body-projects
+  div.page-container
+  div#main-view
+  div.old-style
+  div
+  div#container.emptyContainer
+  table.listTable {
+  border-bottom: 2px solid #00447c;
   color: pink !important;
 }

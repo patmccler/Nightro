@@ -1,7 +1,8 @@
-
 function setup() {
   restoreOptions();
-  document.getElementById("clearDomainButton").addEventListener("click", clearDomain);
+  document
+    .getElementById("clearDomainButton")
+    .addEventListener("click", clearDomain);
 }
 
 function restoreOptions() {
@@ -9,10 +10,8 @@ function restoreOptions() {
 }
 
 function clearDomain() {
-  chrome.storage.local.set({darkmodeDomain: undefined});
-  chrome.runtime.sendMessage({greeting: "darkmodeDomain cleared"});
-
-
+  chrome.storage.local.set({ darkmodeDomain: undefined });
+  chrome.runtime.sendMessage({ greeting: "darkmodeDomain cleared" });
 }
 
 document.addEventListener("DOMContentLoaded", setup);
