@@ -41,7 +41,7 @@ function toggleNightro(state) {
 }
 
 function setupDarkMode() {
-  if (!darkmodeSliderOn) {
+  if (!getStateOfToggle()) {
     // TODO maybe need to disable here?
     return;
   }
@@ -153,4 +153,18 @@ function setupPageAction() {
   ) {
     console.log(response.response);
   });
+}
+
+function getStateOfToggle() {
+  let state = localStorage.getItem("nightroState");
+  switch (state) {
+    case "true":
+      state = true;
+      break;
+    default:
+      state = false;
+  }
+
+  console.log("returning state in check" + state);
+  return state;
 }
