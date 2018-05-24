@@ -10,7 +10,7 @@ function onError(e) {
 (function setup() {
   setupDarkMode();
 
-  setupPageAction();
+  // setupPageAction();
 
   setupListeners();
 })();
@@ -143,13 +143,13 @@ function currentDomainNeedsDarkMode(darkModeDomain) {
   return darkModeDomain == currDomain;
 }
 
-function setupPageAction() {
-  chrome.runtime.sendMessage({ greeting: "try darkmode page action" }, function(
-    response
-  ) {
-    console.log(response.response);
-  });
-}
+// function setupPageAction() {
+//   chrome.runtime.sendMessage({ greeting: "try darkmode page action" }, function(
+//     response
+//   ) {
+//     console.log(response.response);
+//   });
+// }
 
 //TODO maybe implement per - domain toggle check
 //on page load, check if this domain has toggle set or not

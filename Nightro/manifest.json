@@ -26,12 +26,6 @@
     "page": "templates/options.html"
   },
   "permissions": ["tabs", "storage", "<all_urls>", "contextMenus"],
-  "page_action": {
-    "default_icon": {
-      "16": "icons/icon48.png"
-    },
-    "default_title": "Click this on the page you want to make darkmode"
-  },
   "short_name": "Nightro",
   "version": "1.0",
   "web_accessible_resources": ["css/*.css"]
