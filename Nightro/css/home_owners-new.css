@@ -1,4 +1,12 @@
-/* Affecting the Owner Card */
+/* Affecting All Card  */
 .card {
-    background-color: red !important;
+    background-color: transparent !important;
+}
+
+.person-icon {
+    background-color: transparent !important;
+}
+
+form.home-owners-form.nitro-inline-form div.container div.row div.col-md-6.px-2 div.mb-3 div.person-form.nitro-inline-form.card.create div.person.card-block.form-width-md div.col-md-12.clearfix div.row span.multi-input-group.full.form-group div.multi-input-group-item.label-inside.form-group label.control-label {
+    background-color:  #0072ce !important;
 }
