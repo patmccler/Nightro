@@ -1,6 +1,5 @@
 console.log("test main loaded");
 const NIGHTRO_STATE_KEY = "nightroState";
-var darkmodeSliderOn;
 var sheets = [];
 var defaultCSSSheets = ["nitro", "scrollbars"];
 
@@ -9,7 +8,6 @@ function onError(e) {
 }
 
 (function setup() {
-  darkmodeSliderOn = true;
   setupDarkMode();
 
   setupPageAction();
@@ -31,13 +29,9 @@ function setupListeners() {
   });
 
   window.addEventListener("storage", function(e) {
-    if (e.key == null) {
-      //storage was cleared - turn darkmode off
-      removeAllCSS();
-    } else if (e.key == NIGHTRO_STATE_KEY) {
-      if (getStateOfToggle) {
-        turnOnDarkMode();
-      }
+    console.log(e);
+    if (e.key == NIGHTRO_STATE_KEY || e.key == null) {
+      setupDarkMode();
     }
   });
 }
@@ -51,17 +45,14 @@ function toggleNightro() {
 
   setToggleState(currentState);
 
-  if (currentState) {
-    turnOnDarkMode();
-  } else {
-    //needs to be turned off
-    removeAllCSS();
-  }
+  setupDarkMode();
 }
 
 function setupDarkMode() {
   if (getStateOfToggle()) {
     turnOnDarkMode();
+  } else {
+    removeAllCSS();
   }
 }
 
@@ -111,9 +102,11 @@ function loadCSS(file) {
 
   link.type = "text/css";
   link.rel = "stylesheet";
-  if (!document.getElementById(link.id)) {
-    sheets.push(link.id);
-    document.getElementsByTagName("head")[0].appendChild(link);
+  sheets.push(link.id);
+  try {
+    document.documentElement.appendChild(link);
+  } catch (e) {
+    onError(e);
   }
 }
 
