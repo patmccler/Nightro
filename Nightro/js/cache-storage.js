@@ -67,24 +67,24 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 function toggleNightro() {
-  console.log("toggling");
-  var state = checkState();
-  state = !state;
-  console.log("state after toggle is " + state);
-  console.log(!state);
-  //toggle
-  setState(state);
+  // console.log("toggling");
+  // // var state = checkState();
+  // // state = !state;
+  // console.log("state after toggle is " + state);
+  // console.log(!state);
+  // //toggle
+  // setState(state);
 
-  console.log("sending message");
-  chrome.tabs.query({ currentWindow: true }, function(tabs) {
+  console.log("sending Toggle message");
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     console.log(tabs);
     for (var i = 0; i < tabs.length; i++) {
       chrome.tabs.sendMessage(tabs[i].id, {
-        greeting: "toggle nightro",
-        nightroState: state
+        greeting: "toggle nightro"
+        //nightroState: state
       });
     }
-    //todo catch this message in content script
+    // catch this message in content script
   });
 }
 
@@ -93,21 +93,21 @@ function setState(state) {
   localStorage.setItem("nightroState", state);
 }
 
-//checks state of night
-function checkState() {
-  let state = localStorage.getItem("nightroState");
-  console.log("state from local is : " + state);
-  switch (state) {
-    case "true":
-      state = true;
-      break;
-    case "false":
-      state = false;
-      break;
-    default:
-      state: true;
-  }
+// //checks state of night
+// function checkState() {
+//   let state = localStorage.getItem("nightroState");
+//   console.log("state from local is : " + state);
+//   switch (state) {
+//     case "true":
+//       state = true;
+//       break;
+//     case "false":
+//       state = false;
+//       break;
+//     default:
+//       state: true;
+//   }
 
-  console.log("returning state in check" + state);
-  return state;
-}
+//   console.log("returning state in check" + state);
+//   return state;
+// }

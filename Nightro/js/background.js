@@ -1,9 +1,9 @@
 //currently UNUSED - This code will be helpful if we need to refactor to use the BG later so I am leaving the file in
-// console.log("BG START");
-// var darkmodeDomain = false;
-// var tabsWithPageAction = [];
+console.log("BG START");
+var darkmodeDomain = false;
+var tabsWithPageAction = [];
 
-// //files to load on every page
+//files to load on every page
 // var cssToLoad = [
 //   "nitro.css",
 //   "tickets.css",
@@ -15,13 +15,13 @@
 //   "aeriel-measurements.css"
 // ];
 
-// // try {
-// //   chrome.runtime.getPackageDirectoryEntry(DE => {
-// //     console.log(DE);
-// //   });
-// // } catch (e) {
-// //   console.log(e);
-// // }
+// try {
+//   chrome.runtime.getPackageDirectoryEntry(DE => {
+//     console.log(DE);
+//   });
+// } catch (e) {
+//   console.log(e);
+// }
 
 // chrome.storage.local.get(["darkmodeDomain"], function(response) {
 //   if (response.darkmodeDomain != undefined) {
@@ -30,117 +30,117 @@
 //   }
 // });
 
-// //called when pageAction is clicked
-// chrome.pageAction.onClicked.addListener(tab => {
-//   console.log("Saving this URL as domain to use from tab: " + tab.url);
-//   try {
-//     let parser = document.createElement("a");
-//     parser.href = tab.url;
-//     let domain = parser.hostname;
-//     darkmodeDomain = domain;
-//     chrome.storage.local.set(
-//       {
-//         darkmodeDomain: domain
-//       } /*optional callback can go here*/
-//     );
-//     for (let i = 0; i < tabsWithPageAction.length; i++) {
-//       chrome.pageAction.hide(tabsWithPageAction[i]);
-//     }
-//   } catch (e) {
-//     onError(e);
-//   }
-// });
+//called when pageAction is clicked
+chrome.pageAction.onClicked.addListener(tab => {
+  console.log("Saving this URL as domain to use from tab: " + tab.url);
+  try {
+    let parser = document.createElement("a");
+    parser.href = tab.url;
+    let domain = parser.hostname;
+    darkmodeDomain = domain;
+    chrome.storage.local.set(
+      {
+        darkmodeDomain: domain
+      } /*optional callback can go here*/
+    );
+    for (let i = 0; i < tabsWithPageAction.length; i++) {
+      chrome.pageAction.hide(tabsWithPageAction[i]);
+    }
+  } catch (e) {
+    onError(e);
+  }
+});
 
-// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-//   console.log("msg recieved: " + request.greeting);
-//   let answer = new Object();
-//   var response = "response: ";
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  console.log("msg recieved: " + request.greeting);
+  let answer = new Object();
+  var response = "response: ";
 
-//   switch (request.greeting) {
-//     case "check css load":
-//       checkCSSNeeded(sender);
+  switch (request.greeting) {
+    case "check css load":
+      checkCSSNeeded(sender);
 
-//       console.log(sender.tab.url);
+      console.log(sender.tab.url);
 
-//       break;
+      break;
 
-//     case "try darkmode page action":
-//       console.log("trying page action");
-//       if (needPageAction()) {
-//         response += "need page action";
-//         chrome.pageAction.show(sender.tab.id);
-//         tabsWithPageAction.push(sender.tab.id);
-//       } else {
-//         response += "no page action needed";
-//       }
-//       break;
+    case "try darkmode page action":
+      console.log("trying page action");
+      if (needPageAction()) {
+        response += "need page action";
+        chrome.pageAction.show(sender.tab.id);
+        tabsWithPageAction.push(sender.tab.id);
+      } else {
+        response += "no page action needed";
+      }
+      break;
 
-//     case "darkmodeDomain cleared":
-//       darkmodeDomain = false;
-//       response += "clear domain recieved";
-//       break;
+    case "darkmodeDomain cleared":
+      darkmodeDomain = false;
+      response += "clear domain recieved";
+      break;
 
-//     case "turn on darkmode":
-//       console.log("sending darkmode to tab " + sender.tab.id);
-//       response += "sending dark mode";
-//       enableDarkMode(tab);
+    case "turn on darkmode":
+      console.log("sending darkmode to tab " + sender.tab.id);
+      response += "sending dark mode";
+      enableDarkMode(tab);
 
-//       break;
+      break;
 
-//     default:
-//       response += "unknown message";
-//       console.log("unknown message: " + request.greeting);
-//       break;
-//   }
+    default:
+      response += "unknown message";
+      console.log("unknown message: " + request.greeting);
+      break;
+  }
 
-//   console.log("sending " + response);
-//   answer["response"] = response;
-//   sendResponse(answer);
-// });
+  console.log("sending " + response);
+  answer["response"] = response;
+  sendResponse(answer);
+});
 
-// function needPageAction() {
-//   console.log(darkmodeDomain);
-//   if (darkmodeDomain) {
-//     return false;
-//   }
-//   return true;
-// }
+function needPageAction() {
+  console.log(darkmodeDomain);
+  if (darkmodeDomain) {
+    return false;
+  }
+  return true;
+}
 
-// function checkCSSNeeded(sender) {
-//   let parser = document.createElement("a");
-//   parser.href = sender.tab.url;
+function checkCSSNeeded(sender) {
+  let parser = document.createElement("a");
+  parser.href = sender.tab.url;
 
-//   let newPageDomain = parser.hostname;
-//   console.log(newPageDomain);
+  let newPageDomain = parser.hostname;
+  console.log(newPageDomain);
 
-//   if (newPageDomain == darkmodeDomain) {
-//     console.log("loading CSS");
-//     loadCSSInTab(sender.tab);
-//   }
-// }
+  if (newPageDomain == darkmodeDomain) {
+    console.log("loading CSS");
+    loadCSSInTab(sender.tab);
+  }
+}
 
-// function enableDarkMode(tab) {
-//   console.log("enabling for" + tab);
-//   loadCSSInTab(tab);
-// }
+function enableDarkMode(tab) {
+  console.log("enabling for" + tab);
+  loadCSSInTab(tab);
+}
 
-// function loadCSSInTab(tab) {
-//   console.log(tab.id);
-//   let details = {
-//     cssOrigin: "user",
-//     runAt: "document_start",
-//     allFrames: true,
-//     file: "will be changed"
-//   };
-//   for (let i = 0; i < cssToLoad.length; i++) {
-//     details.file = "css/" + cssToLoad[i];
+function loadCSSInTab(tab) {
+  console.log(tab.id);
+  let details = {
+    cssOrigin: "user",
+    runAt: "document_start",
+    allFrames: true,
+    file: "will be changed"
+  };
+  for (let i = 0; i < cssToLoad.length; i++) {
+    details.file = "css/" + cssToLoad[i];
 
-//     chrome.tabs.insertCSS(tab.id, details, function() {
-//       console.log("CSS Injected");
-//     });
-//   }
-// }
+    chrome.tabs.insertCSS(tab.id, details, function() {
+      console.log("CSS Injected");
+    });
+  }
+}
 
-// function onError(e) {
-//   console.log(e);
-// }
+function onError(e) {
+  console.log(e);
+}

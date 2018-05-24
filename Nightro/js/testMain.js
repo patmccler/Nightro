@@ -1,5 +1,5 @@
 console.log("test main loaded");
-
+const NIGHTRO_STATE_KEY = "nightroState";
 var darkmodeSliderOn;
 var sheets = [];
 var defaultCSSSheets = ["nitro", "scrollbars"];
@@ -21,18 +21,37 @@ function setupListeners() {
   chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     switch (request.greeting) {
       case "toggle nightro":
-        toggleNightro(request.nightroState);
+        //toggleNightro(request.nightroState);
+        toggleNightro();
         break;
       default:
         console.log("unknown message");
     }
     sendResponse("MSG GOT");
   });
+
+  window.addEventListener("storage", function(e) {
+    if (e.key == null) {
+      //storage was cleared - turn darkmode off
+      removeAllCSS();
+    } else if (e.key == NIGHTRO_STATE_KEY) {
+      if (getStateOfToggle) {
+        turnOnDarkMode();
+      }
+    }
+  });
 }
 
-function toggleNightro(state) {
-  console.log("Nightro needs to be turned on: " + state);
-  if (state) {
+//function toggleNightro(state) {
+function toggleNightro() {
+  //console.log("Nightro needs to be turned on: " + state);
+  currentState = getStateOfToggle();
+  // toggle the state
+  currentState = !currentState;
+
+  setToggleState(currentState);
+
+  if (currentState) {
     turnOnDarkMode();
   } else {
     //needs to be turned off
@@ -41,25 +60,9 @@ function toggleNightro(state) {
 }
 
 function setupDarkMode() {
-  if (!getStateOfToggle()) {
-    // TODO maybe need to disable here?
-    return;
+  if (getStateOfToggle()) {
+    turnOnDarkMode();
   }
-
-  //gets domain from local storage, and calls turnOnDarkMode if needed
-  chrome.storage.local.get(["darkmodeDomain"], function(response) {
-    let domain = false;
-    if (response.darkmodeDomain != undefined) {
-      domain = response.darkmodeDomain;
-      if (domain) {
-        let needsDarkMode = currentDomainNeedsDarkMode(domain);
-        console.log(needsDarkMode);
-        if (needsDarkMode) {
-          turnOnDarkMode();
-        }
-      }
-    }
-  });
 }
 
 function turnOnDarkMode() {
@@ -155,8 +158,11 @@ function setupPageAction() {
   });
 }
 
+//TODO maybe implement per - domain toggle check
+//on page load, check if this domain has toggle set or not
+//if not, assume we aren't interested in this page and ignore it
 function getStateOfToggle() {
-  let state = localStorage.getItem("nightroState");
+  let state = localStorage.getItem(NIGHTRO_STATE_KEY);
   switch (state) {
     case "true":
       state = true;
@@ -167,4 +173,21 @@ function getStateOfToggle() {
 
   console.log("returning state in check" + state);
   return state;
+}
+
+//sets the state of the toggle to the one provided
+function setToggleState(state) {
+  if (state) {
+    setToggleOn();
+  } else {
+    setToggleOff();
+  }
+}
+
+function setToggleOn() {
+  localStorage.setItem(NIGHTRO_STATE_KEY, "true");
+}
+
+function setToggleOff() {
+  localStorage.removeItem(NIGHTRO_STATE_KEY);
 }
