@@ -7,6 +7,43 @@
     background-color: transparent !important;
 }
 
-form.home-owners-form.nitro-inline-form div.container div.row div.col-md-6.px-2 div.mb-3 div.person-form.nitro-inline-form.card.create div.person.card-block.form-width-md div.col-md-12.clearfix div.row span.multi-input-group.full.form-group div.multi-input-group-item.label-inside.form-group label.control-label {
-    background-color:  #0072ce !important;
+/* Adjusting the badges above each field to be in color ubison and readable */
+label.control-label, label {
+    background-color: #00447c !important;
+    color: white !important;
+    font-weight:bold !important;
+}
+/* Adjusting the buttons to be more responsive */
+button.btn.btn-default.btn-sm.btn-block.collapse-person:hover, button.btn.btn-default.btn-sm.btn-block:hover {
+    background-color: #0077ce !important;
+    color: white !important;
+}
+
+label.btn.btn-ghost-power-navy {
+    background-color: transparent !important;
+}
+
+label.btn.btn-ghost-power-navy.active {
+    background-color: #00447C !important;
+}
+
+/* Adjusting the secondary owner form */
+div.add-resident span {
+    color: white !important;
+}
+
+/*HOA button /slider */
+div.checkbox.checkbox-toggle.toggle-right.col-sm-3.form-group.text-right > label {
+    background-color: transparent !important;
+}
+/* Fixes the HOA toggle */
+div.checkbox.checkbox-toggle.toggle-right.col-sm-3.form-group.text-right > label:nth-child(1) > input:nth-child(1):checked {
+    background-color: #06ad0f !important;
+}
+
+/*Fixes the messed up form controls that did not have the proper styling appleid to match the rest of the fields.*/
+select.form-control {
+    border-color: white !important;
+    background-color: #6b6b6b !important;
+
 }
