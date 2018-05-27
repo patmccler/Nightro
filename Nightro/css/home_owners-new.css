@@ -1,0 +1,49 @@
+/* Affecting All Card  */
+.card {
+    background-color: transparent !important;
+}
+
+.person-icon {
+    background-color: transparent !important;
+}
+
+/* Adjusting the badges above each field to be in color ubison and readable */
+label.control-label, label {
+    background-color: #00447c !important;
+    color: white !important;
+    font-weight:bold !important;
+}
+/* Adjusting the buttons to be more responsive */
+button.btn.btn-default.btn-sm.btn-block.collapse-person:hover, button.btn.btn-default.btn-sm.btn-block:hover {
+    background-color: #0077ce !important;
+    color: white !important;
+}
+
+label.btn.btn-ghost-power-navy {
+    background-color: transparent !important;
+}
+
+label.btn.btn-ghost-power-navy.active {
+    background-color: #00447C !important;
+}
+
+/* Adjusting the secondary owner form */
+div.add-resident span {
+    color: white !important;
+}
+
+/*HOA button /slider */
+div.checkbox.checkbox-toggle.toggle-right.col-sm-3.form-group.text-right > label {
+    background-color: transparent !important;
+}
+/* Fixes the HOA toggle */
+div.checkbox.checkbox-toggle.toggle-right.col-sm-3.form-group.text-right > label:nth-child(1) > input:nth-child(1):checked {
+    background-color: #06ad0f !important;
+}
+
+/*Fixes the messed up form controls that did not have the proper styling appleid to match the rest of the fields.*/
+select.form-control {
+    border-color: white !important;
+    background-color: #6b6b6b !important;
+
+}
