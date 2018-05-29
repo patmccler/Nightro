@@ -42,7 +42,6 @@ function setupListeners() {
    * needs to change state of nightro if correct key is changed
    */
   window.addEventListener("storage", function(e) {
-    console.log(e);
     if (e.key == NIGHTRO_STATE_KEY || e.key == null) {
       setupDarkMode();
     }
