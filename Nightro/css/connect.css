@@ -2,13 +2,17 @@
 
 /*--------------- Bookmarks ---------------*/
 
-
-bookmarks-bar, .main, .roster {
-    background: #292929 !important;
+bookmarks-bar,
+.main,
+.roster {
+  background: #292929 !important;
 }
 
-.bookmark, .bookmark.room-bookmark, .bookmark.user-bookmark, section.message {
-  background: rgb(41, 41, 41);
+.bookmark,
+.bookmark.room-bookmark,
+.bookmark.user-bookmark,
+section.message {
+  background: rgb(41, 41, 41) !important;
 }
 
 /*525252*/
@@ -18,40 +22,42 @@ bookmarks-bar, .main, .roster {
 } */
 
 div.message-body {
-    color: #ACE !important;
+  color: #ace !important;
 }
 
-.bookmark-label, .bookmark-label-name {
+.bookmark-label,
+.bookmark-label-name {
   color: #fff !important;
 }
 
-.bookmark +.bookmark {
-  border-top: 1px solid #455a6b;
+.bookmark + .bookmark {
+  border-top: 1px solid #455a6b !important;
 }
 
-
-
 /*--------------- Self Messages --------------- */
-article.message.me div.contents div.message-body-reactions-container div.message-body{
-color: #ACE !important;
-text-align: right;
-padding-left: 35%;
-padding-right: 50px;
+article.message.me
+  div.contents
+  div.message-body-reactions-container
+  div.message-body {
+  color: #ace !important;
+  text-align: right !important;
+  padding-left: 35% !important;
+  padding-right: 50px !important;
 }
 
 article.message.me div.contents div.message-meta div.message-avatar {
-  display: inline-block;
-  float: right;
-  height: 34px;
-  margin-right: 4px;
-  width: 34px;
+  display: inline-block !important;
+  float: right !important;
+  height: 34px !important;
+  margin-right: 4px !important;
+  width: 34px !important;
 }
 
 div article.message.me div.contents div.message-meta span.message-sender {
-  font-weight: 700;
-  vertical-align: top;
-  float: right;
-  margin-right: 4px;
+  font-weight: 700 !important;
+  vertical-align: top !important;
+  float: right !important;
+  margin-right: 4px !important;
 }
 
 div article.message.me div.contents div.message-meta span.message-time
@@ -63,93 +69,93 @@ article.message div.contents div.message-body-reactions-container div.message-bo
 
 /*--------------- Branding & Top Bars --------------- */
 .branding-bar {
-  background-color: #00447C;
-  border-bottom: 2px solid #002340;
-  color: #fff;
-  display: block;
-  height: 44px;
-  position: relative;
-  text-align: center;
+  background-color: #00447c !important;
+  border-bottom: 2px solid #002340 !important;
+  color: #fff !important;
+  display: block !important;
+  height: 44px !important;
+  position: relative !important;
+  text-align: center !important;
 }
 .section-header {
-  background: #00447C;
-  border-bottom: 2px solid #002340;
-  color: #fff;
-  display: flex;
-  flex: 0 0 45px;
-  font-size: 18px;
-  font-weight: 400;
-  justify-content: center;
-  overflow: hidden;
+  background: #00447c !important;
+  border-bottom: 2px solid #002340 !important;
+  color: #fff !important;
+  display: flex !important;
+  flex: 0 0 45px !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  justify-content: center !important;
+  overflow: hidden !important;
 }
 .bookmarks-subheader {
-    background: #00447C;
-    border-bottom: 2px solid #002340;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 36px;
-    padding-left: 12px;
+  background: #00447c !important;
+  border-bottom: 2px solid #002340 !important;
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 36px !important;
+  padding-left: 12px !important;
 }
 
 .bookmarks-bar {
-  border-bottom: 2px solid #002340;
-  border-right: 2px solid #002340;
+  border-bottom: 2px solid #002340 !important;
+  border-right: 2px solid #002340 !important;
 }
 
 .roster {
-  background-color: inherit;
-  border-left: 2px solid #002340;
+  background-color: inherit !important;
+  border-left: 2px solid #002340 !important;
 }
 
 .message-separator.sticky {
-  background-color : none !important;
+  background-color: none !important;
 }
 .messages.message-separator {
-  background-color : none !important;
+  background-color: none !important;
 }
 
 /*--------------- Messages Fields & Top Bars  --------------- */
 
 .messages .message-separator {
-    background-color: #292929;
-    margin: 0;
-    position: relative;
-    text-align: center;
+  background-color: #292929 !important;
+  margin: 0 !important;
+  position: relative !important;
+  text-align: center !important;
 }
 
 .messages .message-separator-label {
-    color: #ACE;
-    display: inline-block;
-    font-size: 17px;
-    line-height: 35px;
-    margin: 0 auto;
-    position: relative;
+  color: #ace !important;
+  display: inline-block !important;
+  font-size: 17px !important;
+  line-height: 35px !important;
+  margin: 0 auto !important;
+  position: relative !important;
 }
 
 span.user-mention {
-  background-color: rgb(41, 41, 41);
+  background-color: rgb(41, 41, 41) !important;
 }
 
 .message-input-container {
-    background: #292929;;
-    border-top: 2px solid #002340;
-    position: relative;
-    padding: 7px 0;
-    white-space: pre-wrap;
-    width: 100%;
-    word-wrap: break-word;
+  background: #292929 !important;
+  border-top: 2px solid #002340 !important;
+  position: relative !important;
+  padding: 7px 0 !important;
+  white-space: pre-wrap !important;
+  width: 100% !important;
+  word-wrap: break-word !important;
 }
 
 .message-input-container .DraftEditor-editorContainer {
-    background-color: #404040 !important;
-    border: none !important;
-    border-radius: 0 !important;
-  }
-
+  background-color: #404040 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
 
 /*--------------- Messages --------------- */
-div article.message, main.main section.messages {
+div article.message,
+main.main section.messages {
   background-image: none !important;
   background-color: #404040 !important;
   margin: 0 !important;
@@ -162,149 +168,152 @@ div.ReactModal__Overlay.ReactModal__Overlay--after-open.modal-overlay {
 }
 
 div.message-body {
-    color: #ACE !important;
+  color: #ace !important;
 }
 
 /*--------------- Badge Icons --------------- */
 
 /* Activity room badge */
 .activity-indicator .activity-badge {
-background: transparent;
-border-radius: 18px;
-color: #9b9b9b;
-display: inline-block;
-font-size: 12px;
-line-height: 18px;
-padding: 0 8px;
-font-weight: bold;
-border-width: 1px;
-border-color: #9b9b9b;
-border-style: solid;
+  background: transparent !important;
+  border-radius: 18px !important;
+  color: #9b9b9b !important;
+  display: inline-block !important;
+  font-size: 12px !important;
+  line-height: 18px !important;
+  padding: 0 8px !important;
+  font-weight: bold !important;
+  border-width: 1px !important;
+  border-color: #9b9b9b !important;
+  border-style: solid !important;
 }
 
-  /* All mention badge */
+/* All mention badge */
 .activity-indicator .activity-badge-all {
-border-radius: 18px;
-color: #6eb1e8;
-display: inline-block;
-font-size: 12px;
-font-weight: bold;
-line-height: 18px;
-padding: 0 8px;
-border-width: 1px;
-border-color: #6eb1e8;
-border-style: solid;
+  border-radius: 18px !important;
+  color: #6eb1e8 !important;
+  display: inline-block !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  line-height: 18px !important;
+  padding: 0 8px !important;
+  border-width: 1px !important;
+  border-color: #6eb1e8 !important;
+  border-style: solid !important;
 }
 
 /* Specific mention to me */
 .activity-indicator .activity-badge-me {
-  border-radius: 18px;
-  color: #daaa00;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 18px;
-  padding: 0 8px;
-  border-width: 1px;
-  border-color: #daaa00;
-  border-style: solid;
+  border-radius: 18px !important;
+  color: #daaa00 !important;
+  display: inline-block !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  line-height: 18px !important;
+  padding: 0 8px !important;
+  border-width: 1px !important;
+  border-color: #daaa00 !important;
+  border-style: solid !important;
 }
 
 /* --------------- Chat Box UI --------------- */
 
-div.message-input-container{
+div.message-input-container {
   background-color: #292929 !important;
 }
 div.DraftEditor-editorContainer * {
-  background-color: #6B6B6B !important;
-  color: #ACE !important;
+  background-color: #6b6b6b !important;
+  color: #ace !important;
 }
 
 .user-mention.me {
-  background: #00447c;
-  border-color: #ace;
+  background: #00447c !important;
+  border-color: #ace !important;
 }
 
 .user-mention {
-    background: #292929;
-    border-radius: 2px;
-    border: 1px solid #a9a9a9;
-    padding: 0 5px;
-    white-space: nowrap;
-  }
+  background: #292929 !important;
+  border-radius: 2px !important;
+  border: 1px solid #a9a9a9 !important;
+  padding: 0 5px !important;
+  white-space: nowrap !important;
+}
 
-  .message-input-container .user-picker {
-      position: absolute;
-      bottom: 46px;
-      width: 100%;
-      border: 2px solid #455a6b;
-      border-radius: 4px;
-      z-index: 100;
-  }
+.message-input-container .user-picker {
+  position: absolute !important;
+  bottom: 46px !important;
+  width: 100% !important;
+  border: 2px solid #455a6b !important;
+  border-radius: 4px !important;
+  z-index: 100 !important;
+}
 
-  /* --------------- User Card --------------- */
+/* --------------- User Card --------------- */
 
-  .vcard, .user-photo {
-    background-color: #404040 !important;
-  }
+.vcard,
+.user-photo {
+  background-color: #404040 !important;
+}
 
-  .vcard {
-    color: #fff !important;
-  }
+.vcard {
+  color: #fff !important;
+}
 
 /* --------------- People Who Liked Modal **BROKEN, DOES NOT DISAPPEAR** --------------- */
-  /* .ReactModalPortal, info-content {
-    background: #505050;
-    border-radius: 8px;
-    left: 30%;
-    max-height: 80vh;
-    overflow: hidden;
-        overflow-y: hidden;
-    overflow-y: scroll;
-    position: absolute;
-    right: 30%;
-    top: 50%;
-    transform: translateY(-50%);
+/* .ReactModalPortal, info-content {
+    background: #505050 !important;
+    border-radius: 8px !important;
+    left: 30% !important;
+    max-height: 80vh !important;
+    overflow: hidden !important;
+        overflow-y: hidden !important;
+    overflow-y: scroll !important;
+    position: absolute !important;
+    right: 30% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
 } */
 
 .info-content {
-    background: #505050;
-    border-radius: 8px;
-    left: 30%;
-    max-height: 80vh;
-    overflow: hidden;
-        overflow-y: hidden;
-    overflow-y: scroll;
-    position: absolute;
-    right: 30%;
-    top: 50%;
-    transform: translateY(-50%);
+  background: #505050 !important;
+  border-radius: 8px !important;
+  left: 30% !important;
+  max-height: 80vh !important;
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+  overflow-y: scroll !important;
+  position: absolute !important;
+  right: 30% !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
 
-.filterable-list, .form-area .memberships-container, .simple-list {
-    background: #455a6b;
-    border: none !important;
-    flex: 1;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+.filterable-list,
+.form-area .memberships-container,
+.simple-list {
+  background: #455a6b !important;
+  border: none !important;
+  flex: 1 !important;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
 }
- /* Room Creation */
- ul.radio-button-group li {
-   background: #404040 !important;
-   border-color: #455A6B !important;
- }
+/* Room Creation */
+ul.radio-button-group li {
+  background: #404040 !important;
+  border-color: #455a6b !important;
+}
 
 ul.radio-button-group li:hover {
-  background: #00447C !important;
+  background: #00447c !important;
 }
 
- ul.radio-button-group {
-  border-color: #455A6B !important;
- }
+ul.radio-button-group {
+  border-color: #455a6b !important;
+}
 
- ul.radio-button-group li i.fa.option.selected {
-   color: #06ad0f !important;
- }
+ul.radio-button-group li i.fa.option.selected {
+  color: #06ad0f !important;
+}
 
 div.room-form div ul.radio-button-group li div.description h2 span {
   color: #ace !important;
@@ -314,19 +323,24 @@ div.room-form div ul.radio-button-group li div.description h2 span {
   color: #d8d8d8 !important;
 }
 
-div.input-group .filterable-list, .form-area .memberships-container, .simple-list {
+div.input-group .filterable-list,
+.form-area .memberships-container,
+.simple-list {
   background-color: #383838 !important;
 }
 
-ul.memberships-container li.bookmark:hover, article.bookmark.user-bookmark:hover, section.bookmark-label:hover {
-  background-color: #00447C !important;
+ul.memberships-container li.bookmark:hover,
+article.bookmark.user-bookmark:hover,
+section.bookmark-label:hover {
+  background-color: #00447c !important;
 }
 
 div.bookmarks-selector ul.filterable-list li.bookmark.rooms-bookmark:hover {
-  background-color: #00447C !important;
+  background-color: #00447c !important;
 }
 
-ul.memberships-container li.bookmark:hover article.bookmark.user-bookmark, li.bookmark:hover section.bookmark-label {
+ul.memberships-container li.bookmark:hover article.bookmark.user-bookmark,
+li.bookmark:hover section.bookmark-label {
   background-color: #00447c !important;
 }
 
@@ -334,14 +348,16 @@ div.bookmark-list div section.bookmarks-users article:hover {
   background-color: none !important;
 }
 
-
-
-div.bookmarks-selector ul.filterable-list:hover li.bookmark.people-bookmark:hover {
+div.bookmarks-selector
+  ul.filterable-list:hover
+  li.bookmark.people-bookmark:hover {
   background-color: #00447c !important;
 }
 
-section.bookmarks-people article.bookmark.people-bookmark:hover section.bookmark-label:hover {
-  background-color: #00447C !important;
+section.bookmarks-people
+  article.bookmark.people-bookmark:hover
+  section.bookmark-label:hover {
+  background-color: #00447c !important;
 }
 /*--------------- Notification Preferences ---------------*/
 div.notification-preferences-container div {
